@@ -1,105 +1,173 @@
-# Hiperspektral Görüntü Sınıflandırması
+# Hiperspektral Görüntülerin Makine Öğrenmesi ve Derin Öğrenme Yöntemleriyle Sınıflandırılması
 
-Hiperspektral görüntüleme teknolojisini kullanarak arazi örtüsü (land cover) sınıflandırması yapan bir Python projesidir.
+## 📚 Proje Bilgileri
 
-## Proje Hakkında
+**Proje Türü:** Bilgisayar Mühendisliği Bitirme Projesi  
+**Üniversite:** Yıldız Teknik Üniversitesi  
+**Öğrenci Numaraları:** 22011083, 22011084  
+**Öğrenciler:** Tan Erciyas, Kerem Baydar  
+**İletişim:**
+- tan.erciyas@std.yildiz.edu.tr
+- kerem.baydar@std.yildiz.edu.tr
 
-Bu proje, AVIRIS sensörü tarafından toplanan **Indian Pines** veri setini kullanarak hiperspektral sınıflandırma gerçekleştirmektedir. Hiperspektral görüntüler, yüzlerce spektral banttan oluşan çok boyutlu veri setleridir ve her piksel için detaylı spektral bilgi sağlar.
+---
 
-### Veri Seti: Indian Pines
-- **Çözünürlük**: 145 × 145 piksel
-- **Spektral Bant Sayısı**: 200 (orijinal 220'den su emilim bölgeleri çıkarıldı)
-- **Sınıf Sayısı**: 16 ürün + 1 tanımsız sınıf
-- **Sınıflar**:
-  - Alfalfa, Corn (notill/mintill/normal)
-  - Grass (pasture/trees/pasture-mowed)
-  - Hay-windrowed, Oats
-  - Soybean (notill/mintill/clean)
-  - Wheat, Woods
-  - Buildings-grass-trees-drives, Stone-steel-towers
+## 🎯 Proje Hedefleri
 
-## Kurulum
+Projenin temel amacı, yüksek boyutlu ve karmaşık spektral veriye sahip hiperspektral görüntülerin (HSI) sınıflandırılmasında, **eğiticili (supervised)** ve **yarı eğiticili (semi-supervised)** öğrenme yaklaşımlarının performans farklarını nicel olarak ortaya koymaktır.
 
-### Gereksinimler
-- Python 3.7 veya üzeri
-- pip paket yöneticisi
+### Ana Hedefler:
+1. **Performans Karşılaştırması:** Farklı makine öğrenmesi ve derin öğrenme yöntemlerinin hiperspektral görüntü sınıflandırmadaki etkinliğini karşılaştırmak
+2. **Boyutsallık Sorunu Çözümü:** "Boyutluluğun laneti" (curse of dimensionality) problemini temel ön işleme teknikleri ile çözmek
+3. **Pratik Uygulamalar:** Geliştirililen modelleri gerçek zamanlı test edebilecek kullanıcı dostu bir arayüz geliştirmek
+4. **Etiketli Veri Kısıtlılığı:** Sınırlı etiketli örnek sayısında model performansını optimize etmek
 
-### Adımlar
+---
 
-1. Depoyu klonlayın:
+## 📊 Veri Setleri
+
+Proje kapsamında aşağıdaki üç temel hiperspektral veri seti kullanılacaktır:
+
+### 1. Indian Pines
+- **Boyut:** 145×145 piksel
+- **Bant Sayısı:** 200 spektral bant
+- **Sınıf Sayısı:** 16 sınıf
+- **Kaynak:** [Kaggle - Indian Pines Hyperspectral Dataset](https://www.kaggle.com/datasets/abhijeetgo/indian-pines-hyperspectral-dataset)
+
+### 2. Pavia University
+- **Boyut:** 610×340 piksel
+- **Bant Sayısı:** 103 spektral bant
+- **Sınıf Sayısı:** 9 sınıf
+- **Kaynak:** [Kaggle - Pavia University HSI](https://www.kaggle.com/datasets/syamkakarla/pavia-university-hsi)
+
+### 3. Salinas
+- **Boyut:** 512×217 piksel
+- **Bant Sayısı:** 204 spektral bant
+- **Sınıf Sayısı:** 16 sınıf
+- **Kaynak:** [Kaggle - Salinas Dataset](https://www.kaggle.com/datasets/wangyijialili/salinas)
+
+---
+
+## 🔧 Proje Kapsamı ve Yöntemler
+
+### Veri Ön İşleme
+- **Gürültü Azaltma:** Gaussian filtreleme
+- **Boyut İndirgeme:** Temel Bileşen Analizi (PCA)
+
+### Makine Öğrenmesi Modelleri
+Aşağıdaki yöntemler karşılaştırmalı olarak analiz edilecektir:
+
+1. **Eğiticili Öğrenme (Supervised Learning)**
+   - Evrişimli Sinir Ağları (CNN)
+   - Vision Transformer (ViT)
+
+2. **Yarı Eğiticili Öğrenme (Semi-Supervised Learning)**
+   - Self-Training yöntemi
+
+### Eğitim Stratejileri
+- **Curriculum Learning:** Eğitimin kararlılığını ve yakınsamasını artırmak için uygulanacak
+
+### Model Değerlendirme Metrikleri
+- **Accuracy (Doğruluk):** Genel sınıflandırma başarısı
+- **Precision (Kesinlik):** Pozitif tahminlerin doğruluğu
+- **Recall (Duyarlılık):** Pozitif örneklerin bulunabilirliği
+- **F1-Score:** Kesinlik ve duyarlılık dengesini ölçer
+- **Kappa Katsayısı:** Sınıflar arası anlaşma derecesi
+
+---
+
+## 💻 Teknoloji Yığını
+
+### Programlama ve Kütüphaneler
+- **Dil:** Python
+- **Görüntü İşleme:** OpenCV
+- **Makine Öğrenmesi:** Scikit-learn
+- **Derin Öğrenme:** PyTorch veya TensorFlow
+
+### Grafik Kullanıcı Arayüzü (GUI)
+- **Ön Yüz:** React
+- **Arka Uç:** Python
+- **İşlem Yöntemi:** Multithreading (Çok İzlekli yapı)
+  - Yüklenen hiperspektral görüntünün aynı anda birden fazla model (CNN, ViT, Self-Training) ile sınıflandırma tahmini yapabilmesini sağlar
+  - Her model tahminini ayrı thread'de çalıştırarak, kullanıcı arayüzünün duyarlı (responsive) kalmasını garantiler
+  - Eşzamanlı işlem gerçekleştirilerek tüm model sonuçları paralel şekilde alınabilir
+
+### Geliştirme Ortamları
+- VS Code
+- Google Colab
+
+### Versiyon Yönetimi
+- GitHub
+
+---
+
+## 📋 Proje Çıktıları
+
+### 1. Teknik Dokümantasyon
+Kapsamlı bir teknik rapor sunan:
+- Eğiticili ve yarı eğiticili öğrenme yöntemlerinin performans verileri
+- Accuracy, Precision, Recall, F1-Score ve Kappa metriklerini içeren karşılaştırmalı tablolar
+- Karışıklık Matrisleri (Confusion Matrices)
+- Eğitim/Doğrulama Accuracy ve Loss grafikleri
+- Curriculum Learning stratejisinin etkinlik analizi
+
+### 2. Grafik Kullanıcı Arayüzü (GUI)
+Kullanıcılar tarafından kolayca kullanılabilecek uygulama:
+- Hiperspektral görüntü yükleme ve görselleştirme
+- **Multithreaded Paralel Tahmin:** Yüklenen görüntü aynı anda tüm modeller tarafından işlenerek çoklu sınıflandırma tahmini
+  - CNN modeli ile tahmin (Thread-1)
+  - ViT modeli ile tahmin (Thread-2)
+  - Self-Training modeli ile tahmin (Thread-3)
+  - Tüm tahminler eşzamanlı olarak gerçekleşir ve sonuçlar anında görüntülenir
+- Tahmin sonuçlarının karşılaştırmalı görünümü
+- Eğitim geçmişi ve istatistik paneli
+- Kesintisiz kullanıcı deneyimi (UI thread'inin engellenmemesi)
+
+### 3. Kaynak Kodlar
+- GitHub deposunda sürüm kontrol sistemine uygun şekilde yapılandırılmış tüm kodlar
+- Detaylı inline documentation ve docstring'ler
+- Replicable ve reproducible araştırma yapısı
+
+---
+
+## 📈 Beklenen Çıktılar
+
+1. **Yüksek Performanslı Modeller:** Hiperspektral görüntü sınıflandırmasında %95+ doğruluk oranı
+2. **Etkili GUI:** Eğitim görmemiş kullanıcıların model tahmini yapabilmesi
+3. **Bilimsel Katkı:** Eğiticili vs yarı eğiticili yöntemlerin karşılaştırmalı analizi
+4. **Açık Kaynak Kod:** Geçmiş ve gelecek araştırmacılar için referans kaynağı
+
+---
+
+## 🚀 Hızlı Başlangıç
+
 ```bash
-git clone <repository_url>
-cd hyperspectral_classification
-```
-
-2. Sanal ortam oluşturun (önerilir):
-```bash
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# veya
-venv\Scripts\activate  # Windows
-```
-
-3. Gerekli paketleri yükleyin:
-```bash
+# Gerekli kütüphaneleri yükle
 pip install -r requirements.txt
+
+# Veri setlerini indir
+python scripts/download_datasets.py
+
+# Modeli eğit
+python train.py --config config/config.yaml
+
+# GUI'yi başlat
+python gui/app.py
 ```
 
-4. Jupyter notebook'u başlatın:
-```bash
-jupyter notebook
-```
+---
 
-## Kullanım
+## 📞 İletişim
 
-### 1. Veri Yükleme ve Görselleştirme
-`notebooks/data_loader.ipynb` notebook'unu açın ve hücreleri sırasıyla çalıştırın:
-- Gerekli kütüphaneleri içe aktarma
-- MAT dosyalarından veri yükleme
-- Veri yapısı ve boyutlarının doğrulanması
-- Örnek spektral bandları ve ground truth haritasının görselleştirilmesi
-- Veri istatistiklerinin hesaplanması
+- **Tan Erciyas:** tan.erciyas@std.yildiz.edu.tr | 05053536058
+- **Kerem Baydar:** kerem.baydar@std.yildiz.edu.tr | 05447354100
 
-## Dizin Yapısı
+---
 
-```
-hyperspectral_classification/
-├── README.md              # Proje dokumentasyon
-├── requirements.txt       # Python bağımlılıkları
-├── data/
-│   ├── Indian_pines_corrected.mat    # Hiperspektral görüntü data (145x145x200)
-│   └── Indian_pines_gt.mat           # Ground truth etiketleri (145x145)
-├── notebooks/
-│   └── data_loader.ipynb             # Veri yükleme ve analiz notebook'u
-├── src/                   # Sınıflandırma modülleri (geliştirme aşaması)
-└── outputs/               # Sonuçlar ve çıktılar
-```
+## 📄 Lisans
 
-## Teknolojiler
+Bu proje Yıldız Teknik Üniversitesi Bilgisayar Mühendisliği bitirme projesidir.
 
-- **NumPy**: Sayısal hesaplamalar
-- **SciPy**: MAT dosya işlemleri
-- **Matplotlib**: Veri görselleştirme
-- **Scikit-learn**: Makine öğrenmesi algoritmaları
-- **Jupyter**: İnteraktif analiz
+---
 
-## Sonraki Adımlar
-
-- [ ] Veri ön işleme (normalizasyon, boyut indirgeme)
-- [ ] Eğitim/test bölümlemesi
-- [ ] Sınıflandırma modelleri (SVM, Random Forest, CNN, vb.)
-- [ ] Model performans değerlendirmesi
-- [ ] Sonuçların görselleştirilmesi
-
-## Kaynaklar
-
-- [Indian Pines Dataset](https://www.ehu.eus/ccwintco/index.php?title=Hyperspectral_Remote_Sensing_Scenes)
-- [Hiperspektral Görüntü İşleme](https://en.wikipedia.org/wiki/Hyperspectral_imaging)
-
-## Lisans
-
-MIT License
-
-## Yazarlar
-
-Hiperspektral Classification Projesi
+**Son Güncelleme:** 28 Şubat 2026
