@@ -32,19 +32,19 @@ Proje kapsamında aşağıdaki üç temel hiperspektral veri seti kullanılacakt
 - **Boyut:** 145×145 piksel
 - **Bant Sayısı:** 200 spektral bant
 - **Sınıf Sayısı:** 16 sınıf
-- **Kaynak:** [Kaggle - Indian Pines Hyperspectral Dataset](https://www.kaggle.com/datasets/abhijeetgo/indian-pines-hyperspectral-dataset)
+- **Kaynak:** [Hyperspectral Remote Sensing Scenes](https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes)
 
 ### 2. Pavia University
 - **Boyut:** 610×340 piksel
 - **Bant Sayısı:** 103 spektral bant
 - **Sınıf Sayısı:** 9 sınıf
-- **Kaynak:** [Kaggle - Pavia University HSI](https://www.kaggle.com/datasets/syamkakarla/pavia-university-hsi)
+- **Kaynak:** [Hyperspectral Remote Sensing Scenes](https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes)
 
 ### 3. Salinas
 - **Boyut:** 512×217 piksel
 - **Bant Sayısı:** 204 spektral bant
 - **Sınıf Sayısı:** 16 sınıf
-- **Kaynak:** [Kaggle - Salinas Dataset](https://www.kaggle.com/datasets/wangyijialili/salinas)
+- **Kaynak:** [Hyperspectral Remote Sensing Scenes](https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes)
 
 ---
 
@@ -164,7 +164,73 @@ python gui/app.py
 
 ---
 
-## 📄 Lisans
+## � Hiperspektral Görüntü Yapısı Detaylı Açıklama
+
+### 📐 Boyutlandırma Mantığı
+
+Veri setleri 3D arrays olarak yüklenir. Örneğin Indian Pines:
+```
+indian_img.shape = (145, 145, 200)
+                     ↓    ↓    ↓
+                   Yükseklik Genişlik Spektral Bant
+```
+
+### 🎨 Veri Yapısı Gösterimi
+
+Hiperspektral görüntü, çok sayıda spektral bant katmanından oluşan bir 3D veri kübüdür:
+
+```
+┌─────────────────────────────────────┐
+│  145×145 Bant 0 (UV)                │  ← Katman 1
+│  [piksel değerleri matrisi]         │
+└─────────────────────────────────────┘
+         ⬇️
+┌─────────────────────────────────────┐
+│  145×145 Bant 1                     │  ← Katman 2
+│  [piksel değerleri matrisi]         │
+└─────────────────────────────────────┘
+         ⬇️
+         ... (Bant 2-198) ...
+         ⬇️
+┌─────────────────────────────────────┐
+│  145×145 Bant 199 (İnfrared)        │  ← Katman 200
+│  [piksel değerleri matrisi]         │
+└─────────────────────────────────────┘
+```
+
+### 🔍 Spektral Bant Nedir?
+
+Her bant farklı bir **dalga boyundaki** elektromanyetik ışın ölçümüdür:
+
+**Kod Örneği:**
+```python
+# Tek bir bant (normal gri görüntü gibi)
+bant_0 = indian_img[:, :, 0]      # Shape: (145, 145)
+
+# Bir piksel'in tüm spektral imzası
+pixel_spectrum = indian_img[10, 20, :]  # Shape: (200,) → 200 bant değeri
+
+# Tüm veri kübü
+all_data = indian_img  # Shape: (145, 145, 200)
+```
+
+### 📊 Spektral İmza Örneği
+
+Bir piksel için farklı dalga boylarındaki ölçümler:
+
+| Bant | Dalga Boyu | Piksel Değeri |
+|------|-----------|---------------|
+| 0 | 400 nm (Mavi) | 234 |
+| 50 | 550 nm (Yeşil) | 456 |
+| 100 | 700 nm (Kırmızı) | 678 |
+| 150 | 1400 nm | 412 |
+| 199 | 2500 nm (İnfrared) | 123 |
+
+Toplam **21,025 piksel** × **200 spektral değer** = **4,205,000 sayı** verisi içerir!
+
+---
+
+## �📄 Lisans
 
 Bu proje Yıldız Teknik Üniversitesi Bilgisayar Mühendisliği bitirme projesidir.
 
