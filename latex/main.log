@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.1)  10 MAY 2026 21:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.10)  10 MAY 2026 22:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/tanerciyas/workspace/github.com/ghurstird/hyperspectral_classification/latex/main.tex
-(/Users/tanerciyas/workspace/github.com/ghurstird/hyperspectral_classification/latex/main.tex
+**"/Users/kerem/Documents/Kerem/Codes/Github Projects/bitirme/hyperspectral_classification/latex/main.tex"
+(/Users/kerem/Documents/Kerem/Codes/Github Projects/bitirme/hyperspectral_classification/latex/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/local/texlive/2026/texmf-dist/tex/latex/base/book.cls
@@ -1031,32 +1031,32 @@ File: pgfcalendar.code.tex 2025-08-29 v3.1.11a (3.1.11a)
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 34.
-LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 35.
+LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 35.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdacmr.fd
 File: mdacmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 34.
-LaTeX Font Info:    Trying to load font information for MDB+cmr on input line 34.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 35.
+LaTeX Font Info:    Trying to load font information for MDB+cmr on input line 35.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbcmr.fd
 File: mdbcmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    ... okay on input line 35.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
@@ -1075,8 +1075,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 34.
-Package biblatex Info: Reference segment=0 on input line 34.
+Package biblatex Info: Reference section=0 on input line 35.
+Package biblatex Info: Reference segment=0 on input line 35.
  (/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count522
@@ -1271,9 +1271,20 @@ LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
 
  [6
 
-] [7
+] (./main.lot
+Underfull \hbox (badness 2772) in paragraph at lines 1--1
+ [][] []\T1/mdbch/m/n/12 Groundtruth classes for the Indian Pines scene and their 
+ []
+
+)
+\tf@lot=\write8
+\openout8 = `main.lot'.
+
+ [7
 
 ] [8
+
+] [9
 
 ]) (./RD_projectChapters/1-chapter.tex
  1.
@@ -1375,60 +1386,128 @@ Underfull \hbox (badness 4024) in paragraph at lines 2--3
 \T1/mdbch/m/n/12 The system design phase constitutes the core of this project, defining the
  []
 
+<images/workflow.png, id=69, 2822.545pt x 1452.42625pt>
+File: images/workflow.png Graphic file (type png)
+<use images/workflow.png>
+Package pdftex.def Info: images/workflow.png  used on input line 6.
+(pdftex.def)             Requested size: 426.79135pt x 219.60535pt.
 [9
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
-[]\T1/mdbch/b/n/12 3D-CNN: \T1/mdbch/m/n/12 This model employs three-dimensional kernels to extract
+ <./images/workflow.png>]
+<images/indian_pines_band.png, id=75, 353.4003pt x 278.9622pt>
+File: images/indian_pines_band.png Graphic file (type png)
+<use images/indian_pines_band.png>
+Package pdftex.def Info: images/indian_pines_band.png  used on input line 23.
+(pdftex.def)             Requested size: 204.85802pt x 161.7088pt.
+<images/Indian_pines_gt.png, id=76, 353.4003pt x 280.4076pt>
+File: images/Indian_pines_gt.png Graphic file (type png)
+<use images/Indian_pines_gt.png>
+Package pdftex.def Info: images/Indian_pines_gt.png  used on input line 30.
+(pdftex.def)             Requested size: 204.85802pt x 162.54666pt.
+ [10 <./images/indian_pines_band.png> <./images/Indian_pines_gt.png>]
+<images/pavia_band.png, id=80, 353.4003pt x 280.4076pt>
+File: images/pavia_band.png Graphic file (type png)
+<use images/pavia_band.png>
+Package pdftex.def Info: images/pavia_band.png  used on input line 71.
+(pdftex.def)             Requested size: 204.85802pt x 162.54666pt.
+<images/paviau_gt.png, id=81, 353.4003pt x 278.9622pt>
+File: images/paviau_gt.png Graphic file (type png)
+<use images/paviau_gt.png>
+Package pdftex.def Info: images/paviau_gt.png  used on input line 78.
+(pdftex.def)             Requested size: 204.85802pt x 161.7088pt.
+ [11]
+<images/salinas_band.png, id=85, 449.5194pt x 338.2236pt>
+File: images/salinas_band.png Graphic file (type png)
+<use images/salinas_band.png>
+Package pdftex.def Info: images/salinas_band.png  used on input line 112.
+(pdftex.def)             Requested size: 204.85802pt x 154.13454pt.
+<images/salinas_gt.png, id=86, 449.5194pt x 338.2236pt>
+File: images/salinas_gt.png Graphic file (type png)
+<use images/salinas_gt.png>
+Package pdftex.def Info: images/salinas_gt.png  used on input line 119.
+(pdftex.def)             Requested size: 204.85802pt x 154.13454pt.
+ [12 <./images/pavia_band.png> <./images/paviau_gt.png>] [13 <./images/salinas_band.png> <./images/salinas_gt.png>]
+<images/block_diagram.png, id=93, 2826.56pt x 1475.5125pt>
+File: images/block_diagram.png Graphic file (type png)
+<use images/block_diagram.png>
+Package pdftex.def Info: images/block_diagram.png  used on input line 158.
+(pdftex.def)             Requested size: 426.79135pt x 222.78076pt.
+LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
+(Font)              scaled to size 12.86407pt on input line 177.
+
+Underfull \hbox (badness 4713) in paragraph at lines 177--178
+[]\T1/mdbch/b/n/12 Spatial Gaus-sian Fil-ter-ing: \T1/mdbch/m/n/12 A Gaussian filter is applied with $\OML/mdbch/m/it/12 ^^[ \OT1/mdbch/m/n/12 =
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 38--39
+Underfull \hbox (badness 2103) in paragraph at lines 177--178
+\OT1/mdbch/m/n/12 0\OML/mdbch/m/it/12 :\OT1/mdbch/m/n/12 5$ \T1/mdbch/m/n/12 along only the spatial axes ($\OML/mdbch/m/it/12 H \OMS/mdbch/m/n/12 ^^B \OML/mdbch/m/it/12 W$\T1/mdbch/m/n/12 ) of the normalized hypercube
+ []
+
+
+Underfull \hbox (badness 1348) in paragraph at lines 177--178
+\T1/cmtt/m/n/12 mode='reflect'\T1/mdbch/m/n/12 . Setting the spectral axis sigma to zero ensures that
+ []
+
+[14 <./images/block_diagram.png>]
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 179.
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 179.
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
+[]\T1/mdbch/b/n/12 3D-CNN: \T1/mdbch/m/n/12 This model employs three-dimensional kernels to extract
+ []
+
+[15{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+Underfull \hbox (badness 1325) in paragraph at lines 205--206
 \T1/mdbch/m/n/12 bands, the HSI patches are flattened into sequences of embeddings. A
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 38--39
+Underfull \hbox (badness 1270) in paragraph at lines 205--206
 \T1/mdbch/m/n/12 self-attention mechanism is applied to weigh the importance of different
  []
 
-[10]
-Underfull \hbox (badness 1028) in paragraph at lines 45--46
+
+Underfull \hbox (badness 1028) in paragraph at lines 212--213
 []\T1/mdbch/b/n/12 Curriculum Learn-ing (CL): \T1/mdbch/m/n/12 To ensure training stability, a CL strategy is
  []
 
-) [11]
+<images/SSL_flowchart.png, id=106, 2826.56pt x 1451.4225pt>
+File: images/SSL_flowchart.png Graphic file (type png)
+<use images/SSL_flowchart.png>
+Package pdftex.def Info: images/SSL_flowchart.png  used on input line 217.
+(pdftex.def)             Requested size: 426.79135pt x 219.14352pt.
+[16 <./images/SSL_flowchart.png>]) [17]
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 11.52008pt on input line 83.
- [12
+(Font)              scaled to size 11.52008pt on input line 84.
+ [18
 
 ]
-Underfull \hbox (badness 2418) in paragraph at lines 83--83
+Underfull \hbox (badness 2418) in paragraph at lines 84--84
 []\T1/mdbch/m/n/12 Z. Shu, Y. Wang, and Z. Yu, ``Dual attention transformer network for
  []
 
 
-Underfull \hbox (badness 1048) in paragraph at lines 83--83
+Underfull \hbox (badness 1048) in paragraph at lines 84--84
 []\T1/mdbch/m/n/12 M. F. Baumgardner, L. L. Biehl, and D. A. Landgrebe, ``220 band aviris
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--83
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
 []\T1/mdbch/m/n/12 I. Triguero, S. García, and F. Herrera, ``Self-labeled techniques for
  []
 
 
-Underfull \hbox (badness 1377) in paragraph at lines 83--83
+Underfull \hbox (badness 1377) in paragraph at lines 84--84
 \T1/mdbch/m/n/12 library,'' in \T1/mdbch/m/it/12 Ad-vances in Neu-ral In-for-ma-tion Pro-cess-ing Sys-tems 32\T1/mdbch/m/n/12 , 2019,
  []
 
-[13]
-LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
-(Font)              scaled to size 12.86407pt on input line 83.
- [14{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./cv.tex) [15
+[19] [20] (./cv.tex) [21
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260510211921 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+runsystem(latexminted cleantemp  --timestamp 20260510222030 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
  ***********
@@ -1440,18 +1519,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32969 strings out of 467525
- 694852 string characters out of 5418983
- 1603745 words of memory out of 5000000
- 61341 multiletter control sequences out of 15000+600000
- 680286 words of font info for 118 fonts, out of 8000000 for 9000
+ 33070 strings out of 467525
+ 697414 string characters out of 5418982
+ 1604299 words of memory out of 5000000
+ 61434 multiletter control sequences out of 15000+600000
+ 686093 words of font info for 125 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 100i,11n,147p,1421b,1367s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (24 pages, 204650 bytes).
+ 100i,12n,147p,1433b,1367s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7v.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on main.pdf (31 pages, 13630175 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
+ 170 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 63 words of extra memory for PDF output out of 10000 (max. 10000000)
 

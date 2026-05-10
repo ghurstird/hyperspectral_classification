@@ -1,22 +1,161 @@
 \chapter{SYSTEM DESIGN}
 The system design phase constitutes the core of this project, defining the architectural framework and procedural flow required to process high-dimensional hyperspectral data. This section provides a comprehensive overview of the materials used, the preprocessing pipeline, the deep learning architectures, and the novel learning strategies implemented to achieve high classification accuracy under limited supervision.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{images/workflow.png}
+    \caption{Overall Workflow of the Proposed HSI Classification System}
+    \label{fig:workflow}
+\end{figure}
+
 \section{Material and Dataset}
 The efficacy of hyperspectral image (HSI) classification models is heavily dependent on the quality and characteristics of the datasets used for training and validation. In this project, three benchmark datasets recognized in remote sensing literature are utilized: Indian Pines, Pavia University, and Salinas Scene.
 
 \subsection{Dataset Specifications}
-\begin{itemize}
-    \item \textbf{Indian Pines:} Collected by the AVIRIS sensor over North-Western Indiana, this dataset consists of $145 \times 145$ pixels and 224 spectral reflectance bands. It contains 16 classes of vegetation and land cover. Due to water absorption, the number of bands is typically reduced to 200 \cite{baumgardner2015220}.
-    \item \textbf{Pavia University:} Acquired by the ROSIS sensor over an urban area in Italy, it consists of $610 \times 340$ pixels with 103 spectral bands. It features 9 urban land-cover classes such as asphalt, meadows, and bricks \cite{dell2005pavia}.
-    \item \textbf{Salinas Scene:} Also collected by AVIRIS over Salinas Valley, California, this dataset features high spatial resolution with $512 \times 217$ pixels and 224 spectral bands (reduced to 204 after removing water absorption bands) \cite{salinas_dataset}.
-\end{itemize}
+
+\subsubsection{Indian Pines}
+Collected by the AVIRIS sensor over North-Western Indiana, this dataset consists of $145 \times 145$ pixels and 224 spectral reflectance bands. It contains 16 classes of vegetation and land cover. Due to water absorption, the number of bands is typically reduced to 200 \cite{baumgardner2015220}.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/indian_pines_band.png}
+        \caption{Indian Pines -- False-color band composite}
+        \label{fig:indian_pines_band}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/Indian_pines_gt.png}
+        \caption{Indian Pines -- Ground truth map}
+        \label{fig:indian_pines_gt}
+    \end{minipage}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \caption{Groundtruth classes for the Indian Pines scene and their respective samples number}
+    \label{tab:indian_pines_classes}
+    \renewcommand{\arraystretch}{1.2} % Satır aralıklarını biraz açarak daha okunaklı yapar
+    \begin{tabular}{|c|l|c|}
+        \hline
+        \textbf{\#} & \textbf{Class} & \textbf{Samples} \\ \hline
+        1 & Alfalfa & 46 \\ \hline
+        2 & Corn-notill & 1428 \\ \hline
+        3 & Corn-mintill & 830 \\ \hline
+        4 & Corn & 237 \\ \hline
+        5 & Grass-pasture & 483 \\ \hline
+        6 & Grass-trees & 730 \\ \hline
+        7 & Grass-pasture-mowed & 28 \\ \hline
+        8 & Hay-windrowed & 478 \\ \hline
+        9 & Oats & 20 \\ \hline
+        10 & Soybean-notill & 972 \\ \hline
+        11 & Soybean-mintill & 2455 \\ \hline
+        12 & Soybean-clean & 593 \\ \hline
+        13 & Wheat & 205 \\ \hline
+        14 & Woods & 1265 \\ \hline
+        15 & Buildings-Grass-Trees-Drives & 386 \\ \hline
+        16 & Stone-Steel-Towers & 93 \\ \hline
+        \multicolumn{2}{|r|}{\textbf{Total}} & \textbf{10249} \\ \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection{Pavia University}
+Acquired by the ROSIS sensor over an urban area in Italy, it consists of $610 \times 340$ pixels with 103 spectral bands. It features 9 urban land-cover classes such as asphalt, meadows, and bricks \cite{dell2005pavia}.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/pavia_band.png}
+        \caption{Pavia University -- False-color band composite}
+        \label{fig:pavia_band}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/paviau_gt.png}
+        \caption{Pavia University -- Ground truth map}
+        \label{fig:pavia_gt}
+    \end{minipage}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \caption{Groundtruth classes for the Pavia University scene and their respective samples number}
+    \label{tab:pavia_classes}
+    \renewcommand{\arraystretch}{1.2} % Satır aralıklarını biraz açarak daha okunaklı yapar
+    \begin{tabular}{|c|l|c|}
+        \hline
+        \textbf{\#} & \textbf{Class} & \textbf{Samples} \\ \hline
+        1 & Asphalt & 6631 \\ \hline
+        2 & Meadows & 18649 \\ \hline
+        3 & Gravel & 2099 \\ \hline
+        4 & Trees & 3064 \\ \hline
+        5 & Painted metal sheets & 1345 \\ \hline
+        6 & Bare Soil & 5029 \\ \hline
+        7 & Bitumen & 1330 \\ \hline
+        8 & Self-Blocking Bricks & 3682 \\ \hline
+        9 & Shadows & 947 \\ \hline
+        \multicolumn{2}{|r|}{\textbf{Total}} & \textbf{42776} \\ \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection{Salinas Scene}
+Also collected by AVIRIS over Salinas Valley, California, this dataset features high spatial resolution with $512 \times 217$ pixels and 224 spectral bands (reduced to 204 after removing water absorption bands) \cite{salinas_dataset}.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/salinas_band.png}
+        \caption{Salinas Scene -- False-color band composite}
+        \label{fig:salinas_band}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/salinas_gt.png}
+        \caption{Salinas Scene -- Ground truth map}
+        \label{fig:salinas_gt}
+    \end{minipage}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \caption{Groundtruth classes for the Salinas scene and their respective samples number}
+    \label{tab:salinas_classes}
+    \renewcommand{\arraystretch}{1.2} % Satır aralıklarını biraz açarak daha okunaklı yapar
+    \begin{tabular}{|c|l|c|}
+        \hline
+        \textbf{\#} & \textbf{Class} & \textbf{Samples} \\ \hline
+        1 & Brocoli\_green\_weeds\_1 & 2009 \\ \hline
+        2 & Brocoli\_green\_weeds\_2 & 3726 \\ \hline
+        3 & Fallow & 1976 \\ \hline
+        4 & Fallow\_rough\_plow & 1394 \\ \hline
+        5 & Fallow\_smooth & 2678 \\ \hline
+        6 & Stubble & 3959 \\ \hline
+        7 & Celery & 3579 \\ \hline
+        8 & Grapes\_untrained & 11271 \\ \hline
+        9 & Soil\_vinyard\_develop & 6203 \\ \hline
+        10 & Corn\_senesced\_green\_weeds & 3278 \\ \hline
+        11 & Lettuce\_romaine\_4wk & 1068 \\ \hline
+        12 & Lettuce\_romaine\_5wk & 1927 \\ \hline
+        13 & Lettuce\_romaine\_6wk & 916 \\ \hline
+        14 & Lettuce\_romaine\_7wk & 1070 \\ \hline
+        15 & Vinyard\_untrained & 7268 \\ \hline
+        16 & Vinyard\_vertical\_trellis & 1807 \\ \hline
+        \multicolumn{2}{|r|}{\textbf{Total}} & \textbf{54129} \\ \hline
+    \end{tabular}
+\end{table}
 
 \subsection{Data Structure and Storage}
 The data is structured as 3D hypercubes ($H \times W \times B$), where $H$ and $W$ represent spatial dimensions and $B$ represents the spectral bands. To optimize memory usage during training, the datasets are stored in NumPy array formats (`.npy`) and processed in patches to preserve local spatial relationships.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    % 
+    \includegraphics[width=\linewidth]{images/block_diagram.png}
     \caption{General Block Diagram of the Proposed HSI Classification System}
     \label{fig:block_diagram}
 \end{figure}
@@ -25,11 +164,39 @@ The data is structured as 3D hypercubes ($H \times W \times B$), where $H$ and $
 The proposed system follows a modular pipeline: preprocessing, feature extraction, and a semi-supervised learning phase supported by curriculum learning.
 
 \subsection{Preprocessing and Dimensionality Reduction}
-To address the "curse of dimensionality," the following steps are executed:
+To address the "curse of dimensionality" inherent in hyperspectral data, the following sequential steps are applied to all three datasets.
+
 \begin{enumerate}
-    \item \textbf{Noise Reduction:} Gaussian filtering is applied to spatial layers to mitigate sensor-induced noise without blurring class boundaries.
-    \item \textbf{Principal Component Analysis (PCA):} PCA is utilized to reduce the spectral dimension from $B$ bands to $k$ principal components (where $k \ll B$) while retaining more than 99\% of the variance \cite{pedregosa2011scikit}.
+    \item \textbf{Global Min-Max Normalization:} The raw hypercube is reshaped to a 2D matrix and a single global minimum and maximum is computed across all pixels and all bands. Each value is then rescaled to $[0,1]$ as follows:
+    \begin{equation}
+        \hat{x} = \frac{x - x_{\min}}{x_{\max} - x_{\min}}
+        \label{eq:normalization}
+    \end{equation}
+    Band-wise normalization was deliberately avoided to preserve the natural variance ratio between bands.
+
+    \item \textbf{Spatial Gaussian Filtering:} A Gaussian filter is applied with $\sigma = 0.5$ along only the spatial axes ($H \times W$) of the normalized hypercube using \texttt{scipy.ndimage.gaussian\_filter} with \texttt{sigma=(0.5, 0.5, 0)} and \texttt{mode='reflect'}. Setting the spectral axis sigma to zero ensures that inter-band relationships remain intact while sensor-induced spatial noise is attenuated.
+
+    \item \textbf{Fixed-Component PCA:} PCA with a fixed $n\_components = 30$ is applied to the filtered data after reshaping it to $(H \times W, B)$. The variance-based threshold (99.5\%) was evaluated first but yielded only 4--5 components for Pavia University and Salinas, which is insufficient for the CNN and ViT input depths. The resulting reduced cube is reshaped back to $(H, W, 30)$ \cite{pedregosa2011scikit}.
 \end{enumerate}
+
+\subsection{Patch Extraction and Dataset Splitting}
+For each labeled pixel $(r, c)$ where \texttt{gt[r,c] > 0}, a $15 \times 15$ spatial patch is extracted from the PCA-reduced cube, producing a sample of shape $15 \times 15 \times 30$. Background pixels (label $= 0$) are excluded entirely. To allow boundary pixels to serve as valid patch centers, the cube is first padded by $\lfloor 15/2 \rfloor = 7$ pixels on each spatial side using reflect padding.
+
+The resulting patches are split into training and test sets with \texttt{test\_size=0.2}, \texttt{stratify=y}, and \texttt{random\_state=42}, ensuring minority classes are proportionally represented in both splits. The resulting sample counts are given in Table~\ref{tab:split_sizes}.
+
+\begin{table}[H]
+    \centering
+    \caption{Patch counts after stratified 80/20 train-test split ($15 \times 15 \times 30$)}
+    \label{tab:split_sizes}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|l|c|c|c|}
+        \hline
+        \textbf{Dataset} & \textbf{Total} & \textbf{Train (80\%)} & \textbf{Test (20\%)} \\ \hline
+        Indian Pines     & 10249 & 8199  & 2050  \\ \hline
+        Pavia University & 42776 & 34220 & 8556  \\ \hline
+        Salinas Scene    & 54129 & 43303 & 10826 \\ \hline
+    \end{tabular}
+\end{table}
 
 \subsection{Model Architectures}
 The system implements two state-of-the-art architectures to evaluate performance differences:
@@ -45,12 +212,43 @@ The core innovation of the project lies in handling labeled data scarcity:
     \item \textbf{Curriculum Learning (CL):} To ensure training stability, a CL strategy is implemented where the model is first presented with "easy" samples (pixels with high spectral purity and clear spatial context) before transitioning to "difficult" samples near decision boundaries \cite{bengio2009curriculum}.
 \end{itemize}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    % 
+    \includegraphics[width=\linewidth]{images/SSL_flowchart.png}
     \caption{Flowchart of the Semi-Supervised Learning Strategy}
     \label{fig:flowchart}
 \end{figure}
+
+\subsection{Evaluation Metrics}
+To assess model performance, five standard metrics are employed. Let $TP_c$, $FP_c$, and $FN_c$ denote the true positives, false positives, and false negatives for class $c$, and let $N$ be the total number of test samples.
+
+\begin{itemize}
+    \item \textbf{Overall Accuracy (OA):} The ratio of correctly classified pixels to the total number of test pixels:
+    \begin{equation}
+        \text{OA} = \frac{\sum_{c} TP_c}{N}
+    \end{equation}
+
+    \item \textbf{Precision:} The fraction of pixels predicted as class $c$ that truly belong to class $c$, averaged across all classes (macro):
+    \begin{equation}
+        \text{Precision} = \frac{1}{C} \sum_{c=1}^{C} \frac{TP_c}{TP_c + FP_c}
+    \end{equation}
+
+    \item \textbf{Recall:} The fraction of true class-$c$ pixels that are correctly identified:
+    \begin{equation}
+        \text{Recall} = \frac{1}{C} \sum_{c=1}^{C} \frac{TP_c}{TP_c + FN_c}
+    \end{equation}
+
+    \item \textbf{F1-Score:} The harmonic mean of Precision and Recall:
+    \begin{equation}
+        \text{F1} = \frac{2 \cdot \text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}
+    \end{equation}
+
+    \item \textbf{Cohen's Kappa ($\kappa$):} A metric that corrects Overall Accuracy for agreement expected by chance. Given the observed accuracy $p_o$ and the chance agreement $p_e$:
+    \begin{equation}
+        \kappa = \frac{p_o - p_e}{1 - p_e}
+    \end{equation}
+    A value of $\kappa = 1$ indicates perfect classification, while $\kappa = 0$ indicates performance equivalent to random chance.
+\end{itemize}
 
 \subsection{GUI and Multithreading Integration}
 To provide a practical application, a React-based front-end and a Python/FastAPI back-end are developed. To ensure a responsive user experience during heavy model inference, a multithreading approach is utilized. The inference engine runs in a separate thread from the I/O operations, allowing the user to interact with the GUI while the deep learning models process large hyperspectral hypercubes in the background.
