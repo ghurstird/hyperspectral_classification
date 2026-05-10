@@ -1,0 +1,23 @@
+\contentsline {chapter}{LIST OF ABBREVIATIONS}{iv}{}%
+\contentsline {chapter}{LIST OF FIGURES}{v}{}%
+\contentsline {chapter}{ABSTRACT}{vi}{}%
+\contentsline {chapter}{ÖZET}{vii}{}%
+\contentsline {chapter}{\numberline {1}INTRODUCTION}{1}{}%
+\contentsline {section}{\numberline {1.1}Purpose}{2}{}%
+\contentsline {section}{\numberline {1.2}Preliminary Investigation}{2}{}%
+\contentsline {chapter}{\numberline {2}LITERATURE ANALYSIS}{3}{}%
+\contentsline {section}{\numberline {2.1}Traditional Machine Learning Approaches}{3}{}%
+\contentsline {section}{\numberline {2.2}Convolutional Neural Networks (CNN) Based Approaches}{4}{}%
+\contentsline {section}{\numberline {2.3}Autoencoders, Generative Networks, and RNNs}{4}{}%
+\contentsline {section}{\numberline {2.4}Transformer Architectures and Semi-Supervised Methods}{4}{}%
+\contentsline {section}{\numberline {2.5}Current Standing in Literature and Original Value of the Study}{5}{}%
+\contentsline {chapter}{\numberline {3}SYSTEM ANALYSIS AND FEASIBILITY}{6}{}%
+\contentsline {section}{\numberline {3.1}System Analysis}{6}{}%
+\contentsline {section}{\numberline {3.2}Feasibility}{7}{}%
+\contentsline {subsection}{\numberline {3.2.1}Technical Feasibility}{7}{}%
+\contentsline {subsubsection}{\numberline {3.2.1.1}Hardware Feasibility}{7}{}%
+\contentsline {subsection}{\numberline {3.2.2}Legal Feasibility}{7}{}%
+\contentsline {subsection}{\numberline {3.2.3}Economic Feasibility}{8}{}%
+\contentsline {subsection}{\numberline {3.2.4}Workforce and Time Feasibility}{8}{}%
+\contentsline {chapter}{References}{9}{}%
+\contentsline {chapter}{Curriculum Vitae}{12}{}%

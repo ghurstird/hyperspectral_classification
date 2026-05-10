@@ -1,3 +1,4 @@
 claude_agent.txt
 datasets/
 notebooks/datasets
+.venv/
