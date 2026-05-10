@@ -1,3 +1,56 @@
-\chapter{SİSTEM TASARIMI}
-\section{Materyal ve Veri Kümesi}
-\section{Metot}
+\chapter{SYSTEM DESIGN}
+The system design phase constitutes the core of this project, defining the architectural framework and procedural flow required to process high-dimensional hyperspectral data. This section provides a comprehensive overview of the materials used, the preprocessing pipeline, the deep learning architectures, and the novel learning strategies implemented to achieve high classification accuracy under limited supervision.
+
+\section{Material and Dataset}
+The efficacy of hyperspectral image (HSI) classification models is heavily dependent on the quality and characteristics of the datasets used for training and validation. In this project, three benchmark datasets recognized in remote sensing literature are utilized: Indian Pines, Pavia University, and Salinas Scene.
+
+\subsection{Dataset Specifications}
+\begin{itemize}
+    \item \textbf{Indian Pines:} Collected by the AVIRIS sensor over North-Western Indiana, this dataset consists of $145 \times 145$ pixels and 224 spectral reflectance bands. It contains 16 classes of vegetation and land cover. Due to water absorption, the number of bands is typically reduced to 200 \cite{baumgardner2015220}.
+    \item \textbf{Pavia University:} Acquired by the ROSIS sensor over an urban area in Italy, it consists of $610 \times 340$ pixels with 103 spectral bands. It features 9 urban land-cover classes such as asphalt, meadows, and bricks \cite{dell2005pavia}.
+    \item \textbf{Salinas Scene:} Also collected by AVIRIS over Salinas Valley, California, this dataset features high spatial resolution with $512 \times 217$ pixels and 224 spectral bands (reduced to 204 after removing water absorption bands) \cite{salinas_dataset}.
+\end{itemize}
+
+\subsection{Data Structure and Storage}
+The data is structured as 3D hypercubes ($H \times W \times B$), where $H$ and $W$ represent spatial dimensions and $B$ represents the spectral bands. To optimize memory usage during training, the datasets are stored in NumPy array formats (`.npy`) and processed in patches to preserve local spatial relationships.
+
+\begin{figure}[htbp]
+    \centering
+    % 
+    \caption{General Block Diagram of the Proposed HSI Classification System}
+    \label{fig:block_diagram}
+\end{figure}
+
+\section{Methodology}
+The proposed system follows a modular pipeline: preprocessing, feature extraction, and a semi-supervised learning phase supported by curriculum learning.
+
+\subsection{Preprocessing and Dimensionality Reduction}
+To address the "curse of dimensionality," the following steps are executed:
+\begin{enumerate}
+    \item \textbf{Noise Reduction:} Gaussian filtering is applied to spatial layers to mitigate sensor-induced noise without blurring class boundaries.
+    \item \textbf{Principal Component Analysis (PCA):} PCA is utilized to reduce the spectral dimension from $B$ bands to $k$ principal components (where $k \ll B$) while retaining more than 99\% of the variance \cite{pedregosa2011scikit}.
+\end{enumerate}
+
+\subsection{Model Architectures}
+The system implements two state-of-the-art architectures to evaluate performance differences:
+\begin{itemize}
+    \item \textbf{3D-CNN:} This model employs three-dimensional kernels to extract spectral-spatial features simultaneously. The architecture includes volumetric convolution layers followed by batch normalization and ReLU activation to prevent vanishing gradients \cite{chen2016deep}.
+    \item \textbf{Vision Transformer (ViT):} To capture long-range dependencies across spectral bands, the HSI patches are flattened into sequences of embeddings. A self-attention mechanism is applied to weigh the importance of different spectral-spatial tokens \cite{dosovitskiy2020image}.
+\end{itemize}
+
+\subsection{Semi-Supervised Learning and Curriculum Learning}
+The core innovation of the project lies in handling labeled data scarcity:
+\begin{itemize}
+    \item \textbf{Self-Training:} The model initially trains on a small set of labeled pixels. It then iteratively predicts labels for the unlabeled pool, incorporating high-confidence samples back into the training set \cite{triguero2015self}.
+    \item \textbf{Curriculum Learning (CL):} To ensure training stability, a CL strategy is implemented where the model is first presented with "easy" samples (pixels with high spectral purity and clear spatial context) before transitioning to "difficult" samples near decision boundaries \cite{bengio2009curriculum}.
+\end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+    % 
+    \caption{Flowchart of the Semi-Supervised Learning Strategy}
+    \label{fig:flowchart}
+\end{figure}
+
+\subsection{GUI and Multithreading Integration}
+To provide a practical application, a React-based front-end and a Python/FastAPI back-end are developed. To ensure a responsive user experience during heavy model inference, a multithreading approach is utilized. The inference engine runs in a separate thread from the I/O operations, allowing the user to interact with the GUI while the deep learning models process large hyperspectral hypercubes in the background.

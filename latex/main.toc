@@ -1,7 +1,7 @@
-\contentsline {chapter}{LIST OF ABBREVIATIONS}{iv}{}%
-\contentsline {chapter}{LIST OF FIGURES}{v}{}%
-\contentsline {chapter}{ABSTRACT}{vi}{}%
-\contentsline {chapter}{ÖZET}{vii}{}%
+\contentsline {chapter}{LIST OF ABBREVIATIONS}{v}{}%
+\contentsline {chapter}{LIST OF FIGURES}{vi}{}%
+\contentsline {chapter}{ABSTRACT}{vii}{}%
+\contentsline {chapter}{ÖZET}{viii}{}%
 \contentsline {chapter}{\numberline {1}INTRODUCTION}{1}{}%
 \contentsline {section}{\numberline {1.1}Purpose}{2}{}%
 \contentsline {section}{\numberline {1.2}Preliminary Investigation}{2}{}%
@@ -19,5 +19,14 @@
 \contentsline {subsection}{\numberline {3.2.2}Legal Feasibility}{7}{}%
 \contentsline {subsection}{\numberline {3.2.3}Economic Feasibility}{8}{}%
 \contentsline {subsection}{\numberline {3.2.4}Workforce and Time Feasibility}{8}{}%
-\contentsline {chapter}{References}{9}{}%
-\contentsline {chapter}{Curriculum Vitae}{12}{}%
+\contentsline {chapter}{\numberline {4}SYSTEM DESIGN}{9}{}%
+\contentsline {section}{\numberline {4.1}Material and Dataset}{9}{}%
+\contentsline {subsection}{\numberline {4.1.1}Dataset Specifications}{9}{}%
+\contentsline {subsection}{\numberline {4.1.2}Data Structure and Storage}{10}{}%
+\contentsline {section}{\numberline {4.2}Methodology}{10}{}%
+\contentsline {subsection}{\numberline {4.2.1}Preprocessing and Dimensionality Reduction}{10}{}%
+\contentsline {subsection}{\numberline {4.2.2}Model Architectures}{10}{}%
+\contentsline {subsection}{\numberline {4.2.3}Semi-Supervised Learning and Curriculum Learning}{11}{}%
+\contentsline {subsection}{\numberline {4.2.4}GUI and Multithreading Integration}{11}{}%
+\contentsline {chapter}{References}{12}{}%
+\contentsline {chapter}{Curriculum Vitae}{15}{}%

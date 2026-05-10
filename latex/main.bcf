@@ -2414,6 +2414,14 @@
     <bcf:citekey order="34" intorder="1">baumer2015visual</bcf:citekey>
     <bcf:citekey order="35" intorder="1">dabbish2012social</bcf:citekey>
     <bcf:citekey order="36" intorder="1">bisong2019google</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">baumgardner2015220</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">dell2005pavia</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">salinas_dataset</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">pedregosa2011scikit</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">chen2016deep</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">dosovitskiy2020image</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">triguero2015self</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">bengio2009curriculum</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
