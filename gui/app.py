@@ -782,7 +782,9 @@ class StatsPanel(QFrame):
         self.table.setEditTriggers(QTableWidget.EditTrigger.NoEditTriggers)
         self.table.setAlternatingRowColors(True)
         self.table.setShowGrid(False)
-        self.table.setMinimumHeight(220)
+        self.table.setMinimumHeight(100)
+        self.table.setSizeAdjustPolicy(QTableWidget.SizeAdjustPolicy.AdjustToContents)
+        self.table.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         layout.addWidget(self.table)
         self._visible = True
 
@@ -831,6 +833,13 @@ class StatsPanel(QFrame):
         self.table.setVisible(True)
         self._visible = True
         self.toggle_btn.setText("Gizle")
+        self._fit_table_height()
+
+    def _fit_table_height(self):
+        h = self.table.horizontalHeader().height() + 4
+        for i in range(self.table.rowCount()):
+            h += self.table.rowHeight(i)
+        self.table.setFixedHeight(h)
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Section 10 — MainWindow
