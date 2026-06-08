@@ -243,7 +243,15 @@ MODEL_CONFIGS = [
      "file_prefix": "semi_cnn3d_model"},
     {"key": "vit_semi",   "label": "ViT",   "arch": "vit",   "mode": "semi-supervised",
      "file_prefix": "semi_vit_model"},
+    {"key": "cnn2d_fed",  "label": "CNN2D", "arch": "cnn2d", "mode": "federated",
+     "file_prefix": "federated_cnn_model"},
+    {"key": "cnn3d_fed",  "label": "CNN3D", "arch": "cnn3d", "mode": "federated",
+     "file_prefix": "federated_cnn3d_model"},
+    {"key": "vit_fed",    "label": "ViT",   "arch": "vit",   "mode": "federated",
+     "file_prefix": "federated_vit_model"},
 ]
+
+_TOTAL_MODELS = len(MODEL_CONFIGS)  # 9
 
 _CMAP_COLORS = [
     "#e6194b","#3cb44b","#ffe119","#4363d8","#f58231",
@@ -459,7 +467,12 @@ class MapPanel(QFrame):
         title.setFont(QFont("Arial", 11, QFont.Weight.Bold))
 
         badge = QLabel(self.mode)
-        bc, tc = ("#e0e7ff","#4338ca") if self.mode=="supervised" else ("#ffedd5","#c2410c")
+        if self.mode == "supervised":
+            bc, tc = "#e0e7ff", "#4338ca"
+        elif self.mode == "semi-supervised":
+            bc, tc = "#ffedd5", "#c2410c"
+        else:  # federated
+            bc, tc = "#d1fae5", "#065f46"
         badge.setStyleSheet(
             f"background:{bc};color:{tc};border-radius:5px;"
             f"padding:2px 8px;font-size:10px;font-weight:600;border:none;"
@@ -633,14 +646,13 @@ class SidePanel(QFrame):
         layout.addWidget(prog_lbl)
 
         self.progress_bar = QProgressBar()
-        self.progress_bar.setRange(0, 6)
+        self.progress_bar.setRange(0, _TOTAL_MODELS)
         self.progress_bar.setValue(0)
-        self.progress_bar.setFormat("%v / 6")
         self.progress_bar.setFixedHeight(10)
         self.progress_bar.setTextVisible(False)
         layout.addWidget(self.progress_bar)
 
-        self.progress_lbl = QLabel("0 / 6 model")
+        self.progress_lbl = QLabel(f"0 / {_TOTAL_MODELS} model")
         self.progress_lbl.setAlignment(Qt.AlignmentFlag.AlignRight)
         self.progress_lbl.setStyleSheet("color:#94a3b8;font-size:10px;border:none;")
         layout.addWidget(self.progress_lbl)
@@ -691,9 +703,10 @@ class SidePanel(QFrame):
             os.path.exists(os.path.join(MODELS_DIR, f"{c['file_prefix']}_{prefix}.pth"))
             for c in MODEL_CONFIGS
         )
-        if   found == 6: txt, color = "✓  6 / 6 model hazır",   "#059669"
-        elif found > 0:  txt, color = f"⚠  {found} / 6 model ({6-found} eksik)", "#d97706"
-        else:            txt, color = "✗  Model bulunamadı",     "#dc2626"
+        total = _TOTAL_MODELS
+        if   found == total: txt, color = f"✓  {total} / {total} model hazır", "#059669"
+        elif found > 0:      txt, color = f"⚠  {found} / {total} model ({total-found} eksik)", "#d97706"
+        else:                txt, color = "✗  Model bulunamadı",                "#dc2626"
         self.model_status_lbl.setText(txt)
         self.model_status_lbl.setStyleSheet(
             f"color:{color};font-size:11px;font-weight:bold;border:none;"
@@ -706,11 +719,11 @@ class SidePanel(QFrame):
         self.select_btn.setEnabled(not running)
         if running:
             self.progress_bar.setValue(0)
-            self.progress_lbl.setText("0 / 6 model")
+            self.progress_lbl.setText(f"0 / {_TOTAL_MODELS} model")
 
     def update_progress(self, value: int):
         self.progress_bar.setValue(value)
-        self.progress_lbl.setText(f"{value} / 6 model")
+        self.progress_lbl.setText(f"{value} / {_TOTAL_MODELS} model")
 
     def set_status(self, msg: str):
         self.status_lbl.setText(msg)
@@ -726,6 +739,9 @@ _MODEL_LABELS = {
     "cnn2d_semi": "CNN2D  —  Semi-supervised",
     "cnn3d_semi": "CNN3D  —  Semi-supervised",
     "vit_semi":   "ViT      —  Semi-supervised",
+    "cnn2d_fed":  "CNN2D  —  Federated",
+    "cnn3d_fed":  "CNN3D  —  Federated",
+    "vit_fed":    "ViT      —  Federated",
 }
 
 class StatsPanel(QFrame):
@@ -783,7 +799,11 @@ class StatsPanel(QFrame):
         if not metrics_dict:
             return
         best_oa = max(m["OA"] for m in metrics_dict.values())
-        order   = ["cnn2d_sup","cnn3d_sup","vit_sup","cnn2d_semi","cnn3d_semi","vit_semi"]
+        order   = [
+            "cnn2d_sup","cnn3d_sup","vit_sup",
+            "cnn2d_semi","cnn3d_semi","vit_semi",
+            "cnn2d_fed","cnn3d_fed","vit_fed",
+        ]
         for key in order:
             if key not in metrics_dict:
                 continue
@@ -883,6 +903,7 @@ class MainWindow(QMainWindow):
         for row_label, row_color, keys in [
             ("SUPERVISED",      "#6366f1", ["cnn2d_sup",  "cnn3d_sup",  "vit_sup"]),
             ("SEMI-SUPERVISED", "#f97316", ["cnn2d_semi", "cnn3d_semi", "vit_semi"]),
+            ("FEDERATED",       "#059669", ["cnn2d_fed",  "cnn3d_fed",  "vit_fed"]),
         ]:
             lbl = QLabel(row_label)
             lbl.setFont(QFont("Arial", 10, QFont.Weight.Bold))
@@ -959,7 +980,7 @@ class MainWindow(QMainWindow):
     def _tick(self):
         self._completed += 1
         self.side.update_progress(self._completed)
-        if self._completed >= 6:
+        if self._completed >= _TOTAL_MODELS:
             self.side.set_running(False)
             self.side.set_status("Tamamlandı ✓")
             self.stats.update(self._all_metrics)
