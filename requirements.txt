@@ -5,3 +5,5 @@ scikit-learn
 ipykernel
 seaborn
 scipy
+torch
+PyQt6
