@@ -2,3 +2,5 @@ claude_agent.txt
 datasets/
 notebooks/datasets
 .venv/
+gui/models/
+gui/PLAN.md
