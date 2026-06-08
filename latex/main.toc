@@ -1,8 +1,6 @@
-\contentsline {chapter}{LIST OF ABBREVIATIONS}{v}{}%
-\contentsline {chapter}{LIST OF FIGURES}{vi}{}%
-\contentsline {chapter}{LIST OF TABLES}{vii}{}%
-\contentsline {chapter}{ABSTRACT}{viii}{}%
-\contentsline {chapter}{ÖZET}{ix}{}%
+\contentsline {chapter}{LIST OF ABBREVIATIONS}{iv}{}%
+\contentsline {chapter}{ABSTRACT}{v}{}%
+\contentsline {chapter}{ÖZET}{vii}{}%
 \contentsline {chapter}{\numberline {1}INTRODUCTION}{1}{}%
 \contentsline {section}{\numberline {1.1}Purpose}{2}{}%
 \contentsline {section}{\numberline {1.2}Preliminary Investigation}{2}{}%
@@ -31,8 +29,68 @@
 \contentsline {subsection}{\numberline {4.2.1}Preprocessing and Dimensionality Reduction}{14}{}%
 \contentsline {subsection}{\numberline {4.2.2}Patch Extraction and Dataset Splitting}{15}{}%
 \contentsline {subsection}{\numberline {4.2.3}Model Architectures}{15}{}%
-\contentsline {subsection}{\numberline {4.2.4}Semi-Supervised Learning and Curriculum Learning}{16}{}%
-\contentsline {subsection}{\numberline {4.2.5}Evaluation Metrics}{16}{}%
-\contentsline {subsection}{\numberline {4.2.6}GUI and Multithreading Integration}{17}{}%
-\contentsline {chapter}{References}{18}{}%
-\contentsline {chapter}{Curriculum Vitae}{21}{}%
+\contentsline {subsection}{\numberline {4.2.4}Supervised Learning Models}{16}{}%
+\contentsline {subsubsection}{\numberline {4.2.4.1}2D-CNN Supervised Model}{16}{}%
+\contentsline {subsubsection}{\numberline {4.2.4.2}3D-CNN Supervised Model}{16}{}%
+\contentsline {subsubsection}{\numberline {4.2.4.3}Vision Transformer (ViT) Supervised Model}{16}{}%
+\contentsline {subsection}{\numberline {4.2.5}Semi-Supervised Learning Models}{17}{}%
+\contentsline {subsubsection}{\numberline {4.2.5.1}Self-Training Strategy}{17}{}%
+\contentsline {subsubsection}{\numberline {4.2.5.2}Curriculum Learning Integration}{17}{}%
+\contentsline {subsubsection}{\numberline {4.2.5.3}2D-CNN Semi-Supervised Model}{17}{}%
+\contentsline {subsubsection}{\numberline {4.2.5.4}3D-CNN Semi-Supervised Model}{18}{}%
+\contentsline {subsubsection}{\numberline {4.2.5.5}Vision Transformer (ViT) Semi-Supervised Model}{18}{}%
+\contentsline {subsection}{\numberline {4.2.6}Federated Learning Models}{18}{}%
+\contentsline {subsubsection}{\numberline {4.2.6.1}Federated Learning Framework}{18}{}%
+\contentsline {subsubsection}{\numberline {4.2.6.2}2D-CNN Federated Model}{18}{}%
+\contentsline {subsubsection}{\numberline {4.2.6.3}3D-CNN Federated Model}{19}{}%
+\contentsline {subsubsection}{\numberline {4.2.6.4}Vision Transformer (ViT) Federated Model}{19}{}%
+\contentsline {subsubsection}{\numberline {4.2.6.5}Privacy and Communication Efficiency}{19}{}%
+\contentsline {subsection}{\numberline {4.2.7}Comparative Learning Paradigm Summary}{19}{}%
+\contentsline {subsection}{\numberline {4.2.8}Evaluation Metrics}{20}{}%
+\contentsline {subsection}{\numberline {4.2.9}GUI and Multithreading Integration}{21}{}%
+\contentsline {chapter}{\numberline {5}EXPERIMENTAL RESULTS}{22}{}%
+\contentsline {section}{\numberline {5.1}Performance Analysis}{22}{}%
+\contentsline {subsection}{\numberline {5.1.1}Supervised Learning Results}{22}{}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}Indian Pines Dataset Performance}{22}{}%
+\contentsline {subsubsection}{\numberline {5.1.1.2}Pavia University Dataset Performance}{23}{}%
+\contentsline {subsubsection}{\numberline {5.1.1.3}Salinas Dataset Performance}{23}{}%
+\contentsline {subsection}{\numberline {5.1.2}Semi-Supervised Learning Results}{23}{}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}Semi-Supervised Indian Pines Performance}{23}{}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}Semi-Supervised Pavia University Performance}{24}{}%
+\contentsline {subsubsection}{\numberline {5.1.2.3}Semi-Supervised Salinas Performance}{24}{}%
+\contentsline {subsection}{\numberline {5.1.3}Federated Learning Results}{24}{}%
+\contentsline {subsubsection}{\numberline {5.1.3.1}Federated Learning on Indian Pines}{24}{}%
+\contentsline {subsubsection}{\numberline {5.1.3.2}Federated Learning on Pavia University}{25}{}%
+\contentsline {subsubsection}{\numberline {5.1.3.3}Federated Learning on Salinas}{25}{}%
+\contentsline {section}{\numberline {5.2}Comparative Analysis}{25}{}%
+\contentsline {subsection}{\numberline {5.2.1}Overall Accuracy Comparison}{25}{}%
+\contentsline {subsection}{\numberline {5.2.2}Performance Improvement Analysis}{25}{}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}Semi-Supervised vs. Supervised}{26}{}%
+\contentsline {subsubsection}{\numberline {5.2.2.2}Federated vs. Supervised}{26}{}%
+\contentsline {subsection}{\numberline {5.2.3}Architecture Comparison}{26}{}%
+\contentsline {subsection}{\numberline {5.2.4}Dataset-Specific Analysis}{27}{}%
+\contentsline {subsection}{\numberline {5.2.5}Privacy and Efficiency Trade-offs}{28}{}%
+\contentsline {chapter}{\numberline {6}CONCLUSIONS AND DISCUSSION}{29}{}%
+\contentsline {section}{\numberline {6.1}Summary}{29}{}%
+\contentsline {section}{\numberline {6.2}Key Findings}{29}{}%
+\contentsline {subsection}{\numberline {6.2.1}Semi-Supervised Learning Effectiveness}{29}{}%
+\contentsline {subsection}{\numberline {6.2.2}Federated Learning Privacy-Performance Trade-off}{30}{}%
+\contentsline {subsection}{\numberline {6.2.3}Architecture-Specific Insights}{30}{}%
+\contentsline {section}{\numberline {6.3}Project Objectives and Achievement Level}{31}{}%
+\contentsline {subsection}{\numberline {6.3.1}Original Objectives}{31}{}%
+\contentsline {subsection}{\numberline {6.3.2}Achievement Level}{31}{}%
+\contentsline {section}{\numberline {6.4}Strengths}{32}{}%
+\contentsline {subsection}{\numberline {6.4.1}Methodological Strengths}{32}{}%
+\contentsline {subsection}{\numberline {6.4.2}Implementation Strengths}{32}{}%
+\contentsline {section}{\numberline {6.5}Limitations and Weaknesses}{33}{}%
+\contentsline {subsection}{\numberline {6.5.1}Methodological Limitations}{33}{}%
+\contentsline {subsection}{\numberline {6.5.2}Experimental Limitations}{33}{}%
+\contentsline {subsection}{\numberline {6.5.3}Implementation Limitations}{34}{}%
+\contentsline {section}{\numberline {6.6}Future Work}{34}{}%
+\contentsline {subsection}{\numberline {6.6.1}Methodological Extensions}{34}{}%
+\contentsline {subsection}{\numberline {6.6.2}Architectural Enhancements}{34}{}%
+\contentsline {subsection}{\numberline {6.6.3}Experimental Directions}{35}{}%
+\contentsline {subsection}{\numberline {6.6.4}Practical Applications}{35}{}%
+\contentsline {section}{\numberline {6.7}Conclusion}{35}{}%
+\contentsline {chapter}{References}{37}{}%
+\contentsline {chapter}{Curriculum Vitae}{40}{}%

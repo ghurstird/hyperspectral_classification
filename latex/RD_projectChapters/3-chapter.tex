@@ -10,7 +10,7 @@ The fundamental requirements that the system is expected to fulfill are as follo
 \begin{itemize}
     \item De-noising of hyperspectral images using Gaussian filtering and dimensionality reduction through the Principal Component Analysis (PCA) method \cite{pedregosa2011scikit}.
     \item Enabling the training of supervised (CNN \cite{chen2016deep}, ViT \cite{dosovitskiy2020image}) and semi-supervised (Self-Training \cite{triguero2015self}) models using a Curriculum Learning \cite{bengio2009curriculum} strategy.
-    \item Providing a graphical user interface (GUI) operating on a multithreaded architecture to allow simultaneous testing and real-time prediction of developed models \cite{fedosejev2015react}.
+    \item Providing a graphical user interface (GUI) operating on a multithreaded architecture to allow simultaneous testing and real-time prediction of developed models.
 \end{itemize}
 
 To test whether the requirements are met at the end of the project, the following performance metrics will be utilized: Accuracy, Precision, Recall, F1-Score, and Kappa coefficient.
@@ -19,13 +19,13 @@ To test whether the requirements are met at the end of the project, the followin
 The feasibility study evaluates the viability of the project by analyzing how resources were selected among alternatives and the project's timeline.
 
 \subsection{Technical Feasibility}
-Technical feasibility is a brand-independent study that highlights technical features, including software and hardware feasibility. Python \cite{van1995python} has been selected as the application development language due to its robust ecosystem in the field of machine learning. For deep learning processes, PyTorch \cite{paszke2019pytorch} or TensorFlow \cite{abadi2016tensorflow} libraries will be used, while Scikit-learn \cite{pedregosa2011scikit} and OpenCV \cite{itseez2015opencv} will be utilized for data processing. For the front-end development of the GUI, React \cite{fedosejev2015react} has been preferred for its performance and concurrent processing capabilities. The development environment will be VS Code \cite{baumer2015visual}, and version control will be managed via GitHub \cite{dabbish2012social}.
+Technical feasibility is a brand-independent study that highlights technical features, including software and hardware feasibility. Python \cite{van1995python} has been selected as the application development language due to its robust ecosystem in the field of machine learning. For deep learning processes, PyTorch \cite{paszke2019pytorch} or TensorFlow \cite{abadi2016tensorflow} libraries will be used, while Scikit-learn \cite{pedregosa2011scikit} and OpenCV \cite{itseez2015opencv} will be utilized for data processing. For the GUI development, PyQt6 framework has been used for its capabilities in creating responsive and multithreaded user interfaces. The development environment will be VS Code \cite{baumer2015visual}, and version control will be managed via GitHub \cite{dabbish2012social}.
 
 \subsubsection{Hardware Feasibility}
 The high parallel processing capacity required for training deep learning models will be met using the GPU accelerators provided by the Google Colab \cite{bisong2019google} environment. For front-end development and interface integration, the hardware owned by the project team (macOS-based computers) possesses sufficient capacity.
 
 \subsection{Legal Feasibility}
-The tools used in the project, such as Python, React, PyTorch, and OpenCV, have open-source licenses. The Indian Pines, Pavia University, and Salinas datasets are open for academic use. Therefore, it has been determined that the project does not pose any legal barriers or patent infringements.
+The tools used in the project, such as Python, PyQt6, PyTorch, and OpenCV, have open-source licenses. The Indian Pines, Pavia University, and Salinas datasets are open for academic use. Therefore, it has been determined that the project does not pose any legal barriers or patent infringements.
 
 \subsection{Economic Feasibility}
 All libraries and development platforms selected for the project consist of free and open-source tools. Thanks to the use of Google Colab and existing personal hardware, no additional investment costs are incurred, and the project is considered economically viable.

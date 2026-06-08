@@ -2404,24 +2404,24 @@
     <bcf:citekey order="24" intorder="1">dosovitskiy2020image</bcf:citekey>
     <bcf:citekey order="25" intorder="1">triguero2015self</bcf:citekey>
     <bcf:citekey order="26" intorder="1">bengio2009curriculum</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">fedosejev2015react</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">van1995python</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">paszke2019pytorch</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">abadi2016tensorflow</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">pedregosa2011scikit</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">itseez2015opencv</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">fedosejev2015react</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">baumer2015visual</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">dabbish2012social</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">bisong2019google</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">baumgardner2015220</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">dell2005pavia</bcf:citekey>
-    <bcf:citekey order="39" intorder="1">salinas_dataset</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">pedregosa2011scikit</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">chen2016deep</bcf:citekey>
-    <bcf:citekey order="42" intorder="1">dosovitskiy2020image</bcf:citekey>
-    <bcf:citekey order="43" intorder="1">triguero2015self</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">bengio2009curriculum</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">van1995python</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">paszke2019pytorch</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">abadi2016tensorflow</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">pedregosa2011scikit</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">itseez2015opencv</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">baumer2015visual</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">dabbish2012social</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">bisong2019google</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">baumgardner2015220</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">dell2005pavia</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">salinas_dataset</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">pedregosa2011scikit</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">chen2016deep</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">dosovitskiy2020image</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">dosovitskiy2020image</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">triguero2015self</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">bengio2009curriculum</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">mcmahan2017communication</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

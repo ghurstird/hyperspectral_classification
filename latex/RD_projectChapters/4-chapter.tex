@@ -205,12 +205,97 @@ The system implements two state-of-the-art architectures to evaluate performance
     \item \textbf{Vision Transformer (ViT):} To capture long-range dependencies across spectral bands, the HSI patches are flattened into sequences of embeddings. A self-attention mechanism is applied to weigh the importance of different spectral-spatial tokens \cite{dosovitskiy2020image}.
 \end{itemize}
 
-\subsection{Semi-Supervised Learning and Curriculum Learning}
-The core innovation of the project lies in handling labeled data scarcity:
+\subsection{Supervised Learning Models}
+In the supervised learning paradigm, the model trains exclusively on labeled samples from the training set. This approach serves as the baseline for evaluating the performance improvements achieved through semi-supervised and federated learning strategies.
+
+\subsubsection{2D-CNN Supervised Model}
+The 2D-CNN variant operates on spatial patches extracted from the hyperspectral cube. After PCA-based dimensionality reduction, each patch is reshaped to $15 \times 15 \times 30$. The 2D convolution kernels process the spatial dimensions while treating spectral bands as input channels. This approach reduces computational overhead compared to full 3D convolutions while preserving spatial-spectral relationships.
+
+\subsubsection{3D-CNN Supervised Model}
+The 3D-CNN model leverages volumetric convolution operations to jointly extract spectral-spatial features. The use of 3D kernels allows the network to capture inter-band correlations, leading to superior feature representations. The architecture incorporates batch normalization and dropout layers to prevent overfitting, particularly when training on limited labeled data.
+
+\subsubsection{Vision Transformer (ViT) Supervised Model}
+The ViT-based approach flattens the spectral-spatial patches into a sequence of linear embeddings. Positional encodings are added to preserve spatial-spectral relationships, and multi-head self-attention mechanisms enable the model to capture global dependencies across all spectral bands and spatial locations. This transformer-based architecture has demonstrated competitive performance on hyperspectral classification tasks \cite{dosovitskiy2020image}.
+
+\subsection{Semi-Supervised Learning Models}
+The semi-supervised learning phase addresses the practical challenge of limited labeled data by leveraging unlabeled samples to improve model generalization. The approach combines self-training with curriculum learning to iteratively expand the training set with high-confidence pseudo-labeled samples.
+
+\subsubsection{Self-Training Strategy}
+The self-training mechanism operates through iterative pseudo-labeling:
+\begin{enumerate}
+    \item Initialize the model using a subset of labeled training samples.
+    \item Generate predictions on the unlabeled pool with associated confidence scores.
+    \item Incorporate samples exceeding a confidence threshold into the training set with their predicted labels.
+    \item Retrain the model on the augmented labeled set.
+    \item Repeat until convergence or a maximum iteration limit is reached \cite{triguero2015self}.
+\end{enumerate}
+
+\subsubsection{Curriculum Learning Integration}
+Curriculum Learning (CL) guides the training process by presenting samples in order of increasing difficulty:
+\begin{enumerate}
+    \item \textbf{Easy Samples:} Pixels with high spectral purity and clear spatial context are introduced first, allowing the model to learn robust decision boundaries.
+    \item \textbf{Medium Samples:} Pixels with moderate spectral-spatial characteristics are gradually introduced as the model gains confidence.
+    \item \textbf{Difficult Samples:} Boundary pixels and spectrally ambiguous samples are presented in later epochs to refine the decision boundaries \cite{bengio2009curriculum}.
+\end{enumerate}
+
+\subsubsection{2D-CNN Semi-Supervised Model}
+The 2D-CNN architecture operates identically to its supervised variant but benefits from the expanded training set created through self-training and curriculum learning. The confidence-weighted pseudo-labels reduce noise in the expanded training set.
+
+\subsubsection{3D-CNN Semi-Supervised Model}
+By incorporating unlabeled samples through self-training, the 3D-CNN captures richer spectral-spatial correlations. The curriculum learning strategy helps the model avoid local minima that often arise when training on the full noisy pseudo-labeled set.
+
+\subsubsection{Vision Transformer (ViT) Semi-Supervised Model}
+The ViT's global receptive field makes it particularly suitable for semi-supervised learning. The self-attention mechanism naturally accounts for the varying confidence scores in pseudo-labeled samples, and the transformer architecture's robustness to input perturbations aids in handling label noise.
+
+\subsection{Federated Learning Models}
+Federated learning enables collaborative training across distributed clients without centralizing sensitive data. In this project, federated learning is simulated through a server-client architecture where multiple institutions or geographic regions train local models on their own data while contributing to a global model \cite{mcmahan2017communication}.
+
+\subsubsection{Federated Learning Framework}
+The federated learning process follows the Federated Averaging (FedAvg) algorithm:
+\begin{enumerate}
+    \item Initialize a global model at the central server.
+    \item Each client downloads the global model weights and trains locally on its own hyperspectral dataset for a fixed number of epochs.
+    \item Clients upload their updated model weights to the server (not raw data, preserving privacy).
+    \item The server aggregates weights from all participating clients through averaging.
+    \item The updated global model is redistributed to clients for the next round.
+    \item Repeat for multiple communication rounds until convergence.
+\end{enumerate}
+
+\subsubsection{2D-CNN Federated Model}
+The 2D-CNN architecture is trained locally on each client's dataset (Indian Pines, Pavia University, and Salinas in this simulation) with identical hyperparameters. Model weight aggregation at the server ensures that the global model benefits from the diverse spectral-spatial characteristics of each dataset while maintaining privacy.
+
+\subsubsection{3D-CNN Federated Model}
+The 3D-CNN federated variant trains independently on each client site before aggregation. The volumetric convolution layers capture dataset-specific spectral correlations, and weight averaging produces a more generalizable global model compared to single-dataset training. This approach is particularly valuable for remote sensing applications where hyperspectral data is distributed across multiple acquisition campaigns and sensors.
+
+\subsubsection{Vision Transformer (ViT) Federated Model}
+The ViT-based federated learning approach trains transformer blocks locally on heterogeneous data distributions. The self-attention weights encode local data statistics, and their aggregation at the server produces a global transformer capable of handling diverse spectral-spatial patterns. This flexibility is essential for practical federated hyperspectral classification systems serving multiple organizations with different sensors and geographic regions.
+
+\subsubsection{Privacy and Communication Efficiency}
+Federated learning inherently provides data privacy by keeping raw hyperspectral data at client locations. However, communication overhead between clients and server becomes a critical bottleneck. To mitigate this:
 \begin{itemize}
-    \item \textbf{Self-Training:} The model initially trains on a small set of labeled pixels. It then iteratively predicts labels for the unlabeled pool, incorporating high-confidence samples back into the training set \cite{triguero2015self}.
-    \item \textbf{Curriculum Learning (CL):} To ensure training stability, a CL strategy is implemented where the model is first presented with "easy" samples (pixels with high spectral purity and clear spatial context) before transitioning to "difficult" samples near decision boundaries \cite{bengio2009curriculum}.
+    \item \textbf{Gradient Compression:} Model weights are compressed before transmission to reduce bandwidth requirements.
+    \item \textbf{Local Training Epochs:} Each client performs multiple local training epochs (typically 5--10) before communicating with the server, reducing communication rounds.
+    \item \textbf{Asynchronous Aggregation:} The server waits for a subset of fast clients to respond rather than waiting for all clients, improving wall-clock training time.
 \end{itemize}
+
+\subsection{Comparative Learning Paradigm Summary}
+The core innovation of the project lies in comparing three distinct learning paradigms to address labeled data scarcity in hyperspectral classification:
+
+\begin{table}[H]
+    \centering
+    \caption{Comparison of Supervised, Semi-Supervised, and Federated Learning Paradigms}
+    \label{tab:learning_paradigms}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|l|c|c|c|}
+        \hline
+        \textbf{Characteristic} & \textbf{Supervised} & \textbf{Semi-Supervised} & \textbf{Federated} \\ \hline
+        \textbf{Data Requirement} & Fully Labeled & Partial Labels & Local Data Privacy \\ \hline
+        \textbf{Scalability} & Centralized & Centralized & Distributed \\ \hline
+        \textbf{Communication Cost} & None & None & High \\ \hline
+        \textbf{Privacy Protection} & Limited & Limited & High \\ \hline
+        \textbf{Typical Accuracy} & Baseline & Enhanced & Comparable \\ \hline
+    \end{tabular}
+\end{table}
 
 \begin{figure}[H]
     \centering
