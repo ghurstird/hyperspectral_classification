@@ -156,6 +156,7 @@ This section provides a comprehensive comparative analysis of the three learning
     \caption{Overall Accuracy Comparison Across All Learning Paradigms}
     \label{tab:oa_comparison}
     \renewcommand{\arraystretch}{1.2}
+    \resizebox{\textwidth}{!}{%
     \begin{tabular}{|l|ccc|ccc|ccc|}
         \hline
         \multirow{2}{*}{\textbf{Dataset}} & \multicolumn{3}{c|}{\textbf{Supervised}} & \multicolumn{3}{c|}{\textbf{Semi-Supervised}} & \multicolumn{3}{c|}{\textbf{Federated (Round 50)}} \\ \cline{2-10}
@@ -163,7 +164,7 @@ This section provides a comprehensive comparative analysis of the three learning
         Indian Pines & 99.91\% & 99.90\% & 99.61\% & 74.04\% & 66.55\% & 53.96\% & 96.43\% & 92.56\% & 85.65\% \\ \hline
         Pavia University & 99.99\% & 99.99\% & 99.75\% & 97.17\% & 96.91\% & 91.77\% & 99.83\% & 99.76\% & 98.95\% \\ \hline
         Salinas & 99.99\% & 99.84\% & 99.81\% & 96.46\% & 97.30\% & 86.49\% & 99.90\% & 99.76\% & 97.73\% \\ \hline
-    \end{tabular}
+    \end{tabular}}
 \end{table}
 
 \subsection{Performance Improvement Analysis}
@@ -195,13 +196,14 @@ Federated learning achieves comparable performance to supervised learning with p
     \caption{Average Performance Across Datasets by Architecture Type}
     \label{tab:architecture_comparison}
     \renewcommand{\arraystretch}{1.2}
+    \resizebox{\textwidth}{!}{%
     \begin{tabular}{|l|c|c|c|}
         \hline
         \textbf{Architecture} & \textbf{Supervised Avg OA} & \textbf{Semi-Supervised Avg OA} & \textbf{Federated Avg OA (Round 50)} \\ \hline
         2D-CNN & 99.96\% & 89.22\% & 98.72\% \\ \hline
         3D-CNN & 99.91\% & 86.92\% & 97.36\% \\ \hline
         Vision Transformer & 99.72\% & 77.41\% & 94.11\% \\ \hline
-    \end{tabular}
+    \end{tabular}}
 \end{table}
 
 \textbf{Key Findings:}

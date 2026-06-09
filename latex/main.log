@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.1)  8 JUN 2026 22:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.10)  8 JUN 2026 23:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/tanerciyas/workspace/github.com/ghurstird/hyperspectral_classification/latex/main.tex
-(/Users/tanerciyas/workspace/github.com/ghurstird/hyperspectral_classification/latex/main.tex
+**"/Users/kerem/Documents/Kerem/Codes/Github Projects/bitirme/hyperspectral_classification/latex/main.tex"
+(/Users/kerem/Documents/Kerem/Codes/Github Projects/bitirme/hyperspectral_classification/latex/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/local/texlive/2026/texmf-dist/tex/latex/base/book.cls
@@ -1574,84 +1574,74 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--152
 \T1/mdbch/m/n/12 improvements, computational efficiency, privacy implications, and practical
  []
 
-./RD_projectChapters/5-chapter.tex:161: Undefined control sequence.
+./RD_projectChapters/5-chapter.tex:167: Undefined control sequence.
 <recently read> \multirow 
                           
-l.161         \multirow
-                       {2}{*}{\textbf{Dataset}} & \multicolumn{3}{c|}{\textb...
+l.167     \end{tabular}}
+                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Overfull \hbox (121.4441pt too wide) in paragraph at lines 159--167
- [][] 
- []
-
 [25]
-Underfull \hbox (badness 1048) in paragraph at lines 179--180
+Underfull \hbox (badness 1048) in paragraph at lines 180--181
 []\T1/mdbch/b/n/12 Indian Pines: \T1/mdbch/m/n/12 Average improvement of 1.63% across architectures, with
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 179--180
+Underfull \hbox (badness 1158) in paragraph at lines 180--181
 \T1/mdbch/m/n/12 3D-CNN showing the largest gain of 1.34 percentage points (96.78% $\OMS/mdbch/m/n/12 !$
  []
 
 
-Underfull \hbox (badness 4013) in paragraph at lines 180--181
+Underfull \hbox (badness 4013) in paragraph at lines 181--182
 []\T1/mdbch/b/n/12 Pavia Uni-ver-sity: \T1/mdbch/m/n/12 Average improvement of 1.82%, demonstrating the
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 180--181
+Underfull \hbox (badness 1168) in paragraph at lines 181--182
 \T1/mdbch/m/n/12 effectiveness of curriculum learning in handling diverse urban land-cover
  []
 
 
-Overfull \hbox (43.43042pt too wide) in paragraph at lines 198--205
- [][] 
- []
-
-
-Underfull \hbox (badness 2913) in paragraph at lines 209--210
+Underfull \hbox (badness 2913) in paragraph at lines 211--212
 []\T1/mdbch/b/n/12 3D-CNN Su-pe-rior Per-for-mance: \T1/mdbch/m/n/12 The 3D-CNN architecture consistently
  []
 
 [26]
-Underfull \hbox (badness 1796) in paragraph at lines 211--212
+Underfull \hbox (badness 1796) in paragraph at lines 213--214
 \T1/mdbch/m/n/12 results (averaging 95.67% in supervised mode), particularly excelling in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--214
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
 \T1/mdbch/m/n/12 accuracy (94.28% supervised, 96.30% semi-supervised), they provide
  []
 
 
-Underfull \hbox (badness 4621) in paragraph at lines 218--219
+Underfull \hbox (badness 4621) in paragraph at lines 220--221
 []\T1/mdbch/b/n/12 Indian Pines: \T1/mdbch/m/n/12 Smallest dataset (10,249 samples) benefits most from
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
 \T1/mdbch/m/n/12 semi-supervised learning (+1.63% average improvement), indicating
  []
 
 
-Underfull \hbox (badness 5161) in paragraph at lines 220--221
+Underfull \hbox (badness 5161) in paragraph at lines 222--223
 \T1/mdbch/m/n/12 performance across paradigms, with federated learning achieving only
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--223
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
 []\T1/mdbch/b/n/12 Salinas: \T1/mdbch/m/n/12 Largest dataset (54,129 samples) demonstrates highest
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--223
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
 \T1/mdbch/m/n/12 absolute accuracy (98.67% semi-supervised 3D-CNN) and narrowest
  []
 
@@ -1696,17 +1686,12 @@ Underfull \hbox (badness 1275) in paragraph at lines 17--18
 
 
 Underfull \hbox (badness 2980) in paragraph at lines 24--25
-[]\T1/mdbch/m/n/12 Federated 3D-CNN achieves 88.83% average accuracy (across datasets),
+[]\T1/mdbch/m/n/12 Federated 3D-CNN achieves 97.36% average accuracy (across datasets),
  []
 
 
-Underfull \hbox (badness 2884) in paragraph at lines 24--25
-\T1/mdbch/m/n/12 representing a -11.08% degradation compared to centralized supervised
- []
-
-
-Underfull \hbox (badness 3375) in paragraph at lines 25--26
-\T1/mdbch/m/n/12 93-94% accuracy, demonstrating robustness when data heterogeneity is
+Underfull \hbox (badness 1931) in paragraph at lines 25--26
+\T1/mdbch/m/n/12 99-100% accuracy, demonstrating robustness when data heterogeneity is
  []
 
 
@@ -1740,215 +1725,205 @@ Underfull \hbox (badness 1360) in paragraph at lines 49--50
  []
 
 
-./RD_projectChapters/6-chapter.tex:65: LaTeX Error: Unicode character ✓ (U+2713)
+./RD_projectChapters/6-chapter.tex:72: LaTeX Error: Unicode character ✓ (U+2713)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.65 ...ne & Normalization + Filtering + PCA & ✓
-                                                   Fully Implemented \\ \hline
+l.72     \end{tabular}}
+                       
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./RD_projectChapters/6-chapter.tex:66: LaTeX Error: Unicode character ✓ (U+2713)
+./RD_projectChapters/6-chapter.tex:72: LaTeX Error: Unicode character ✓ (U+2713)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.66 ...d Baselines & Multiple architectures & ✓
-                                                   2D-CNN, 3D-CNN, ViT \\ \h...
+l.72     \end{tabular}}
+                       
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./RD_projectChapters/6-chapter.tex:67: LaTeX Error: Unicode character ✓ (U+2713)
+./RD_projectChapters/6-chapter.tex:72: LaTeX Error: Unicode character ✓ (U+2713)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.67 ...rvised Learning & Self-training + CL & ✓
-                                                   Implemented (54-97\% rang...
+l.72     \end{tabular}}
+                       
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./RD_projectChapters/6-chapter.tex:68: LaTeX Error: Unicode character ✓ (U+2713)
+./RD_projectChapters/6-chapter.tex:72: LaTeX Error: Unicode character ✓ (U+2713)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.68 ... Learning & Multi-client aggregation & ✓
-                                                   FedAvg Protocol (63-94\% ...
+l.72     \end{tabular}}
+                       
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./RD_projectChapters/6-chapter.tex:69: LaTeX Error: Unicode character ✓ (U+2713)
+./RD_projectChapters/6-chapter.tex:72: LaTeX Error: Unicode character ✓ (U+2713)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.69 ...ng & Python (PyQt6) + Multithreading & ✓
-                                                   Fully Operational \\ \hline
+l.72     \end{tabular}}
+                       
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./RD_projectChapters/6-chapter.tex:70: LaTeX Error: Unicode character ✓ (U+2713)
+./RD_projectChapters/6-chapter.tex:72: LaTeX Error: Unicode character ✓ (U+2713)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.70 ... ($>$ 95\%) & Supervised requirement & ✓
-                                                   Achieved (99.72-99.96\%) ...
+l.72     \end{tabular}}
+                       
 You may provide a definition with
 \DeclareUnicodeCharacter 
-
-
-Overfull \hbox (77.5223pt too wide) in paragraph at lines 62--72
- [][] 
- []
 
 [31]
-Underfull \hbox (badness 3009) in paragraph at lines 82--83
+Underfull \hbox (badness 3009) in paragraph at lines 83--84
 []\T1/mdbch/b/n/12 Privacy-Preserving Fed-er-ated Im-ple-men-ta-tion: \T1/mdbch/m/n/12 The federated learning
  []
 
 
-Underfull \hbox (badness 1038) in paragraph at lines 93--94
+Underfull \hbox (badness 1038) in paragraph at lines 94--95
 []\T1/mdbch/b/n/12 Responsive GUI: \T1/mdbch/m/n/12 PyQt6-based GUI with multithreaded inference provides
  []
 
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 []\T1/mdbch/b/n/12 Reproducibility: \T1/mdbch/m/n/12 Fixed random seeds and stratified splitting ensure
  []
 
-
-Underfull \hbox (badness 3240) in paragraph at lines 102--103
+[32]
+Underfull \hbox (badness 3240) in paragraph at lines 103--104
 []\T1/mdbch/b/n/12 Simulated Fed-er-ated Sce-nario: \T1/mdbch/m/n/12 Federated learning is simulated on a
  []
 
 
-Underfull \hbox (badness 1320) in paragraph at lines 102--103
+Underfull \hbox (badness 1320) in paragraph at lines 103--104
 \T1/mdbch/m/n/12 local machine using the three datasets as proxies for distributed clients.
  []
 
 
-Underfull \hbox (badness 2626) in paragraph at lines 108--109
+Underfull \hbox (badness 2626) in paragraph at lines 109--110
 []\T1/mdbch/b/n/12 Limited Cur-ricu-lum Learn-ing Vari-ants: \T1/mdbch/m/n/12 Only one curriculum learning
  []
 
 
-Underfull \hbox (badness 6876) in paragraph at lines 113--114
+Underfull \hbox (badness 6876) in paragraph at lines 114--115
 []\T1/mdbch/b/n/12 Benchmark Datasets Only: \T1/mdbch/m/n/12 Evaluation limited to three widely-used
  []
 
 
-Underfull \hbox (badness 1281) in paragraph at lines 115--116
+Underfull \hbox (badness 1281) in paragraph at lines 116--117
 []\T1/mdbch/b/n/12 No Con-cept Drift Anal-y-sis: \T1/mdbch/m/n/12 Federated learning assumes stationary data
  []
 
 
-Underfull \hbox (badness 2293) in paragraph at lines 115--116
+Underfull \hbox (badness 2293) in paragraph at lines 116--117
 \T1/mdbch/m/n/12 distributions; real remote sensing data exhibits temporal drift requiring
  []
 
 
-Underfull \hbox (badness 4582) in paragraph at lines 119--120
+Underfull \hbox (badness 4582) in paragraph at lines 120--121
 []\T1/mdbch/b/n/12 Limited Ad-ver-sar-ial Ro-bust-ness: \T1/mdbch/m/n/12 No evaluation of model robustness
  []
 
 
-Underfull \hbox (badness 1394) in paragraph at lines 119--120
+Underfull \hbox (badness 1394) in paragraph at lines 120--121
 \T1/mdbch/m/n/12 to adversarial perturbations or distribution shift, relevant for operational
  []
 
 [33]
-Underfull \hbox (badness 3189) in paragraph at lines 137--138
+Underfull \hbox (badness 3189) in paragraph at lines 138--139
 []\T1/mdbch/b/n/12 Heterogeneous Fed-er-ated Ag-gre-ga-tion: \T1/mdbch/m/n/12 Develop weighted aggregation
  []
 
 
-Underfull \hbox (badness 1215) in paragraph at lines 141--142
+Underfull \hbox (badness 1215) in paragraph at lines 142--143
 []\T1/mdbch/b/n/12 Meta-Learning for Few-Shot HSI: \T1/mdbch/m/n/12 Integrate meta-learning approaches to
  []
 
 
-Underfull \hbox (badness 6220) in paragraph at lines 146--147
+Underfull \hbox (badness 6220) in paragraph at lines 147--148
 []\T1/mdbch/b/n/12 Hybrid 2D-3D Mod-els: \T1/mdbch/m/n/12 Design architectures combining 2D and 3D
  []
 
 
-Underfull \hbox (badness 1748) in paragraph at lines 148--149
+Underfull \hbox (badness 1748) in paragraph at lines 149--150
 []\T1/mdbch/b/n/12 Graph Neu-ral Net-works: \T1/mdbch/m/n/12 Explore graph-based architectures that model
  []
 
 
-Underfull \hbox (badness 6559) in paragraph at lines 148--149
+Underfull \hbox (badness 6559) in paragraph at lines 149--150
 \T1/mdbch/m/n/12 spectral-spatial relationships as graph structures, potentially improving
  []
 
 
-Underfull \hbox (badness 5862) in paragraph at lines 150--151
+Underfull \hbox (badness 5862) in paragraph at lines 151--152
 []\T1/mdbch/b/n/12 Self-Supervised Pre-train-ing: \T1/mdbch/m/n/12 Implement self-supervised learning (e.g.,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 []\T1/mdbch/b/n/12 Multi-Modal Fu-sion: \T1/mdbch/m/n/12 Extend to multi-modal data fusion combining
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 \T1/mdbch/m/n/12 hyperspectral, panchromatic, and LiDAR data streams for enhanced
  []
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 []\T1/mdbch/b/n/12 Cross-Sensor Gen-er-al-iza-tion: \T1/mdbch/m/n/12 Evaluate federated learning across
  []
 
 
-Underfull \hbox (badness 2762) in paragraph at lines 161--162
+Underfull \hbox (badness 2762) in paragraph at lines 162--163
 []\T1/mdbch/b/n/12 Adversarial Ro-bust-ness: \T1/mdbch/m/n/12 Conduct comprehensive adversarial robustness
  []
 
 
-Underfull \hbox (badness 1057) in paragraph at lines 161--162
+Underfull \hbox (badness 1057) in paragraph at lines 162--163
 \T1/mdbch/m/n/12 evaluation and develop defense mechanisms for operational hyperspectral
  []
 
 
-Underfull \hbox (badness 1946) in paragraph at lines 174--175
+Underfull \hbox (badness 1946) in paragraph at lines 175--176
 []\T1/mdbch/b/n/12 Operational GUI En-hance-ments: \T1/mdbch/m/n/12 Extend the current Python GUI with
  []
 
-
-Underfull \hbox (badness 1824) in paragraph at lines 178--179
-\T1/mdbch/m/n/12 learning, combining self-training with curriculum learning, achieves consistent
- []
-
 [35]
-Underfull \hbox (badness 1803) in paragraph at lines 180--181
+Underfull \hbox (badness 1803) in paragraph at lines 181--182
 []\T1/mdbch/m/n/12 The three evaluated architectures (2D-CNN, 3D-CNN, ViT) each offer distinct
  []
 
 )
-Underfull \hbox (badness 1527) in paragraph at lines 182--56
+Underfull \hbox (badness 1527) in paragraph at lines 183--56
 \T1/mdbch/m/n/12 extend to real-world federated deployments, heterogeneous sensor integration,
  []
 
@@ -2002,14 +1977,14 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  33081 strings out of 467525
- 697885 string characters out of 5418983
+ 697917 string characters out of 5418982
  1608598 words of memory out of 5000000
  61448 multiletter control sequences out of 15000+600000
  686317 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 100i,12n,147p,1708b,1369s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 100i,12n,147p,1720b,1369s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7v.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (49 pages, 13662230 bytes).
+Output written on main.pdf (49 pages, 13662504 bytes).
 PDF statistics:
  229 PDF objects out of 1000 (max. 8388607)
  144 compressed objects within 2 object streams

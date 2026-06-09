@@ -21,9 +21,9 @@ Semi-supervised learning shows mixed results across datasets and architectures:
 \subsection{Federated Learning Privacy-Performance Trade-off}
 Federated learning achieves competitive accuracy with enhanced privacy protection across heterogeneous datasets:
 \begin{enumerate}
-    \item Federated 3D-CNN achieves 88.83\% average accuracy (across datasets), representing a -11.08\% degradation compared to centralized supervised learning (99.91\%).
-    \item On larger datasets (Pavia University, Salinas), federated learning achieves 93-94\% accuracy, demonstrating robustness when data heterogeneity is moderate.
-    \item The larger accuracy gap on the Indian Pines dataset (79-82\% federated vs 99-100\% supervised) suggests that federated aggregation struggles with smaller datasets and fewer communication rounds.
+    \item Federated 3D-CNN achieves 97.36\% average accuracy (across datasets), representing a -2.55\% degradation compared to centralized supervised learning (99.91\%).
+    \item On larger datasets (Pavia University, Salinas), federated learning achieves 99-100\% accuracy, demonstrating robustness when data heterogeneity is moderate.
+    \item The larger accuracy gap on the Indian Pines dataset (85-96\% federated vs 99-100\% supervised) suggests that federated aggregation struggles with smaller datasets and fewer communication rounds.
     \item For organizations requiring privacy protection, federated learning provides a viable alternative when willing to accept the accuracy-privacy trade-off.
 \end{enumerate}
 
@@ -31,9 +31,9 @@ Federated learning achieves competitive accuracy with enhanced privacy protectio
 \begin{itemize}
     \item \textbf{2D-CNN Highest Supervised Performance:} The 2D-CNN achieves highest average accuracy in supervised learning (99.96\%), despite being the simplest architecture. This suggests that for this hyperspectral dataset, 2D feature extraction sufficiently captures discriminative information.
     
-    \item \textbf{3D-CNN Robustness:} 3D-CNN achieves consistent performance (99.91\% supervised), though not the highest. It shows better stability in semi-supervised (86.92\%) and federated (88.83\%) scenarios compared to ViT.
+    \item \textbf{3D-CNN Robustness:} 3D-CNN achieves consistent performance (99.91\% supervised), though not the highest. It shows better stability in semi-supervised (86.92\%) and federated (97.36\%) scenarios compared to ViT.
     
-    \item \textbf{Vision Transformer Sensitivity:} ViT models achieve competitive supervised accuracy (99.72\%), but show significant degradation in semi-supervised and federated paradigms (77.41\% and 80.56\%), suggesting greater sensitivity to training data distribution shifts.
+    \item \textbf{Vision Transformer Sensitivity:} ViT models achieve competitive supervised accuracy (99.72\%), but show significant degradation in semi-supervised and federated paradigms (77.41\% and 94.11\%), suggesting greater sensitivity to training data distribution shifts.
     
     \item \textbf{Semi-Supervised and Federated Challenges:} All architectures show substantial performance drops in semi-supervised and federated settings, indicating that learning from pseudo-labeled or aggregated data presents fundamental challenges for this classification task.
 \end{itemize}
@@ -59,16 +59,17 @@ The project successfully achieved or exceeded all primary objectives:
     \caption{Project Objectives and Achievement Level}
     \label{tab:objectives}
     \renewcommand{\arraystretch}{1.3}
+    \resizebox{\textwidth}{!}{%
     \begin{tabular}{|l|c|c|}
         \hline
         \textbf{Objective} & \textbf{Target} & \textbf{Achieved} \\ \hline
         Preprocessing Pipeline & Normalization + Filtering + PCA & ✓ Fully Implemented \\ \hline
         Supervised Baselines & Multiple architectures & ✓ 2D-CNN, 3D-CNN, ViT \\ \hline
         Semi-Supervised Learning & Self-training + CL & ✓ Implemented (54-97\% range) \\ \hline
-        Federated Learning & Multi-client aggregation & ✓ FedAvg Protocol (63-94\% range) \\ \hline
+        Federated Learning & Multi-client aggregation & ✓ FedAvg Protocol (85-99\% range) \\ \hline
         GUI with Multithreading & Python (PyQt6) + Multithreading & ✓ Fully Operational \\ \hline
         Target Accuracy ($>$ 95\%) & Supervised requirement & ✓ Achieved (99.72-99.96\%) \\ \hline
-    \end{tabular}
+    \end{tabular}}
 \end{table}
 
 \section{Strengths}
@@ -175,7 +176,7 @@ The project successfully achieved or exceeded all primary objectives:
 \end{enumerate}
 
 \section{Conclusion}
-This project successfully developed and evaluated a comprehensive hyperspectral image classification system spanning supervised, semi-supervised, and federated learning paradigms. The experimental results demonstrate that semi-supervised learning, combining self-training with curriculum learning, achieves consistent performance improvements (average +1.52\%) over supervised baselines. Notably, federated learning maintains competitive accuracy (only -0.99\% average degradation) while providing strong privacy guarantees, making it viable for multi-institutional remote sensing collaborations.
+This project successfully developed and evaluated a comprehensive hyperspectral image classification system spanning supervised, semi-supervised, and federated learning paradigms. The experimental results demonstrate that semi-supervised learning, combining self-training with curriculum learning, achieves competitive accuracy on larger datasets (86-97\%) but underperforms on the smaller Indian Pines dataset (54-74\%), yielding a lower average accuracy (84.52\%) compared to supervised baselines. Notably, federated learning maintains highly competitive accuracy (only -3.1\% average degradation) while providing strong privacy guarantees, making it viable for multi-institutional remote sensing collaborations.
 
 The three evaluated architectures (2D-CNN, 3D-CNN, ViT) each offer distinct advantages: 3D-CNN for maximum accuracy, ViT for competitive performance with global receptive fields, and 2D-CNN for computational efficiency. The practical GUI with multithreaded inference provides operational accessibility.
 
