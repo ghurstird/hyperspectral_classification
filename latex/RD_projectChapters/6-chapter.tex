@@ -3,7 +3,7 @@
 \section{Summary}
 This project developed a comprehensive hyperspectral image (HSI) classification framework that systematically compares three learning paradigms: supervised, semi-supervised, and federated learning. The system processes high-dimensional spectral data (200+ bands) from three benchmark datasets (Indian Pines, Pavia University, and Salinas) using state-of-the-art deep learning architectures (2D-CNN, 3D-CNN, and Vision Transformer).
 
-The methodology incorporates robust preprocessing techniques including global min-max normalization, Gaussian spatial filtering, and Principal Component Analysis (PCA) to reduce dimensionality to 30 components while preserving spectral-spatial information. Patches of size $15 \times 15 \times 30$ are extracted and stratified across training (80\%) and testing (20\%) sets to ensure balanced class representation.
+The methodology incorporates robust preprocessing techniques including global min-max normalization, Gaussian spatial filtering, and Principal Component Analysis (PCA) to reduce dimensionality to 30 components while preserving spectral-spatial information. Patches of size $15 \times 15 \times 30$ are extracted and stratified across training (90\%) and testing (10\%) sets to ensure balanced class representation.
 
 For semi-supervised learning, a novel combination of self-training with curriculum learning iteratively expands the training set by incorporating high-confidence pseudo-labeled samples, presenting them in order of increasing difficulty. Federated learning simulates a multi-client scenario where three clients (representing the three datasets) independently train local models and contribute weight updates to a global model through Federated Averaging (FedAvg).
 

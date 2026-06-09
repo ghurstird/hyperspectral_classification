@@ -1,7 +1,7 @@
 \contentsline {table}{\numberline {4.1}{\ignorespaces Groundtruth classes for the Indian Pines scene and their respective samples number}}{11}{}%
 \contentsline {table}{\numberline {4.2}{\ignorespaces Groundtruth classes for the Pavia University scene and their respective samples number}}{12}{}%
 \contentsline {table}{\numberline {4.3}{\ignorespaces Groundtruth classes for the Salinas scene and their respective samples number}}{13}{}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Patch counts after stratified 80/20 train-test split ($15 \times 15 \times 30$)}}{15}{}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Patch counts after stratified 90/10 train-test split ($15 \times 15 \times 30$)}}{15}{}%
 \contentsline {table}{\numberline {4.5}{\ignorespaces Comparison of Supervised, Semi-Supervised, and Federated Learning Paradigms}}{20}{}%
 \contentsline {table}{\numberline {5.1}{\ignorespaces Supervised Learning Performance on Indian Pines Dataset}}{22}{}%
 \contentsline {table}{\numberline {5.2}{\ignorespaces Supervised Learning Performance on Pavia University Dataset}}{23}{}%

@@ -182,19 +182,19 @@ To address the "curse of dimensionality" inherent in hyperspectral data, the fol
 \subsection{Patch Extraction and Dataset Splitting}
 For each labeled pixel $(r, c)$ where \texttt{gt[r,c] > 0}, a $15 \times 15$ spatial patch is extracted from the PCA-reduced cube, producing a sample of shape $15 \times 15 \times 30$. Background pixels (label $= 0$) are excluded entirely. To allow boundary pixels to serve as valid patch centers, the cube is first padded by $\lfloor 15/2 \rfloor = 7$ pixels on each spatial side using reflect padding.
 
-The resulting patches are split into training and test sets with \texttt{test\_size=0.2}, \texttt{stratify=y}, and \texttt{random\_state=42}, ensuring minority classes are proportionally represented in both splits. The resulting sample counts are given in Table~\ref{tab:split_sizes}.
+The resulting patches are split into training and test sets with \texttt{test\_size=0.1}, \texttt{stratify=y}, and \texttt{random\_state=42}, ensuring minority classes are proportionally represented in both splits. The resulting sample counts are given in Table~\ref{tab:split_sizes}.
 
 \begin{table}[H]
     \centering
-    \caption{Patch counts after stratified 80/20 train-test split ($15 \times 15 \times 30$)}
+    \caption{Patch counts after stratified 90/10 train-test split ($15 \times 15 \times 30$)}
     \label{tab:split_sizes}
     \renewcommand{\arraystretch}{1.2}
     \begin{tabular}{|l|c|c|c|}
         \hline
-        \textbf{Dataset} & \textbf{Total} & \textbf{Train (80\%)} & \textbf{Test (20\%)} \\ \hline
-        Indian Pines     & 10249 & 8199  & 2050  \\ \hline
-        Pavia University & 42776 & 34220 & 8556  \\ \hline
-        Salinas Scene    & 54129 & 43303 & 10826 \\ \hline
+        \textbf{Dataset} & \textbf{Total} & \textbf{Train (90\%)} & \textbf{Test (10\%)} \\ \hline
+        Indian Pines     & 10249 & 9224  & 1025  \\ \hline
+        Pavia University & 42776 & 38498 & 4278  \\ \hline
+        Salinas Scene    & 54129 & 48716 & 5413  \\ \hline
     \end{tabular}
 \end{table}
 

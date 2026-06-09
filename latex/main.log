@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.1)  9 JUN 2026 18:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.10)  9 JUN 2026 18:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/tanerciyas/workspace/github.com/ghurstird/hyperspectral_classification/latex/main.tex
-(/Users/tanerciyas/workspace/github.com/ghurstird/hyperspectral_classification/latex/main.tex
+**"/Users/kerem/Documents/Kerem/Codes/Github Projects/bitirme/hyperspectral_classification/latex/main.tex"
+(/Users/kerem/Documents/Kerem/Codes/Github Projects/bitirme/hyperspectral_classification/latex/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/local/texlive/2026/texmf-dist/tex/latex/base/book.cls
@@ -1309,16 +1309,13 @@ Underfull \hbox (badness 1810) in paragraph at lines 188--189
  []
 
 
-Underfull \hbox (badness 2401) in paragraph at lines 188--189
-\T1/mdbch/m/n/12 components. For semi-supervised learning, a self-training strategy combined
+Underfull \hbox (badness 1412) in paragraph at lines 188--189
+\T1/mdbch/m/n/12 it achieves competitive accuracy on larger datasets (86--97%) but significantly
  []
 
+[9
 
-Underfull \hbox (badness 1320) in paragraph at lines 188--189
-\T1/mdbch/m/n/12 model generalization. Federated learning is simulated through a server-client
- []
-
-
+]
 Underfull \hbox (badness 1590) in paragraph at lines 190--191
 []\T1/mdbch/b/n/12 Keywords:  \T1/mdbch/m/n/12 Hyperspectral Image Classification, Deep Learning, CNN, Vision
  []
@@ -1328,9 +1325,7 @@ Underfull \hbox (badness 1308) in paragraph at lines 190--191
 \T1/mdbch/m/n/12 Transformer, Semi-Supervised Learning, Federated Learning, Machine Learning,
  []
 
-[9
-
-] [10]
+[10]
 Underfull \hbox (badness 1137) in paragraph at lines 208--209
 \T1/mdbch/m/n/12 ve federe ö§renme paradigmalar^^Yn^^Y kullanan kapsaml^^Y bir çerçeve sunmaktad^^Yr.
  []
@@ -1338,6 +1333,11 @@ Underfull \hbox (badness 1137) in paragraph at lines 208--209
 
 Underfull \hbox (badness 1102) in paragraph at lines 208--209
 \T1/mdbch/m/n/12 University ve Salinas) üzerinde gizlilik korumal^^Y i³birlikçi e§itim sa§lamaktad^^Yr.
+ []
+
+
+Underfull \hbox (badness 1320) in paragraph at lines 208--209
+\T1/mdbch/m/n/12 bir performans kayb^^Yyla (%3.1 ortalama dü³ü³) kar³^^Yla³t^^Yr^^Ylabilir do§ruluk elde
  []
 
 [11
@@ -1611,13 +1611,8 @@ Underfull \hbox (badness 1028) in paragraph at lines 216--217
  []
 
 
-Underfull \hbox (badness 4621) in paragraph at lines 221--222
-[]\T1/mdbch/b/n/12 Indian Pines: \T1/mdbch/m/n/12 Smallest dataset (10,249 samples) benefits most from
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
-\T1/mdbch/m/n/12 semi-supervised learning (+1.63% average improvement), indicating
+Underfull \hbox (badness 5970) in paragraph at lines 221--222
+[]\T1/mdbch/b/n/12 Indian Pines: \T1/mdbch/m/n/12 Smallest dataset (10,249 samples) suffers the largest
  []
 
 
@@ -1626,13 +1621,13 @@ Underfull \hbox (badness 5161) in paragraph at lines 223--224
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
-[]\T1/mdbch/b/n/12 Salinas: \T1/mdbch/m/n/12 Largest dataset (54,129 samples) demonstrates highest
+Underfull \hbox (badness 1062) in paragraph at lines 225--226
+[]\T1/mdbch/b/n/12 Salinas: \T1/mdbch/m/n/12 Largest dataset (54,129 samples) demonstrates highest absolute
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
-\T1/mdbch/m/n/12 absolute accuracy (98.67% semi-supervised 3D-CNN) and narrowest
+Overfull \hbox (38.52301pt too wide) in paragraph at lines 234--243
+ [][] 
  []
 
 ) (./RD_projectChapters/6-chapter.tex [27] [28]
@@ -1872,7 +1867,7 @@ Underfull \hbox (badness 2189) in paragraph at lines 85--85
 [39] (./cv.tex) [40
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260609183657 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+runsystem(latexminted cleantemp  --timestamp 20260609185739 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
  ***********
@@ -1885,14 +1880,14 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  33173 strings out of 467525
- 699419 string characters out of 5418983
- 1614210 words of memory out of 5000000
+ 699451 string characters out of 5418982
+ 1614648 words of memory out of 5000000
  61525 multiletter control sequences out of 15000+600000
  689634 words of font info for 134 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 100i,16n,147p,1708b,1369s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 100i,16n,147p,1931b,1369s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7v.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chrma.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (53 pages, 13670198 bytes).
+Output written on main.pdf (53 pages, 13670807 bytes).
 PDF statistics:
  246 PDF objects out of 1000 (max. 8388607)
  155 compressed objects within 2 object streams
