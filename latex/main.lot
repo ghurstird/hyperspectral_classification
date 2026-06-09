@@ -1,0 +1,18 @@
+\contentsline {table}{\numberline {4.1}{\ignorespaces Groundtruth classes for the Indian Pines scene and their respective samples number}}{11}{}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Groundtruth classes for the Pavia University scene and their respective samples number}}{12}{}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Groundtruth classes for the Salinas scene and their respective samples number}}{13}{}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Patch counts after stratified 80/20 train-test split ($15 \times 15 \times 30$)}}{15}{}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Comparison of Supervised, Semi-Supervised, and Federated Learning Paradigms}}{20}{}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Supervised Learning Performance on Indian Pines Dataset}}{22}{}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Supervised Learning Performance on Pavia University Dataset}}{23}{}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Supervised Learning Performance on Salinas Dataset}}{23}{}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Semi-Supervised Learning Performance on Indian Pines Dataset}}{23}{}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Semi-Supervised Learning Performance on Pavia University Dataset}}{24}{}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Semi-Supervised Learning Performance on Salinas Dataset}}{24}{}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Federated Learning Performance on Indian Pines Dataset (Round 50)}}{24}{}%
+\contentsline {table}{\numberline {5.8}{\ignorespaces Federated Learning Performance on Pavia University Dataset (Round 50)}}{25}{}%
+\contentsline {table}{\numberline {5.9}{\ignorespaces Federated Learning Performance on Salinas Dataset (Round 50)}}{25}{}%
+\contentsline {table}{\numberline {5.10}{\ignorespaces Overall Accuracy Comparison Across All Learning Paradigms}}{25}{}%
+\contentsline {table}{\numberline {5.11}{\ignorespaces Average Performance Across Datasets by Architecture Type}}{26}{}%
+\contentsline {table}{\numberline {5.12}{\ignorespaces Qualitative Comparison of Learning Paradigms}}{28}{}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Project Objectives and Achievement Level}}{32}{}%

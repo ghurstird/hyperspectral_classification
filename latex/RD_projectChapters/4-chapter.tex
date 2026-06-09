@@ -336,4 +336,4 @@ To assess model performance, five standard metrics are employed. Let $TP_c$, $FP
 \end{itemize}
 
 \subsection{GUI and Multithreading Integration}
-To provide a practical application, a React-based front-end and a Python/FastAPI back-end are developed. To ensure a responsive user experience during heavy model inference, a multithreading approach is utilized. The inference engine runs in a separate thread from the I/O operations, allowing the user to interact with the GUI while the deep learning models process large hyperspectral hypercubes in the background.
+To provide a practical application, a standalone Python desktop GUI is developed using the PyQt6 framework. To ensure a responsive user experience during heavy model inference, a multithreading approach is utilized. The inference engine runs in a separate thread from the I/O operations, allowing the user to interact with the GUI while the deep learning models process large hyperspectral hypercubes in the background.

@@ -167,27 +167,28 @@ This section provides a comprehensive comparative analysis of the three learning
     \end{tabular}}
 \end{table}
 
-\subsection{Performance Improvement Analysis}
-Analysis of semi-supervised learning shows consistent improvements over supervised baselines across all datasets and architectures. The average improvement is calculated as follows:
+\subsection{Performance Change Analysis}
+The accuracy change relative to the supervised baseline is calculated as follows:
 
 \begin{equation}
-    \text{Improvement\%} = \frac{\text{OA}_{\text{SSL}} - \text{OA}_{\text{Supervised}}}{\text{OA}_{\text{Supervised}}} \times 100
+    \text{Change\%} = \frac{\text{OA}_{\text{alt}} - \text{OA}_{\text{Supervised}}}{\text{OA}_{\text{Supervised}}} \times 100
     \label{eq:improvement}
 \end{equation}
 
 \subsubsection{Semi-Supervised vs. Supervised}
+Semi-supervised learning shows substantial performance degradation compared to the supervised baseline across all datasets, most severely on the small Indian Pines dataset:
 \begin{itemize}
-    \item \textbf{Indian Pines:} Average improvement of 1.63\% across architectures, with 3D-CNN showing the largest gain of 1.34 percentage points (96.78\% $\rightarrow$ 98.12\%).
-    \item \textbf{Pavia University:} Average improvement of 1.82\%, demonstrating the effectiveness of curriculum learning in handling diverse urban land-cover classes.
-    \item \textbf{Salinas:} Average improvement of 2.11\%, indicating strong performance gains when handling large labeled datasets combined with substantial unlabeled samples.
+    \item \textbf{Indian Pines:} Average drop of $-34.96$ percentage points across architectures (from 99.81\% to 64.85\%), indicating that the self-training strategy is highly sensitive to limited dataset size and class imbalance.
+    \item \textbf{Pavia University:} Average drop of $-4.63$ percentage points (from 99.91\% to 95.28\%), demonstrating that curriculum learning partially mitigates degradation when larger unlabeled pools are available.
+    \item \textbf{Salinas:} Average drop of $-6.46$ percentage points (from 99.88\% to 93.42\%), suggesting that even the largest dataset is insufficient to recover fully supervised-level accuracy through pseudo-labeling alone.
 \end{itemize}
 
 \subsubsection{Federated vs. Supervised}
-Federated learning achieves comparable performance to supervised learning with privacy benefits:
+Federated learning achieves near-supervised performance on larger datasets while showing a more notable gap on Indian Pines:
 \begin{itemize}
-    \item \textbf{Indian Pines:} Average difference of -0.89\%, indicating only minimal accuracy trade-off for privacy preservation.
-    \item \textbf{Pavia University:} Average difference of -1.01\%, showing federated learning's robustness across heterogeneous data distributions.
-    \item \textbf{Salinas:} Average difference of -0.67\%, demonstrating near-parity performance at scale.
+    \item \textbf{Indian Pines:} Average difference of $-8.26$ percentage points (from 99.81\% to 91.55\%), reflecting the challenge of federated aggregation on a small dataset with limited local samples per client.
+    \item \textbf{Pavia University:} Average difference of $-0.40$ percentage points (from 99.91\% to 99.51\%), demonstrating strong robustness across heterogeneous urban land-cover classes.
+    \item \textbf{Salinas:} Average difference of $-0.75$ percentage points (from 99.88\% to 99.13\%), showing near-parity performance at scale.
 \end{itemize}
 
 \subsection{Architecture Comparison}
@@ -208,11 +209,11 @@ Federated learning achieves comparable performance to supervised learning with p
 
 \textbf{Key Findings:}
 \begin{enumerate}
-    \item \textbf{3D-CNN Superior Performance:} The 3D-CNN architecture consistently achieves the highest accuracy across all paradigms, with an average supervised accuracy of 96.63\% and semi-supervised accuracy of 98.04\%. The volumetric convolution operations effectively capture spectral-spatial correlations inherent in hyperspectral data.
-    
-    \item \textbf{ViT Competitive Performance:} Vision Transformer models achieve competitive results (averaging 95.67\% in supervised mode), particularly excelling in semi-supervised scenarios (97.71\% average) where the global receptive field benefits from pseudo-labeled samples.
-    
-    \item \textbf{2D-CNN Efficiency Trade-off:} While 2D-CNN models show lower overall accuracy (94.28\% supervised, 96.30\% semi-supervised), they provide computational efficiency gains due to reduced parameter counts and faster inference times, making them suitable for resource-constrained environments.
+    \item \textbf{2D-CNN Highest Overall Accuracy:} The 2D-CNN architecture achieves the highest average supervised accuracy (99.96\%), the highest semi-supervised average (89.22\%), and the highest federated average (98.72\%) across all three datasets. Despite being the simplest architecture, 2D convolutions appear sufficient to capture discriminative spectral-spatial information after PCA-based dimensionality reduction.
+
+    \item \textbf{3D-CNN Consistent Robustness:} The 3D-CNN achieves the second-highest performance across all paradigms (supervised: 99.91\%, semi-supervised: 86.92\%, federated: 97.36\%). Its volumetric convolution operations capture inter-band correlations that contribute to stable performance under both semi-supervised and federated settings.
+
+    \item \textbf{ViT Greatest Sensitivity to Distribution Shift:} Vision Transformer models achieve competitive supervised accuracy (99.72\%) but exhibit the largest degradation under semi-supervised (77.41\% average) and federated (94.11\% average) paradigms, indicating that the self-attention mechanism is more sensitive to noisy pseudo-labels and weight aggregation across heterogeneous data distributions.
 \end{enumerate}
 
 \subsection{Dataset-Specific Analysis}

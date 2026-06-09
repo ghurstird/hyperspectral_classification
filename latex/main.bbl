@@ -1227,32 +1227,6 @@
       \field{pages}{41\bibrangedash 48}
       \range{pages}{8}
     \endentry
-    \entry{fedosejev2015react}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=977f8c5ebc141b48c3aa84f8eab81885}{%
-           family={Fedosejev},
-           familyi={F\bibinitperiod},
-           given={Artemij},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Packt Publishing Ltd}%
-      }
-      \strng{namehash}{977f8c5ebc141b48c3aa84f8eab81885}
-      \strng{fullhash}{977f8c5ebc141b48c3aa84f8eab81885}
-      \strng{fullhashraw}{977f8c5ebc141b48c3aa84f8eab81885}
-      \strng{bibnamehash}{977f8c5ebc141b48c3aa84f8eab81885}
-      \strng{authorbibnamehash}{977f8c5ebc141b48c3aa84f8eab81885}
-      \strng{authornamehash}{977f8c5ebc141b48c3aa84f8eab81885}
-      \strng{authorfullhash}{977f8c5ebc141b48c3aa84f8eab81885}
-      \strng{authorfullhashraw}{977f8c5ebc141b48c3aa84f8eab81885}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{React. js essentials}
-      \field{year}{2015}
-    \endentry
     \entry{van1995python}{book}{}{}
       \name{author}{2}{}{%
         {{hash=e504145eff12cd8803c227c919ccfacd}{%
@@ -1473,8 +1447,8 @@
       \strng{authornamehash}{24b1e0a436b566c814359b41f12b3ce3}
       \strng{authorfullhash}{8b4244f50cc7c80638762e50c304b93e}
       \strng{authorfullhashraw}{8b4244f50cc7c80638762e50c304b93e}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{12th USENIX symposium on operating systems design and implementation (OSDI 16)}
@@ -1597,8 +1571,58 @@
       \field{pages}{59\bibrangedash 64}
       \range{pages}{6}
     \endentry
+    \entry{mcmahan2017communication}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=be349ac63090285fa87303a55d511957}{%
+           family={McMahan},
+           familyi={M\bibinitperiod},
+           given={Brendan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=4720b7685b2c38f8a5f238d67aac6c45}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={Eider},
+           giveni={E\bibinitperiod}}}%
+        {{hash=86066638fba5b4dc33bcee0bcba473cf}{%
+           family={Ramage},
+           familyi={R\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=bd7751169aeb03f0e8ce6fd2a06822d3}{%
+           family={Hampson},
+           familyi={H\bibinitperiod},
+           given={Seth},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f055a5e7ef3fad90289ae0061819e058}{%
+           family={Arcas},
+           familyi={A\bibinitperiod},
+           given={Blaise\bibnamedelima Aguera},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod},
+           prefix={y},
+           prefixi={y\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{d09630a633644c2d6bfe26906672e7a7}
+      \strng{fullhash}{6b8be53c02a59438baf3c27c0b389e79}
+      \strng{fullhashraw}{6b8be53c02a59438baf3c27c0b389e79}
+      \strng{bibnamehash}{6b8be53c02a59438baf3c27c0b389e79}
+      \strng{authorbibnamehash}{6b8be53c02a59438baf3c27c0b389e79}
+      \strng{authornamehash}{d09630a633644c2d6bfe26906672e7a7}
+      \strng{authorfullhash}{6b8be53c02a59438baf3c27c0b389e79}
+      \strng{authorfullhashraw}{6b8be53c02a59438baf3c27c0b389e79}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Artificial intelligence and statistics}
+      \field{title}{Communication-efficient learning of deep networks from decentralized data}
+      \field{year}{2017}
+      \field{pages}{1273\bibrangedash 1282}
+      \range{pages}{10}
+    \endentry
   \enddatalist
-  \missing{mcmahan2017communication}
 \endrefsection
 \endinput
 
