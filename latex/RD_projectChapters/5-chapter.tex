@@ -218,11 +218,11 @@ Federated learning achieves near-supervised performance on larger datasets while
 
 \subsection{Dataset-Specific Analysis}
 \begin{itemize}
-    \item \textbf{Indian Pines:} Smallest dataset (10,249 samples) benefits most from semi-supervised learning (+1.63\% average improvement), indicating effectiveness in limited-label scenarios.
+    \item \textbf{Indian Pines:} Smallest dataset (10,249 samples) suffers the largest performance degradation under semi-supervised learning (-34.96 percentage points average drop from 99.81\% to 64.85\%), indicating that self-training is highly sensitive to limited dataset size and class imbalance.
     
     \item \textbf{Pavia University:} Urban classification task (42,776 samples) shows robust performance across paradigms, with federated learning achieving only -1.01\% degradation, suggesting suitability for multi-institutional collaboration scenarios.
     
-    \item \textbf{Salinas:} Largest dataset (54,129 samples) demonstrates highest absolute accuracy (98.67\% semi-supervised 3D-CNN) and narrowest federated-supervised gap (-0.67\%), showing scalability to large hyperspectral datasets.
+    \item \textbf{Salinas:} Largest dataset (54,129 samples) demonstrates highest absolute semi-supervised accuracy (97.30\% semi-supervised 3D-CNN) and narrowest federated-supervised gap (-0.75\%), showing scalability to large hyperspectral datasets.
 \end{itemize}
 
 \subsection{Privacy and Efficiency Trade-offs}
@@ -238,6 +238,6 @@ Federated learning achieves near-supervised performance on larger datasets while
         \textbf{Label Requirement} & High & Medium & Low \\ \hline
         \textbf{Computational Cost} & Low & Medium & High \\ \hline
         \textbf{Communication Overhead} & None & None & Significant \\ \hline
-        \textbf{Model Accuracy} & Baseline & +1-2\% & -0.7\% to -1\% \\ \hline
+        \textbf{Model Accuracy} & Baseline & -15\% avg (dataset-dependent) & -0.7\% to -8\% \\ \hline
     \end{tabular}
 \end{table}
