@@ -24,7 +24,7 @@ from PyQt6.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
     QLabel, QPushButton, QProgressBar, QFileDialog,
     QTableWidget, QTableWidgetItem, QHeaderView,
-    QFrame, QSizePolicy, QScrollArea,
+    QFrame, QSizePolicy, QScrollArea, QComboBox,
 )
 from PyQt6.QtCore import Qt, QThread, pyqtSignal
 from PyQt6.QtGui import QFont, QColor
@@ -104,6 +104,29 @@ QPushButton#ghost_btn {
 }
 QPushButton#ghost_btn:hover   { background: #f8fafc; border-color: #7c3aed; color: #7c3aed; }
 QPushButton#ghost_btn:disabled { background: #f8fafc; color: #94a3b8; }
+
+/* ── ComboBox ───────────────────────────────────────────────────────────── */
+QComboBox {
+    background: white;
+    color: #374151;
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+    padding: 6px 10px;
+    font-size: 12px;
+}
+QComboBox:hover   { border-color: #7c3aed; }
+QComboBox:disabled { background: #f8fafc; color: #94a3b8; }
+QComboBox::drop-down { border: none; width: 20px; }
+QComboBox QAbstractItemView {
+    background: white;
+    color: #374151;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    selection-background-color: #ede9fe;
+    selection-color: #1e1b4b;
+    font-size: 12px;
+    padding: 2px;
+}
 
 /* ── Progress bar ───────────────────────────────────────────────────────── */
 QProgressBar {
@@ -590,6 +613,7 @@ class SidePanel(QFrame):
         self.setFixedWidth(240)
         self.filepath    = None
         self.dataset_key = None
+        self._run_total  = _TOTAL_MODELS
         self._init_ui()
 
     def _init_ui(self):
@@ -640,19 +664,38 @@ class SidePanel(QFrame):
         self.classify_btn.clicked.connect(self.classify_requested.emit)
         layout.addWidget(self.classify_btn)
 
+        layout.addWidget(_hline())
+
+        # run mode selector
+        mode_lbl = QLabel("Çalışma Modu")
+        mode_lbl.setStyleSheet("color:#64748b;font-size:11px;font-weight:600;border:none;")
+        layout.addWidget(mode_lbl)
+
+        self.mode_combo = QComboBox()
+        self.mode_combo.addItem("Tüm Modeller", None)
+        for cfg in MODEL_CONFIGS:
+            self.mode_combo.addItem(
+                f"{cfg['label']}  —  {cfg['mode'].replace('-', '‑')}",
+                cfg["key"],
+            )
+        self.mode_combo.currentIndexChanged.connect(self._on_mode_changed)
+        layout.addWidget(self.mode_combo)
+
+        layout.addWidget(_hline())
+
         # progress
         prog_lbl = QLabel("İlerleme")
         prog_lbl.setStyleSheet("color:#64748b;font-size:11px;font-weight:600;border:none;")
         layout.addWidget(prog_lbl)
 
         self.progress_bar = QProgressBar()
-        self.progress_bar.setRange(0, _TOTAL_MODELS)
+        self.progress_bar.setRange(0, self._run_total)
         self.progress_bar.setValue(0)
         self.progress_bar.setFixedHeight(10)
         self.progress_bar.setTextVisible(False)
         layout.addWidget(self.progress_bar)
 
-        self.progress_lbl = QLabel(f"0 / {_TOTAL_MODELS} model")
+        self.progress_lbl = QLabel(f"0 / {self._run_total} model")
         self.progress_lbl.setAlignment(Qt.AlignmentFlag.AlignRight)
         self.progress_lbl.setStyleSheet("color:#94a3b8;font-size:10px;border:none;")
         layout.addWidget(self.progress_lbl)
@@ -671,6 +714,17 @@ class SidePanel(QFrame):
         ver.setStyleSheet("color:#cbd5e1;font-size:10px;border:none;")
         ver.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(ver)
+
+    # ── mode handling ────────────────────────────────────────────────────────
+    def _on_mode_changed(self, _idx: int):
+        key = self.mode_combo.currentData()
+        self._run_total = 1 if key else _TOTAL_MODELS
+        self.progress_bar.setRange(0, self._run_total)
+        self.progress_lbl.setText(f"0 / {self._run_total} model")
+
+    @property
+    def selected_model(self) -> "str | None":
+        return self.mode_combo.currentData()
 
     # ── file handling ────────────────────────────────────────────────────────
     def _select_file(self):
@@ -717,13 +771,15 @@ class SidePanel(QFrame):
     def set_running(self, running: bool):
         self.classify_btn.setEnabled(not running)
         self.select_btn.setEnabled(not running)
+        self.mode_combo.setEnabled(not running)
         if running:
+            self.progress_bar.setRange(0, self._run_total)
             self.progress_bar.setValue(0)
-            self.progress_lbl.setText(f"0 / {_TOTAL_MODELS} model")
+            self.progress_lbl.setText(f"0 / {self._run_total} model")
 
     def update_progress(self, value: int):
         self.progress_bar.setValue(value)
-        self.progress_lbl.setText(f"{value} / {_TOTAL_MODELS} model")
+        self.progress_lbl.setText(f"{value} / {self._run_total} model")
 
     def set_status(self, msg: str):
         self.status_lbl.setText(msg)
@@ -850,10 +906,11 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("HSI Classification — Comparative Analysis")
         self.resize(1460, 820)
-        self._workers:     list = []
-        self._prep_worker        = None
-        self._completed:   int  = 0
-        self._all_metrics: dict = {}
+        self._workers:       list = []
+        self._prep_worker          = None
+        self._completed:     int  = 0
+        self._total_to_run:  int  = _TOTAL_MODELS
+        self._all_metrics:   dict = {}
         self._init_ui()
 
     def _init_ui(self):
@@ -945,6 +1002,7 @@ class MainWindow(QMainWindow):
         for p in self.map_panels.values(): p.reset()
         self._all_metrics.clear()
         self._completed = 0
+        self._total_to_run = self.side._run_total
         self._workers.clear()
         self.stats.clear()
         self.side.set_running(True)
@@ -956,11 +1014,17 @@ class MainWindow(QMainWindow):
         self._prep_worker.start()
 
     def _on_prep_done(self, img_pca, gt):
-        self.side.set_status("Modeller paralel çalışıyor…")
+        selected = self.side.selected_model
+        if selected:
+            self.side.set_status(f"Model çalışıyor…")
+        else:
+            self.side.set_status("Modeller paralel çalışıyor…")
         dk     = self.side.dataset_key
         prefix = DATASETS[dk]["prefix"]
 
-        for cfg in MODEL_CONFIGS:
+        configs_to_run = [c for c in MODEL_CONFIGS if selected is None or c["key"] == selected]
+
+        for cfg in configs_to_run:
             panel    = self.map_panels[cfg["key"]]
             pth_path = os.path.join(MODELS_DIR, f"{cfg['file_prefix']}_{prefix}.pth")
             if not os.path.exists(pth_path):
@@ -989,7 +1053,7 @@ class MainWindow(QMainWindow):
     def _tick(self):
         self._completed += 1
         self.side.update_progress(self._completed)
-        if self._completed >= _TOTAL_MODELS:
+        if self._completed >= self._total_to_run:
             self.side.set_running(False)
             self.side.set_status("Tamamlandı ✓")
             self.stats.update(self._all_metrics)

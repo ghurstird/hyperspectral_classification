@@ -1,10 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.10)  9 JUN 2026 18:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.1)  13 JUN 2026 15:51
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/kerem/Documents/Kerem/Codes/Github Projects/bitirme/hyperspectral_classification/latex/main.tex"
-(/Users/kerem/Documents/Kerem/Codes/Github Projects/bitirme/hyperspectral_classification/latex/main.tex
+**main.tex
+(./main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/local/texlive/2026/texmf-dist/tex/latex/base/book.cls
@@ -26,20 +25,28 @@ File: bk12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \bibindent=\dimen148
 ) (./ytucestyle.sty
 Package: ytucestyle 
- (/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mathdesign.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mathdesign.sty
 Package: mathdesign 2013/08/29 v2.31 Math Design Project
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbch/mdbch.cfg)
-LaTeX Encoding Info:    Redeclaring text command \textcircled (encoding OMS) on input line 206.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbch/mdbch.sty
-Package: mdbch 2013/08/29 v2.31 bitstream bitstream charter + mdbch (Math Design Project)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdfont.def
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbch/mdbch.cfg)
+LaTeX Encoding Info:    Redeclaring text command \textcircled (encoding OMS) on
+ input line 206.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbch/mdbch.sty
+Package: mdbch 2013/08/29 v2.31 bitstream bitstream charter + mdbch (Math Desig
+n Project)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdfont.def
 File: mdfont.def 2013/08/29 v2.31 (Math Design Project)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdsffont.def
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdsffont.def
 File: mdsffont.def 2013/08/29 v2.31 (Math Design Project)
 
 
@@ -175,9 +182,12 @@ LaTeX Font Info:    Overwriting symbol font `lettersupright' in version `bold'
 LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 145.
 LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `normal'
 (Font)                  OMS/mdbch/m/n --> OMS/mdbch/m/n on input line 167.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2025/11/04 v2.10 package option processing (HA)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks18
 \XKV@tempa@toks=\toks19
 \XKV@tempb@toks=\toks20
@@ -185,8 +195,10 @@ Package: xkeyval 2025/11/04 v2.10 package option processing (HA)
 \XKV@depth=\count284
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-LaTeX Font Info:    Trying to load font information for OT1+mdbch on input line 186.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbch/ot1mdbch.fd
+LaTeX Font Info:    Trying to load font information for OT1+mdbch on input line
+ 186.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbch/ot1mdbch.fd
 File: ot1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OT1/mdbch.
 )
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
@@ -207,21 +219,27 @@ LaTeX Font Info:    Overwriting symbol font `mathdesignB' in version `bold'
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 532.
 LaTeX Font Info:    Redeclaring math accent \widehat on input line 533.
 \rulethickness=\skip51
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+mdbch on input line 116.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbch/t1mdbch.fd
+LaTeX Font Info:    Trying to load font information for T1+mdbch on input line 
+116.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbch/t1mdbch.fd
 File: t1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for T1/mdbch.
 )
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
 (Font)              scaled to size 11.52008pt on input line 116.
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks22
 \inpenc@posthook=\toks23
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/tocloft/tocloft.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 51.
 \cftparskip=\skip52
@@ -260,11 +278,14 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 \cftbeforetabskip=\skip83
 \cfttabindent=\skip84
 \cfttabnumwidth=\skip85
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/subfig/subfig.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
- (/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen149
 \captionmargin=\dimen150
@@ -291,37 +312,51 @@ Package caption Info: Standard document class detected.
 \sf@top=\skip89
 \sf@bottom=\skip90
 )
-Package caption Info: Option `figurewithin=none' requires the `newfloat' package on input line 26.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/newfloat/newfloat.sty
+Package caption Info: Option `figurewithin=none' requires the `newfloat' packag
+e on input line 26.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/newfloat/newfloat.sty
 Package: newfloat 2023/10/01 v1.2 Defining new floating environments (AR)
 Package newfloat Info: Document class `book' detected (original).
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count294
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count295
- (/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -384,7 +419,8 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \c@mincompwidth=\count341
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def
 File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
@@ -475,12 +511,14 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \localshorteditorwidth=\skip112
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def
 File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 \c@textcitecount=\count410
 \c@textcitetotal=\count411
@@ -498,26 +536,31 @@ File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load bibliography style 'ieee'...
 Package biblatex Info: ... file 'ieee.bbx' found.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex-ieee/ieee.bbx
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex-ieee/ieee.bbx
 File: ieee.bbx 2025-08-01 v1.4f biblatex bibliography style
 Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.bbx' found.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/numeric-comp.bbx
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/numeric-comp.bbx
 File: numeric-comp.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
 File: numeric.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count419
 \c@bbx:relatedtotal=\count420
 ))))
 Package biblatex Info: Trying to load citation style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.cbx' found.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
 File: numeric-comp.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
 \c@cbx@tempcnta=\count421
 \c@cbx@tempcntb=\count422
@@ -537,14 +580,17 @@ Package biblatex Info: Redefining '\smartcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
- (/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2026-01-19 L3 programming layer (loader) 
- (/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count425
 ))
@@ -552,11 +598,14 @@ Package biblatex Info: ... and expl3
 (biblatex)             2026-01-19 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty (/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2025-10-09 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip113
 \enit@outerparindent=\dimen158
@@ -568,23 +617,28 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enitdp@abbrv=\count428
 
 
-LaTeX Warning: \include should only be used after \begin{document} on input line 32.
+LaTeX Warning: \include should only be used after \begin{document} on input lin
+e 32.
 
-(./information.tex) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+(./information.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip114
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
- (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks25
 \ex@=\dimen159
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen160
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count429
@@ -634,26 +688,34 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks29
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen168
 \Gin@req@width=\dimen169
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/setspace/setspace.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
- (/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
 \Gm@cnth=\count441
@@ -668,8 +730,10 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen176
 \Gm@layoutvoffset=\dimen177
 \Gm@dimlist=\toks30
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
 \f@nch@headwidth=\skip117
 \f@nch@offset@elh=\skip118
 \f@nch@offset@erh=\skip119
@@ -685,7 +749,8 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip129
 \f@nch@widthR=\skip130
 \@temptokenb=\toks31
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box56
 \beforetitleunit=\skip131
@@ -696,15 +761,21 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidth=\dimen180
 \titlewidthlast=\dimen181
 \titlewidthfirst=\dimen182
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/minted/minted.sty
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/minted/minted.sty
 Package: minted 2026/03/03 v3.8.0 Yet another Pygments shim for LaTeX
- (/usr/local/texlive/2026/texmf-dist/tex/generic/catchfile/catchfile.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/catchfile/catchfile.sty
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/fvextra/fvextra.sty
-Package: fvextra 2026/02/25 v1.14.0 fvextra - extensions and patches for fancyvrb
- (/usr/local/texlive/2026/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2026/02/25 v1.14.0 fvextra - extensions and patches for fancyv
+rb
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2025/07/28 4.6 verbatim text (tvz,hv)
 \FV@CodeLineNo=\count444
 \FV@InFile=\read3
@@ -712,11 +783,15 @@ Package: fancyvrb 2025/07/28 4.6 verbatim text (tvz,hv)
 \c@FancyVerbLine=\count445
 \FV@StepNumber=\count446
 \FV@OutFile=\write4
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/upquote/upquote.sty
-Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
- (/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/lineno/lineno.sty
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2026/03/08 line numbers on paragraphs v5.9
 \linenopenalty=\count447
 \output=\toks33
@@ -760,21 +835,30 @@ Package: lineno 2026/03/08 line numbers on paragraphs v5.9
 \FV@LineIndentBox=\box63
 \c@FV@BreakBufferDepth=\count468
 \FV@LineWidth=\dimen193
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/latex2pydata/latex2pydata.sty
-Package: latex2pydata 2026/02/25 v0.7.0 latex2pydata - write data to file in Python literal format
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/latex2pydata/latex2pydata.sty
+Package: latex2pydata 2026/02/25 v0.7.0 latex2pydata - write data to file in Py
+thon literal format
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks34
 \pgfkeys@temptoks=\toks35
- (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex
 \pgfkeys@tmptoks=\toks36
-))) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgfopts/pgfopts.sty
+)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 \pgfopts@list@add@a@toks=\toks37
 \pgfopts@list@add@b@toks=\toks38
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/tools/shellesc.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 77.
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count469
 \float@exts=\toks39
@@ -785,17 +869,27 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@minted@FancyVerbLineTemp=\count470
 \@float@every@listing=\toks41
 \c@listing=\count471
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
 \pgfutil@everybye=\toks42
 \pgfutil@tempdima=\dimen194
 \pgfutil@tempdimb=\dimen195
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box66
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
 ))
 Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@x=\dimen196
 \pgf@y=\dimen197
@@ -817,27 +911,37 @@ Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 \t@pgf@tokb=\toks44
 \t@pgf@tokc=\toks45
 \pgf@sys@id@count=\count476
- (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
 Driver file for pgf: pgfsys-pdftex.def
- (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
 File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
-))) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfsyssoftpath@smallbuffer@items=\count477
 \pgfsyssoftpath@bigbuffer@items=\count478
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
 File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -847,18 +951,43 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen262
 \pgfmath@count=\count479
 \pgfmath@box=\box67
 \pgfmath@toks=\toks46
 \pgfmath@stack@operand=\toks47
 \pgfmath@stack@operation=\toks48
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count480
-)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@picminx=\dimen263
 \pgf@picmaxx=\dimen264
@@ -874,75 +1003,123 @@ File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@yy=\dimen274
 \pgf@zx=\dimen275
 \pgf@zy=\dimen276
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@path@lastx=\dimen277
 \pgf@path@lasty=\dimen278
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@shorten@end@additional=\dimen279
 \pgf@shorten@start@additional=\dimen280
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfpic=\box68
 \pgf@hbox=\box69
 \pgf@layerbox@main=\box70
 \pgf@picture@serial@count=\count481
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgflinewidth=\dimen281
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@pt@x=\dimen282
 \pgf@pt@y=\dimen283
 \pgf@pt@temp=\dimen284
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
 File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
 File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfarrowsep=\dimen285
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@max=\dimen286
 \pgf@sys@shading@range@num=\count482
 \pgf@shadingcount=\count483
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfexternal@startupbox=\box71
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
 File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
 File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
 File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex
 File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfnodeparttextbox=\box72
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@nodesepstart=\dimen287
 \pgf@nodesepend=\dimen288
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
 Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
 \pgffor@iter=\dimen289
 \pgffor@skip=\dimen290
 \pgffor@stack=\toks49
 \pgffor@toks=\toks50
-)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@plot@mark@count=\count484
 \pgfplotmarksize=\dimen291
@@ -963,39 +1140,65 @@ File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \tikznumberofchildren=\count486
 \tikznumberofcurrentchild=\count487
 \tikz@fig@count=\count488
- (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfmatrixcurrentrow=\count489
 \pgfmatrixcurrentcolumn=\count490
 \pgf@matrix@numberofcolumns=\count491
 )
 \tikz@expandcount=\count492
- (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgfgantt/pgfgantt.sty
+)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgfgantt/pgfgantt.sty
 Package: pgfgantt 2024/06/19 v5.0a Draw Gantt diagrams with TikZ
- (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+code.tex
 File: pgflibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \arrowsize=\dimen300
-)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
+))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@layerbox@background=\box77
 \pgf@layerboxsaved@background=\box78
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypatterns.code.tex
 File: tikzlibrarypatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibrarypattern
+s.code.tex
 File: pgflibrarypatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
 File: tikzlibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
- (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex
 File: pgflibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfcalendar.sty (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfcalendar.code.tex
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfcalendar.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfcalendar.code.
+tex
 File: pgfcalendar.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfcalendarcurrentjulian=\count493
 \pgf@cal@easter@Y=\count494
@@ -1034,7 +1237,8 @@ Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 )
 \@quotelevel=\count521
 \@quotereset=\count522
- (./main.aux)
+
+(./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
@@ -1052,13 +1256,15 @@ LaTeX Font Info:    ... okay on input line 36.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
 LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 36.
-LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 36.
+LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 3
+6.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdacmr.fd
 File: mdacmr.fd 
 )
 LaTeX Font Info:    ... okay on input line 36.
 LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 36.
-LaTeX Font Info:    Trying to load font information for MDB+cmr on input line 36.
+LaTeX Font Info:    Trying to load font information for MDB+cmr on input line 3
+6.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbcmr.fd
 File: mdbcmr.fd 
 )
@@ -1070,7 +1276,8 @@ Package caption Info: End \AtBeginDocument code.
 Package newfloat Info: `float' package detected.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
 )
 Package biblatex Info: Input encoding 'utf8' detected.
@@ -1080,10 +1287,12 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (./main.bbl)
+
+(./main.bbl)
 Package biblatex Info: Reference section=0 on input line 36.
 Package biblatex Info: Reference segment=0 on input line 36.
- (/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count523
 \scratchdimen=\dimen302
@@ -1098,9 +1307,12 @@ Package biblatex Info: Reference segment=0 on input line 36.
 \everyMPtoPDFconversion=\toks52
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1154,8 +1366,10 @@ LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
 (Font)              scaled to size 16.58891pt on input line 24.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
 (Font)              scaled to size 9.60007pt on input line 24.
-LaTeX Font Info:    Trying to load font information for OML+mdbch on input line 24.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbch/omlmdbch.fd
+LaTeX Font Info:    Trying to load font information for OML+mdbch on input line
+ 24.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbch/omlmdbch.fd
 File: omlmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OML/mdbch.
 )
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
@@ -1164,8 +1378,10 @@ LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
 (Font)              scaled to size 11.52008pt on input line 24.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
 (Font)              scaled to size 9.60007pt on input line 24.
-LaTeX Font Info:    Trying to load font information for OMS+mdbch on input line 24.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbch/omsmdbch.fd
+LaTeX Font Info:    Trying to load font information for OMS+mdbch on input line
+ 24.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbch/omsmdbch.fd
 File: omsmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMS/mdbch.
 )
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
@@ -1174,8 +1390,10 @@ LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
 (Font)              scaled to size 11.52008pt on input line 24.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
 (Font)              scaled to size 9.60007pt on input line 24.
-LaTeX Font Info:    Trying to load font information for OMX+mdbch on input line 24.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbch/omxmdbch.fd
+LaTeX Font Info:    Trying to load font information for OMX+mdbch on input line
+ 24.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbch/omxmdbch.fd
 File: omxmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdbch.
 )
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
@@ -1190,8 +1408,10 @@ LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
 (Font)              scaled to size 11.52008pt on input line 24.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
 (Font)              scaled to size 9.60007pt on input line 24.
-LaTeX Font Info:    Trying to load font information for MDA+mdbch on input line 24.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbch/mdamdbch.fd
+LaTeX Font Info:    Trying to load font information for MDA+mdbch on input line
+ 24.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbch/mdamdbch.fd
 File: mdamdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdbch.
 )
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
@@ -1200,8 +1420,10 @@ LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
 (Font)              scaled to size 11.52008pt on input line 24.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
 (Font)              scaled to size 9.60007pt on input line 24.
-LaTeX Font Info:    Trying to load font information for MDB+mdbch on input line 24.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbch/mdbmdbch.fd
+LaTeX Font Info:    Trying to load font information for MDB+mdbch on input line
+ 24.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbch/mdbmdbch.fd
 File: mdbmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDB/mdbch.
 )
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
@@ -1210,21 +1432,25 @@ LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
 (Font)              scaled to size 11.52008pt on input line 24.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
 (Font)              scaled to size 9.60007pt on input line 24.
- [1
+
+[1
 
 
-{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc} <./ytu_logo.png>]
+{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
+al/texlive/2026/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc} <./ytu_logo.png>]
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 (Font)              scaled to size 11.52008pt on input line 58.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 (Font)              scaled to size 9.60007pt on input line 58.
-LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line 58.
+LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line
+ 58.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdbch/ts1mdbch.fd
 File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
 )
 LaTeX Font Info:    Font shape `TS1/mdbch/b/n' will be
 (Font)              scaled to size 9.60007pt on input line 58.
- [1] [2
+
+[1] [2
 
 ]
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
@@ -1279,12 +1505,14 @@ LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
 
 ] (./main.lot
 Underfull \hbox (badness 2772) in paragraph at lines 1--1
- [][] []\T1/mdbch/m/n/12 Groundtruth classes for the Indian Pines scene and their 
+ [][] []\T1/mdbch/m/n/12 Groundtruth classes for the Indian Pines scene and the
+ir 
  []
 
 
 Underfull \hbox (badness 1365) in paragraph at lines 5--5
- [][] []\T1/mdbch/m/n/12 Comparison of Supervised, Semi-Supervised, and Federated 
+ [][] []\T1/mdbch/m/n/12 Comparison of Supervised, Semi-Supervised, and Federat
+ed 
  []
 
 )
@@ -1293,51 +1521,48 @@ Underfull \hbox (badness 1365) in paragraph at lines 5--5
 
  [8
 
-]
-Underfull \hbox (badness 6792) in paragraph at lines 188--189
-\T1/mdbch/m/n/12 classification employing supervised, semi-supervised, and federated learning
- []
-
-
-Underfull \hbox (badness 1430) in paragraph at lines 188--189
-\T1/mdbch/m/n/12 spectral data, particularly addressing the challenge of limited labeled samples
- []
-
-
-Underfull \hbox (badness 1810) in paragraph at lines 188--189
-\T1/mdbch/m/n/12 Component Analysis (PCA) to reduce dimensionality from 200+ bands to 30
- []
-
-
-Underfull \hbox (badness 1412) in paragraph at lines 188--189
-\T1/mdbch/m/n/12 it achieves competitive accuracy on larger datasets (86--97%) but significantly
- []
-
-[9
+] [9
 
 ]
 Underfull \hbox (badness 1590) in paragraph at lines 190--191
-[]\T1/mdbch/b/n/12 Keywords:  \T1/mdbch/m/n/12 Hyperspectral Image Classification, Deep Learning, CNN, Vision
+[]\T1/mdbch/b/n/12 Keywords:  \T1/mdbch/m/n/12 Hyperspectral Image Classificati
+on, Deep Learning, CNN, Vision
  []
 
 
 Underfull \hbox (badness 1308) in paragraph at lines 190--191
-\T1/mdbch/m/n/12 Transformer, Semi-Supervised Learning, Federated Learning, Machine Learning,
+\T1/mdbch/m/n/12 Transformer, Semi-Supervised Learning, Federated Learning, Mac
+hine Learning,
  []
 
 [10]
-Underfull \hbox (badness 1137) in paragraph at lines 208--209
-\T1/mdbch/m/n/12 ve federe ö§renme paradigmalar^^Yn^^Y kullanan kapsaml^^Y bir çerçeve sunmaktad^^Yr.
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
+[]\T1/mdbch/m/n/12 Bu proje, hiperspektral görüntülerin (HSI) s^^Yn^^Yfland^^Yr
+^^Ylmas^^Y için denetimli,
  []
 
 
-Underfull \hbox (badness 1102) in paragraph at lines 208--209
-\T1/mdbch/m/n/12 University ve Salinas) üzerinde gizlilik korumal^^Y i³birlikçi e§itim sa§lamaktad^^Yr.
+Underfull \hbox (badness 2181) in paragraph at lines 208--209
+\T1/mdbch/m/n/12 olu³turmaktad^^Yr: 2D-CNN, 3D-CNN ve Vision Transformer (ViT).
+ 200'ü a³k^^Yn
  []
 
 
-Underfull \hbox (badness 1320) in paragraph at lines 208--209
-\T1/mdbch/m/n/12 bir performans kayb^^Yyla (%3.1 ortalama dü³ü³) kar³^^Yla³t^^Yr^^Ylabilir do§ruluk elde
+Underfull \hbox (badness 1983) in paragraph at lines 208--209
+\T1/mdbch/m/n/12 stratejisi benimsenmi³tir; bu yakla³^^Ym, etiketsiz örnekleri 
+güven skoruna göre
+ []
+
+
+Underfull \hbox (badness 1286) in paragraph at lines 208--209
+\T1/mdbch/m/n/12 ise üç standart k^^Yyaslama veri seti (Indian Pines, Pavia Uni
+versity ve Salinas)
+ []
+
+
+Underfull \hbox (badness 1546) in paragraph at lines 208--209
+\T1/mdbch/m/n/12 üzerinde çal^^Y³an simüle edilmi³ bir sunucu-istemci mimarisi 
+arac^^Yl^^Y§^^Yyla hayata
  []
 
 [11
@@ -1347,8 +1572,15 @@ Underfull \hbox (badness 1320) in paragraph at lines 208--209
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 (Font)              scaled to size 28.8002pt on input line 1.
 
-Underfull \hbox (badness 1715) in paragraph at lines 4--5
-\T1/mdbch/m/n/12 such as CNN, ViT, and Self-Training, against the common challenges of high
+Underfull \hbox (badness 2573) in paragraph at lines 2--3
+\T1/mdbch/m/n/12 costs for machine learning and deep learning models, while the
+ scarcity of
+ []
+
+
+Underfull \hbox (badness 6032) in paragraph at lines 4--5
+\T1/mdbch/m/n/12 deep learning architectures---CNN, ViT, and Self-Training---un
+der these twin
  []
 
 [1
@@ -1357,517 +1589,471 @@ Underfull \hbox (badness 1715) in paragraph at lines 4--5
 ]
 LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
 (Font)              scaled to size 11.52008pt on input line 11.
-) (./RD_projectChapters/2-chapter.tex
-Underfull \hbox (badness 1609) in paragraph at lines 21--1
-[]\T1/mdbch/m/n/12 The path to be followed in this project targets this gap in the literature by
+
+Underfull \hbox (badness 1087) in paragraph at lines 13--14
+[]\T1/mdbch/m/n/12 To incorporate Curriculum Learning into each model to improv
+e training
  []
 
-[2]
+
+Underfull \hbox (badness 1132) in paragraph at lines 15--16
+\T1/mdbch/m/n/12 to end users, enabling real-time prediction without requiring 
+direct code
+ []
+
+) (./RD_projectChapters/2-chapter.tex [2]
  2.
 
-Underfull \hbox (badness 1616) in paragraph at lines 3--4
-\T1/mdbch/m/n/12 The problem of hyperspectral image (HSI) classification has been one of the
+Underfull \hbox (badness 2818) in paragraph at lines 3--4
+\T1/mdbch/m/n/12 with spectral fidelity that broadband sensors cannot match. Th
+e trajectory
  []
 
 
-Underfull \hbox (badness 1939) in paragraph at lines 6--7
-\T1/mdbch/m/n/12 approaches, studies combining probabilistic SVMs with guided filters [4] and
+Underfull \hbox (badness 4505) in paragraph at lines 3--4
+\T1/mdbch/m/n/12 of the field---from hand-crafted statistical classifiers to at
+tention-based deep
  []
 
 [3
 
-] [4]) (./RD_projectChapters/3-chapter.tex
-Underfull \hbox (badness 1215) in paragraph at lines 22--1
-\T1/mdbch/m/n/12 a single semi-supervised framework by combining CNN and Transformer-based
+]
+Underfull \hbox (badness 1596) in paragraph at lines 27--28
+\T1/mdbch/m/n/12 spectral-spatial patches as input sequences enabled more direc
+t application of
  []
 
-[5]
+[4]) (./RD_projectChapters/3-chapter.tex [5] [6]
  3.
 
-Underfull \hbox (badness 1406) in paragraph at lines 13--14
-[]\T1/mdbch/m/n/12 Providing a graphical user interface (GUI) operating on a multithreaded
+Underfull \hbox (badness 1005) in paragraph at lines 5--6
+\T1/mdbch/m/n/12 specification---they emerged from a systematic examination of 
+the performance
  []
 
-[6
 
-] [7]
+Underfull \hbox (badness 4940) in paragraph at lines 9--10
+[]\T1/mdbch/m/n/12 Preprocessing raw hyperspectral cubes via Gaussian filtering
+ for noise
+ []
+
+
+Underfull \hbox (badness 2762) in paragraph at lines 9--10
+\T1/mdbch/m/n/12 suppression and Principal Component Analysis (PCA) for dimensi
+onality
+ []
+
+
+Underfull \hbox (badness 2762) in paragraph at lines 11--12
+[]\T1/mdbch/m/n/12 Exposing all trained models through a multithreaded GUI that
+ enables
+ []
+
+[7
+
+]
+Underfull \hbox (badness 1168) in paragraph at lines 23--24
+\T1/mdbch/m/n/12 Training deep models on full hyperspectral cubes demands subst
+antial parallel
+ []
+
+[8]
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 52.
+(Font)              scaled to size 10.51207pt on input line 49.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 52.
+(Font)              scaled to size 10.51207pt on input line 49.
 
-Underfull \hbox (badness 3364) in paragraph at lines 60--60
+Underfull \hbox (badness 3364) in paragraph at lines 56--56
  \T1/mdbch/m/n/12 & Data Prep
  []
 
 
-Underfull \hbox (badness 2486) in paragraph at lines 61--61
+Underfull \hbox (badness 2486) in paragraph at lines 57--57
  [][]|\T1/mdbch/m/n/12 Preprocessing
  []
 
 
-Underfull \hbox (badness 2865) in paragraph at lines 62--62
+Underfull \hbox (badness 2865) in paragraph at lines 58--58
  \T1/mdbch/m/n/12 (CNN & ViT)
  []
 
 
-Underfull \hbox (badness 4096) in paragraph at lines 63--63
+Underfull \hbox (badness 4096) in paragraph at lines 59--59
  [][]|\T1/mdbch/m/n/12 Curriculum
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 64--64
+Underfull \hbox (badness 1466) in paragraph at lines 60--60
  []\T1/mdbch/m/n/12 Implementation
  []
 
 
-Underfull \hbox (badness 1769) in paragraph at lines 65--65
+Underfull \hbox (badness 1769) in paragraph at lines 61--61
  [][]|\T1/mdbch/m/n/12 Final Testing &
  []
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 65--65
+Underfull \hbox (badness 1694) in paragraph at lines 61--61
  \T1/mdbch/m/n/12 Documentation
  []
 
 
-Overfull \hbox (2.38869pt too wide) in paragraph at lines 66--67
+Overfull \hbox (2.38869pt too wide) in paragraph at lines 62--63
  [][] 
  []
 
-) (./RD_projectChapters/4-chapter.tex [8]
+) (./RD_projectChapters/4-chapter.tex [9]
  4.
-
-Underfull \hbox (badness 4024) in paragraph at lines 2--3
-\T1/mdbch/m/n/12 The system design phase constitutes the core of this project, defining the
- []
-
-<images/workflow.png, id=79, 2822.545pt x 1452.42625pt>
+<images/workflow.png, id=82, 2822.545pt x 1452.42625pt>
 File: images/workflow.png Graphic file (type png)
 <use images/workflow.png>
 Package pdftex.def Info: images/workflow.png  used on input line 6.
 (pdftex.def)             Requested size: 426.79135pt x 219.60535pt.
-[9
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+\T1/mdbch/m/n/12 Model performance in HSI classification is tightly coupled to 
+dataset
+ []
+
+
+Underfull \hbox (badness 4467) in paragraph at lines 12--13
+\T1/mdbch/m/n/12 characteristics---spatial resolution, class imbalance, and tot
+al labeled sample
+ []
+
+[10
 
  <./images/workflow.png>]
-<images/indian_pines_band.png, id=84, 353.4003pt x 278.9622pt>
+<images/indian_pines_band.png, id=87, 353.4003pt x 278.9622pt>
 File: images/indian_pines_band.png Graphic file (type png)
 <use images/indian_pines_band.png>
 Package pdftex.def Info: images/indian_pines_band.png  used on input line 23.
 (pdftex.def)             Requested size: 204.85802pt x 161.7088pt.
-<images/Indian_pines_gt.png, id=85, 353.4003pt x 280.4076pt>
+<images/Indian_pines_gt.png, id=88, 353.4003pt x 280.4076pt>
 File: images/Indian_pines_gt.png Graphic file (type png)
 <use images/Indian_pines_gt.png>
 Package pdftex.def Info: images/Indian_pines_gt.png  used on input line 30.
 (pdftex.def)             Requested size: 204.85802pt x 162.54666pt.
- [10 <./images/indian_pines_band.png> <./images/Indian_pines_gt.png>]
-<images/pavia_band.png, id=89, 353.4003pt x 280.4076pt>
+ [11 <./images/indian_pines_band.png> <./images/Indian_pines_gt.png>]
+<images/pavia_band.png, id=92, 353.4003pt x 280.4076pt>
 File: images/pavia_band.png Graphic file (type png)
 <use images/pavia_band.png>
 Package pdftex.def Info: images/pavia_band.png  used on input line 71.
 (pdftex.def)             Requested size: 204.85802pt x 162.54666pt.
-<images/paviau_gt.png, id=90, 353.4003pt x 278.9622pt>
+<images/paviau_gt.png, id=93, 353.4003pt x 278.9622pt>
 File: images/paviau_gt.png Graphic file (type png)
 <use images/paviau_gt.png>
 Package pdftex.def Info: images/paviau_gt.png  used on input line 78.
 (pdftex.def)             Requested size: 204.85802pt x 161.7088pt.
- [11]
-<images/salinas_band.png, id=94, 449.5194pt x 338.2236pt>
+ [12]
+<images/salinas_band.png, id=98, 449.5194pt x 338.2236pt>
 File: images/salinas_band.png Graphic file (type png)
 <use images/salinas_band.png>
 Package pdftex.def Info: images/salinas_band.png  used on input line 112.
 (pdftex.def)             Requested size: 204.85802pt x 154.13454pt.
-<images/salinas_gt.png, id=95, 449.5194pt x 338.2236pt>
+<images/salinas_gt.png, id=99, 449.5194pt x 338.2236pt>
 File: images/salinas_gt.png Graphic file (type png)
 <use images/salinas_gt.png>
 Package pdftex.def Info: images/salinas_gt.png  used on input line 119.
 (pdftex.def)             Requested size: 204.85802pt x 154.13454pt.
- [12 <./images/pavia_band.png> <./images/paviau_gt.png>] [13 <./images/salinas_band.png> <./images/salinas_gt.png>]
-<images/block_diagram.png, id=103, 2826.56pt x 1475.5125pt>
+ [13 <./images/pavia_band.png> <./images/paviau_gt.png>] [14 <./images/salinas_
+band.png> <./images/salinas_gt.png>]
+<images/block_diagram.png, id=106, 2826.56pt x 1475.5125pt>
 File: images/block_diagram.png Graphic file (type png)
 <use images/block_diagram.png>
 Package pdftex.def Info: images/block_diagram.png  used on input line 158.
 (pdftex.def)             Requested size: 426.79135pt x 222.78076pt.
+ [15 <./images/block_diagram.png>]
 LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
 (Font)              scaled to size 12.86407pt on input line 177.
 
 Underfull \hbox (badness 4713) in paragraph at lines 177--178
-[]\T1/mdbch/b/n/12 Spatial Gaus-sian Fil-ter-ing: \T1/mdbch/m/n/12 A Gaussian filter is applied with $\OML/mdbch/m/it/12 ^^[ \OT1/mdbch/m/n/12 =
+[]\T1/mdbch/b/n/12 Spatial Gaus-sian Fil-ter-ing: \T1/mdbch/m/n/12 A Gaussian f
+ilter is applied with $\OML/mdbch/m/it/12 ^^[ \OT1/mdbch/m/n/12 =
  []
 
 
 Underfull \hbox (badness 2103) in paragraph at lines 177--178
-\OT1/mdbch/m/n/12 0\OML/mdbch/m/it/12 :\OT1/mdbch/m/n/12 5$ \T1/mdbch/m/n/12 along only the spatial axes ($\OML/mdbch/m/it/12 H \OMS/mdbch/m/n/12 ^^B \OML/mdbch/m/it/12 W$\T1/mdbch/m/n/12 ) of the normalized hypercube
+\OT1/mdbch/m/n/12 0\OML/mdbch/m/it/12 :\OT1/mdbch/m/n/12 5$ \T1/mdbch/m/n/12 al
+ong only the spatial axes ($\OML/mdbch/m/it/12 H \OMS/mdbch/m/n/12 ^^B \OML/mdb
+ch/m/it/12 W$\T1/mdbch/m/n/12 ) of the normalized hypercube
  []
 
 
 Underfull \hbox (badness 1348) in paragraph at lines 177--178
-\T1/cmtt/m/n/12 mode='reflect'\T1/mdbch/m/n/12 . Setting the spectral axis sigma to zero ensures that
+\T1/cmtt/m/n/12 mode='reflect'\T1/mdbch/m/n/12 . Setting the spectral axis sigm
+a to zero ensures that
  []
 
-[14 <./images/block_diagram.png>]
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
 (Font)              scaled to size 7.68005pt on input line 179.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
 (Font)              scaled to size 5.76004pt on input line 179.
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
-[]\T1/mdbch/b/n/12 3D-CNN: \T1/mdbch/m/n/12 This model employs three-dimensional kernels to extract
+Underfull \hbox (badness 1314) in paragraph at lines 202--204
+\T1/mdbch/m/n/12 Two architectures represent complementary inductive biases for
+ spectral-spatial
  []
 
-[15{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-Underfull \hbox (badness 1325) in paragraph at lines 205--206
-\T1/mdbch/m/n/12 bands, the HSI patches are flattened into sequences of embeddings. A
+[16{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
+}]
+Underfull \hbox (badness 1867) in paragraph at lines 204--205
+\T1/mdbch/m/n/12 ReLU activations are inserted after each convolutional block t
+o stabilize
  []
 
-
-Underfull \hbox (badness 1270) in paragraph at lines 205--206
-\T1/mdbch/m/n/12 self-attention mechanism is applied to weigh the importance of different
+[17] [18]
+Underfull \hbox (badness 2237) in paragraph at lines 245--246
+\T1/mdbch/m/n/12 prevents the volumetric kernels from overfitting to the noisie
+st pseudo-labels
  []
 
-
-Underfull \hbox (badness 5460) in paragraph at lines 215--216
-\T1/mdbch/m/n/12 incorporates batch normalization and dropout layers to prevent overfitting,
- []
-
-
-Underfull \hbox (badness 3058) in paragraph at lines 218--219
-\T1/mdbch/m/n/12 relationships, and multi-head self-attention mechanisms enable the model to
- []
-
-
-Underfull \hbox (badness 3930) in paragraph at lines 218--219
-\T1/mdbch/m/n/12 capture global dependencies across all spectral bands and spatial locations.
- []
-
-[16] [17] [18]
-Underfull \hbox (badness 1215) in paragraph at lines 268--269
-\T1/mdbch/m/n/12 The 3D-CNN federated variant trains independently on each client site before
- []
-
-[19]
-<images/SSL_flowchart.png, id=128, 2826.56pt x 1451.4225pt>
+[19] [20]
+<images/SSL_flowchart.png, id=131, 2826.56pt x 1451.4225pt>
 File: images/SSL_flowchart.png Graphic file (type png)
 <use images/SSL_flowchart.png>
 Package pdftex.def Info: images/SSL_flowchart.png  used on input line 302.
 (pdftex.def)             Requested size: 426.79135pt x 219.14352pt.
- [20 <./images/SSL_flowchart.png>]) (./RD_projectChapters/5-chapter.tex [21]
+ [21 <./images/SSL_flowchart.png>])
+(./RD_projectChapters/5-chapter.tex [22]
  5.
 
-Underfull \hbox (badness 2582) in paragraph at lines 7--8
-\T1/mdbch/m/n/12 through additional learning paradigms. Models were trained exclusively on
+Underfull \hbox (badness 1281) in paragraph at lines 7--8
+\T1/mdbch/m/n/12 selected through grid search and cross-validation. These resul
+ts serve as the
  []
 
-[22
+[23
 
-]
-Underfull \hbox (badness 5652) in paragraph at lines 55--56
-\T1/mdbch/m/n/12 Semi-supervised learning leverages unlabeled data through self-training and
+] [24]
+Underfull \hbox (badness 1748) in paragraph at lines 103--104
+\T1/mdbch/m/n/12 are trained and their weights aggregated via FedAvg over 50 co
+mmunication
  []
 
-
-Underfull \hbox (badness 5756) in paragraph at lines 55--56
-\T1/mdbch/m/n/12 curriculum learning strategies to improve model generalization and reduce
- []
-
-[23] [24]
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
-\T1/mdbch/m/n/12 improvements, computational efficiency, privacy implications, and practical
- []
-
-[25]
-Underfull \hbox (badness 4341) in paragraph at lines 182--183
-\T1/mdbch/m/n/12 to 95.28%), demonstrating that curriculum learning partially mitigates
+[25] [26]
+Underfull \hbox (badness 4341) in paragraph at lines 199--200
+\T1/mdbch/m/n/12 to 95.28%), demonstrating that curriculum learning partially m
+itigates
  []
 
 
-Underfull \hbox (badness 2913) in paragraph at lines 183--184
-\T1/mdbch/m/n/12 suggesting that even the largest dataset is insufficient to recover fully
+Underfull \hbox (badness 2913) in paragraph at lines 200--201
+\T1/mdbch/m/n/12 suggesting that even the largest dataset is insufficient to re
+cover fully
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 190--191
-\T1/mdbch/m/n/12 to 99.51%), demonstrating strong robustness across heterogeneous urban
+Underfull \hbox (badness 1158) in paragraph at lines 207--208
+\T1/mdbch/m/n/12 to 99.51%), demonstrating strong robustness across heterogeneo
+us urban
  []
 
-[26]
-Underfull \hbox (badness 1762) in paragraph at lines 214--215
-\T1/mdbch/m/n/12 performance across all paradigms (supervised: 99.91%, semi-supervised:
- []
-
-
-Underfull \hbox (badness 1635) in paragraph at lines 214--215
-\T1/mdbch/m/n/12 inter-band correlations that contribute to stable performance under both
+[27]
+Underfull \hbox (badness 4156) in paragraph at lines 244--245
+\T1/mdbch/m/n/12 2D-CNN leads in supervised (99.96%), semi-supervised (89.22%),
+ and
  []
 
 
-Underfull \hbox (badness 1189) in paragraph at lines 216--217
-\T1/mdbch/m/n/12 achieve competitive supervised accuracy (99.72%) but exhibit the largest
+Underfull \hbox (badness 3138) in paragraph at lines 244--245
+\T1/mdbch/m/n/12 federated (98.72%) average accuracy. After PCA reduces the spe
+ctral
  []
 
 
-Underfull \hbox (badness 1028) in paragraph at lines 216--217
-\T1/mdbch/m/n/12 average) paradigms, indicating that the self-attention mechanism is more
+Underfull \hbox (badness 3780) in paragraph at lines 248--249
+[]\T1/mdbch/b/n/12 ViT is most sen-si-tive to dis-tri-bu-tion shift: \T1/mdbch/
+m/n/12 The Vision Transformer
+ []
+
+[28]
+Underfull \hbox (badness 2027) in paragraph at lines 253--254
+\T1/mdbch/m/n/12 (99.81% $\OMS/mdbch/m/n/12 !$ \T1/mdbch/m/n/12 64.85%), driven
+ by error propagation through pseudo-label
  []
 
 
-Underfull \hbox (badness 5970) in paragraph at lines 221--222
-[]\T1/mdbch/b/n/12 Indian Pines: \T1/mdbch/m/n/12 Smallest dataset (10,249 samples) suffers the largest
- []
-
-
-Underfull \hbox (badness 5161) in paragraph at lines 223--224
-\T1/mdbch/m/n/12 performance across paradigms, with federated learning achieving only
- []
-
-
-Underfull \hbox (badness 1062) in paragraph at lines 225--226
-[]\T1/mdbch/b/n/12 Salinas: \T1/mdbch/m/n/12 Largest dataset (54,129 samples) demonstrates highest absolute
- []
-
-
-Overfull \hbox (38.52301pt too wide) in paragraph at lines 234--243
+Overfull \hbox (38.52301pt too wide) in paragraph at lines 268--277
  [][] 
  []
 
-) (./RD_projectChapters/6-chapter.tex [27] [28]
+) (./RD_projectChapters/6-chapter.tex [29]
  6.
 
-Underfull \hbox (badness 1270) in paragraph at lines 4--5
-\T1/mdbch/m/n/12 framework that systematically compares three learning paradigms: supervised,
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+[]\T1/mdbch/m/n/12 On Pavia University and Salinas, where unlabeled pools are l
+arge,
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 6--7
-[]\T1/mdbch/m/n/12 The methodology incorporates robust preprocessing techniques including global
+Underfull \hbox (badness 1642) in paragraph at lines 14--15
+[]\T1/mdbch/m/n/12 On the smaller, class-imbalanced Indian Pines set, accuracy 
+collapses to
  []
 
-
-Underfull \hbox (badness 2626) in paragraph at lines 8--9
-\T1/mdbch/m/n/12 learning iteratively expands the training set by incorporating high-confidence
- []
-
-
-Underfull \hbox (badness 2384) in paragraph at lines 16--17
-[]\T1/mdbch/m/n/12 However, on the smaller Indian Pines dataset, semi-supervised learning
- []
-
-
-Underfull \hbox (badness 6961) in paragraph at lines 16--17
-\T1/mdbch/m/n/12 significantly underperforms (54-74%), suggesting that the self-training
- []
-
-[29
+[30
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-[]\T1/mdbch/m/n/12 The 2D-CNN semi-supervised model achieves the highest average
+Underfull \hbox (badness 3449) in paragraph at lines 23--24
+\T1/mdbch/m/n/12 demonstrating that FedAvg is robust when local data distributi
+ons are
  []
 
 
-Underfull \hbox (badness 1275) in paragraph at lines 17--18
-\T1/mdbch/m/n/12 semi-supervised accuracy at 89.22%, indicating that simpler architectures
- []
-
-
-Underfull \hbox (badness 2980) in paragraph at lines 24--25
-[]\T1/mdbch/m/n/12 Federated 3D-CNN achieves 97.36% average accuracy (across datasets),
- []
-
-
-Underfull \hbox (badness 1931) in paragraph at lines 25--26
-\T1/mdbch/m/n/12 99-100% accuracy, demonstrating robustness when data heterogeneity is
- []
-
-
-Underfull \hbox (badness 1478) in paragraph at lines 34--35
-[]\T1/mdbch/b/n/12 3D-CNN Ro-bust-ness: \T1/mdbch/m/n/12 3D-CNN achieves consistent performance (99.91%
- []
-
-[30]
-Underfull \hbox (badness 7379) in paragraph at lines 38--39
-[]\T1/mdbch/b/n/12 Semi-Supervised and Fed-er-ated Chal-lenges: \T1/mdbch/m/n/12 All architectures show
- []
-
-
-Underfull \hbox (badness 2012) in paragraph at lines 38--39
-\T1/mdbch/m/n/12 substantial performance drops in semi-supervised and federated settings,
- []
-
-
-Underfull \hbox (badness 1248) in paragraph at lines 38--39
-\T1/mdbch/m/n/12 indicating that learning from pseudo-labeled or aggregated data presents
- []
-
-
-Underfull \hbox (badness 6608) in paragraph at lines 47--48
-[]\T1/mdbch/m/n/12 Implement supervised learning baselines using multiple deep learning
- []
-
-
-Underfull \hbox (badness 1360) in paragraph at lines 49--50
-[]\T1/mdbch/m/n/12 Implement federated learning for privacy-preserving collaborative training
+Underfull \hbox (badness 3078) in paragraph at lines 32--33
+[]\T1/mdbch/b/n/12 3D-CNN: \T1/mdbch/m/n/12 Consistent second across all paradi
+gms (supervised: 99.91%,
  []
 
 [31]
-Underfull \hbox (badness 3009) in paragraph at lines 83--84
-[]\T1/mdbch/b/n/12 Privacy-Preserving Fed-er-ated Im-ple-men-ta-tion: \T1/mdbch/m/n/12 The federated learning
+Underfull \hbox (badness 6608) in paragraph at lines 45--46
+[]\T1/mdbch/m/n/12 Implement supervised learning baselines using multiple deep 
+learning
  []
 
 
-Underfull \hbox (badness 1038) in paragraph at lines 94--95
-[]\T1/mdbch/b/n/12 Responsive GUI: \T1/mdbch/m/n/12 PyQt6-based GUI with multithreaded inference provides
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
-[]\T1/mdbch/b/n/12 Reproducibility: \T1/mdbch/m/n/12 Fixed random seeds and stratified splitting ensure
+Underfull \hbox (badness 1360) in paragraph at lines 47--48
+[]\T1/mdbch/m/n/12 Implement federated learning for privacy-preserving collabor
+ative training
  []
 
 [32]
-Underfull \hbox (badness 3240) in paragraph at lines 103--104
-[]\T1/mdbch/b/n/12 Simulated Fed-er-ated Sce-nario: \T1/mdbch/m/n/12 Federated learning is simulated on a
+Underfull \hbox (badness 1590) in paragraph at lines 77--78
+\T1/mdbch/m/n/12 preprocessing, split, and metric conditions is rare in the HSI
+ literature;
  []
 
 
-Underfull \hbox (badness 1320) in paragraph at lines 103--104
-\T1/mdbch/m/n/12 local machine using the three datasets as proxies for distributed clients.
+Underfull \hbox (badness 2012) in paragraph at lines 77--78
+\T1/mdbch/m/n/12 the results are directly comparable rather than confounded by 
+differing
  []
 
 
-Underfull \hbox (badness 2626) in paragraph at lines 109--110
-[]\T1/mdbch/b/n/12 Limited Cur-ricu-lum Learn-ing Vari-ants: \T1/mdbch/m/n/12 Only one curriculum learning
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+[]\T1/mdbch/b/n/12 Curriculum Learn-ing in-te-gra-tion: \T1/mdbch/m/n/12 Coupli
+ng self-training with
  []
 
 
-Underfull \hbox (badness 6876) in paragraph at lines 114--115
-[]\T1/mdbch/b/n/12 Benchmark Datasets Only: \T1/mdbch/m/n/12 Evaluation limited to three widely-used
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+\T1/mdbch/m/n/12 difficulty-ordered sample presentation measurably reduces pseu
+do-label
  []
 
 
-Underfull \hbox (badness 1281) in paragraph at lines 116--117
-[]\T1/mdbch/b/n/12 No Con-cept Drift Anal-y-sis: \T1/mdbch/m/n/12 Federated learning assumes stationary data
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+[]\T1/mdbch/b/n/12 Privacy-preserving fed-er-ated ar-chi-tec-ture: \T1/mdbch/m/
+n/12 The federated system
  []
 
 
-Underfull \hbox (badness 2293) in paragraph at lines 116--117
-\T1/mdbch/m/n/12 distributions; real remote sensing data exhibits temporal drift requiring
+Underfull \hbox (badness 7081) in paragraph at lines 83--84
+[]\T1/mdbch/b/n/12 Generalizable pre-pro-cess-ing: \T1/mdbch/m/n/12 The three-s
+tep pipeline (normalization,
  []
 
 
-Underfull \hbox (badness 4582) in paragraph at lines 120--121
-[]\T1/mdbch/b/n/12 Limited Ad-ver-sar-ial Ro-bust-ness: \T1/mdbch/m/n/12 No evaluation of model robustness
- []
-
-
-Underfull \hbox (badness 1394) in paragraph at lines 120--121
-\T1/mdbch/m/n/12 to adversarial perturbations or distribution shift, relevant for operational
+Underfull \hbox (badness 1371) in paragraph at lines 88--89
+[]\T1/mdbch/b/n/12 Three-architecture sup-port: \T1/mdbch/m/n/12 Users can sele
+ct 2D-CNN, 3D-CNN, or ViT
  []
 
 [33]
-Underfull \hbox (badness 3189) in paragraph at lines 138--139
-[]\T1/mdbch/b/n/12 Heterogeneous Fed-er-ated Ag-gre-ga-tion: \T1/mdbch/m/n/12 Develop weighted aggregation
- []
-
-
-Underfull \hbox (badness 1215) in paragraph at lines 142--143
-[]\T1/mdbch/b/n/12 Meta-Learning for Few-Shot HSI: \T1/mdbch/m/n/12 Integrate meta-learning approaches to
- []
-
-
-Underfull \hbox (badness 6220) in paragraph at lines 147--148
-[]\T1/mdbch/b/n/12 Hybrid 2D-3D Mod-els: \T1/mdbch/m/n/12 Design architectures combining 2D and 3D
- []
-
-
-Underfull \hbox (badness 1748) in paragraph at lines 149--150
-[]\T1/mdbch/b/n/12 Graph Neu-ral Net-works: \T1/mdbch/m/n/12 Explore graph-based architectures that model
- []
-
-
-Underfull \hbox (badness 6559) in paragraph at lines 149--150
-\T1/mdbch/m/n/12 spectral-spatial relationships as graph structures, potentially improving
- []
-
-
-Underfull \hbox (badness 5862) in paragraph at lines 151--152
-[]\T1/mdbch/b/n/12 Self-Supervised Pre-train-ing: \T1/mdbch/m/n/12 Implement self-supervised learning (e.g.,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
-[]\T1/mdbch/b/n/12 Multi-Modal Fu-sion: \T1/mdbch/m/n/12 Extend to multi-modal data fusion combining
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
-\T1/mdbch/m/n/12 hyperspectral, panchromatic, and LiDAR data streams for enhanced
+Underfull \hbox (badness 1383) in paragraph at lines 116--117
+\T1/mdbch/m/n/12 but bandwidth consumption and round-trip latency---critical fo
+r assessing
  []
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
-[]\T1/mdbch/b/n/12 Cross-Sensor Gen-er-al-iza-tion: \T1/mdbch/m/n/12 Evaluate federated learning across
+Underfull \hbox (badness 1577) in paragraph at lines 123--124
+[]\T1/mdbch/b/n/12 No model com-pres-sion: \T1/mdbch/m/n/12 Weight pruning or q
+uantization would reduce
  []
 
 
-Underfull \hbox (badness 2762) in paragraph at lines 162--163
-[]\T1/mdbch/b/n/12 Adversarial Ro-bust-ness: \T1/mdbch/m/n/12 Conduct comprehensive adversarial robustness
- []
-
-
-Underfull \hbox (badness 1057) in paragraph at lines 162--163
-\T1/mdbch/m/n/12 evaluation and develop defense mechanisms for operational hyperspectral
- []
-
-
-Underfull \hbox (badness 1946) in paragraph at lines 175--176
-[]\T1/mdbch/b/n/12 Operational GUI En-hance-ments: \T1/mdbch/m/n/12 Extend the current Python GUI with
+Underfull \hbox (badness 2635) in paragraph at lines 147--148
+[]\T1/mdbch/b/n/12 Graph Neu-ral Net-works: \T1/mdbch/m/n/12 Model spectral-spa
+tial relationships as graph
  []
 
 [35]
-Underfull \hbox (badness 1803) in paragraph at lines 181--182
-[]\T1/mdbch/m/n/12 The three evaluated architectures (2D-CNN, 3D-CNN, ViT) each offer distinct
+Underfull \hbox (badness 1960) in paragraph at lines 149--150
+[]\T1/mdbch/b/n/12 Self-supervised pre-train-ing: \T1/mdbch/m/n/12 Apply contra
+stive or masked-reconstruction
  []
 
-)
-Underfull \hbox (badness 1527) in paragraph at lines 183--57
-\T1/mdbch/m/n/12 extend to real-world federated deployments, heterogeneous sensor integration,
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
+[]\T1/mdbch/b/n/12 Cross-sensor gen-er-al-iza-tion: \T1/mdbch/m/n/12 Benchmark 
+federated learning across
  []
 
-[36]
+
+Underfull \hbox (badness 2573) in paragraph at lines 160--161
+[]\T1/mdbch/b/n/12 Adversarial ro-bust-ness: \T1/mdbch/m/n/12 Conduct systemati
+c adversarial evaluation and
+ []
+
+
+Underfull \hbox (badness 1769) in paragraph at lines 162--163
+[]\T1/mdbch/b/n/12 Uncertainty quan-tifi-ca-tion: \T1/mdbch/m/n/12 Integrate Ba
+yesian deep learning to output
+ []
+
+[36])
+Underfull \hbox (badness 2626) in paragraph at lines 181--57
+[]\T1/mdbch/m/n/12 The framework delivered here---a unified pipeline spanning t
+hree paradigms,
+ []
+
+
+Underfull \hbox (badness 2512) in paragraph at lines 181--57
+\T1/mdbch/m/n/12 GUI---provides both a reproducible comparative benchmark and a
+ deployable
+ []
+
+[37]
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
 (Font)              scaled to size 11.52008pt on input line 85.
- [37
+ [38
 
 ]
 Underfull \hbox (badness 2418) in paragraph at lines 85--85
-[]\T1/mdbch/m/n/12 Z. Shu, Y. Wang, and Z. Yu, ``Dual attention transformer network for
+[]\T1/mdbch/m/n/12 Z. Shu, Y. Wang, and Z. Yu, ``Dual attention transformer net
+work for
  []
 
 
 Underfull \hbox (badness 1048) in paragraph at lines 85--85
-[]\T1/mdbch/m/n/12 M. F. Baumgardner, L. L. Biehl, and D. A. Landgrebe, ``220 band aviris
+[]\T1/mdbch/m/n/12 M. F. Baumgardner, L. L. Biehl, and D. A. Landgrebe, ``220 b
+and aviris
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 85--85
-[]\T1/mdbch/m/n/12 I. Triguero, S. García, and F. Herrera, ``Self-labeled techniques for
+[]\T1/mdbch/m/n/12 I. Triguero, S. García, and F. Herrera, ``Self-labeled techn
+iques for
  []
 
 
 Underfull \hbox (badness 1377) in paragraph at lines 85--85
-\T1/mdbch/m/n/12 library,'' in \T1/mdbch/m/it/12 Ad-vances in Neu-ral In-for-ma-tion Pro-cess-ing Sys-tems 32\T1/mdbch/m/n/12 , 2019,
+\T1/mdbch/m/n/12 library,'' in \T1/mdbch/m/it/12 Ad-vances in Neu-ral In-for-ma
+-tion Pro-cess-ing Sys-tems 32\T1/mdbch/m/n/12 , 2019,
  []
 
-[38]
+[39]
 Underfull \hbox (badness 2189) in paragraph at lines 85--85
-[]\T1/mdbch/m/n/12 B. McMahan, E. Moore, D. Ramage, S. Hampson, and B. A. y Arcas,
+[]\T1/mdbch/m/n/12 B. McMahan, E. Moore, D. Ramage, S. Hampson, and B. A. y Arc
+as,
  []
 
-[39] (./cv.tex) [40
+[40] (./cv.tex) [41
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260609185739 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+runsystem(latexminted cleantemp  --timestamp 20260613155104 FAD58DE7366495DB465
+0CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
  ***********
@@ -1879,18 +2065,28 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33173 strings out of 467525
- 699451 string characters out of 5418982
- 1614648 words of memory out of 5000000
- 61525 multiletter control sequences out of 15000+600000
+ 33174 strings out of 467525
+ 699220 string characters out of 5418983
+ 1617056 words of memory out of 5000000
+ 61527 multiletter control sequences out of 15000+600000
  689634 words of font info for 134 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 100i,16n,147p,1931b,1369s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7v.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chrma.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (53 pages, 13670807 bytes).
+ 100i,16n,147p,2063b,1369s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb><
+/usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></us
+r/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/
+local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb>
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7
+v.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/m
+d-chr7y.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/m
+dbch/md-chr8t.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathde
+sign/mdbch/md-chri7m.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public
+/mathdesign/mdbch/md-chrma.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/
+public/cm-super/sftt1200.pfb>
+Output written on main.pdf (54 pages, 13673935 bytes).
 PDF statistics:
- 246 PDF objects out of 1000 (max. 8388607)
- 155 compressed objects within 2 object streams
+ 249 PDF objects out of 1000 (max. 8388607)
+ 157 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  63 words of extra memory for PDF output out of 10000 (max. 10000000)
 
