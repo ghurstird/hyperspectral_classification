@@ -1,35 +1,35 @@
 \chapter{SYSTEM ANALYSIS AND FEASIBILITY}
-System analysis serves as the bridge between problem identification and design: it defines what the system must do, establishes the constraints it must operate within, and sets the criteria against which its eventual output will be judged. This chapter details the project objectives, traces how requirements were elicited, and determines that the proposed solution is viable from technical, legal, economic, and workforce perspectives.
+System analysis helps bridge design and problem identification. It tells us what must be done, the limitations and constraints the system will be bound within, and the requirements for measuring the quality of the outputs the system produces. In this chapter, project goals are described, the methods and processes of requirements elicitation are detailed, and the proposed solution is examined for feasibility in terms of technology, law, economy, and labor.
 
 \section{System Analysis}
-Because this is an R\&D project, requirements were not handed down from a client specification---they emerged from a systematic examination of the performance bottlenecks that plague existing deep learning-based HSI classifiers. The system's core function is to ingest high-dimensional spectral data---either loaded externally by the user or drawn from established benchmark datasets (Indian Pines \cite{baumgardner2015220}, Pavia University \cite{dell2005pavia}, and Salinas \cite{salinas_dataset})---and assign a class label to each pixel with high accuracy.
+As this is an R&D project, requirements were not provided because there were no client specifications. Instead, requirements were developed through the analysis of issues and constraints provided by existing deep learning based HSI classifier algorithms. The main function of the system is to read and handle high-dimensional spectral data (either introduced externally by the user or extracted from established benchmarks - Indian Pines, Pavia University, and Salinas) and classify high accuracy pixel data.
 
-Three functional requirements govern the system:
+The system is governed by three functional requirements:
 \begin{itemize}
-    \item Preprocessing raw hyperspectral cubes via Gaussian filtering for noise suppression and Principal Component Analysis (PCA) for dimensionality reduction \cite{pedregosa2011scikit}.
-    \item Training supervised (CNN \cite{chen2016deep}, ViT \cite{dosovitskiy2020image}) and semi-supervised (Self-Training \cite{triguero2015self}) models under a Curriculum Learning schedule \cite{bengio2009curriculum} that controls sample difficulty progression.
-    \item Exposing all trained models through a multithreaded GUI that enables simultaneous model testing and real-time per-pixel prediction without requiring code-level interaction.
+    \item Raw hyperspectral cubes must be filtered using a Gaussian filter and PCA \cite{pedregosa2011scikit}.
+    \item Supervised (CNN \cite{chen2016deep}, ViT \cite{dosovitskiy2020image}) and semi-supervised (Self-Training \cite{triguero2015self}) models must be trained in a Curriculum Learning framework \cite{bengio2009curriculum} that regulates the difficulty of samples.
+    \item A multithreaded GUI must be used to encapsulate all trained models, allowing users to perform simultaneous model testing and view per pixel predictions in real-time without modifying the underlying source code.
 \end{itemize}
 
-Satisfaction of these requirements will be measured using Accuracy, Precision, Recall, F1-Score, and Cohen's Kappa coefficient.
+Meeting these requirements will be evaluated using Accuracy, Precision, Recall, F1-Score, and Cohen’s Kappa coefficient.
 
 \section{Feasibility}
-The feasibility study assesses the viability of the proposed approach across four dimensions: technical, legal, economic, and workforce.
+The analysis examines the likelihood of the proposed solution in four categories: technical, legal, economic, and workforce.
 
 \subsection{Technical Feasibility}
-Python \cite{van1995python} was selected as the implementation language for its mature machine learning ecosystem and broad community support. Deep learning components are built on PyTorch \cite{paszke2019pytorch} or TensorFlow \cite{abadi2016tensorflow}; data processing relies on Scikit-learn \cite{pedregosa2011scikit} and OpenCV \cite{itseez2015opencv}. The GUI is implemented in PyQt6, chosen specifically for its native support for multithreaded worker patterns---critical for keeping the interface responsive during long inference runs. Development takes place in VS Code \cite{baumer2015visual} with version control managed through GitHub \cite{dabbish2012social}.
+The proposed programming language is Python \cite{van1995python} since it has a complete ecosystem for machine learning with a favorable community. Deep learning is constructed with PyTorch \cite{paszke2019pytorch} or TensorFlow \cite{abadi2016tensorflow} with data management offered by Scikit-learn \cite{pedregosa2011scikit} and OpenCV \cite{itseez2015opencv}. The design of the graphical user interface is done with PyQt6. The choice of the PyQt6 library was made because of its built-in support for multithreaded worker patterns, which is important for keeping the user interface responsive when time-consuming inference operations are performed. The construction is done with VS Code \cite{baumer2015visual} and the versioning is done with GitHub. \cite{dabbish2012social}.
 
 \subsubsection{Hardware Feasibility}
-Training deep models on full hyperspectral cubes demands substantial parallel compute. GPU resources are supplied through Google Colab \cite{bisong2019google}, eliminating the need for dedicated on-premises hardware. GUI development and local integration work are handled on the project team's existing macOS machines, which are more than adequate for the task.
+Training deep models with long inference operations on complete hyperspectral cubes requires high computational resources. Google Colab \cite{bisong2019google}, provides the needed graphic processing units and eliminates the need for the computational resources for the project. The graphic user interface and integration design are done on the project team’s personal macOS systems.
 
 \subsection{Legal Feasibility}
-Every library in the stack---Python, PyQt6, PyTorch, OpenCV---is distributed under an open-source license. The three benchmark datasets are publicly available for academic use. No licensing conflicts or patent encumbrances have been identified.
+All libraries in the stack of PyQt6, Python, PyTorch, and OpenCV are fully open-sourced. The three benchmark datasets in use are legally permitted for academic use. There are no licensing or patent barriers.
 
 \subsection{Economic Feasibility}
-The entire toolchain is free and open source, and Google Colab covers the GPU compute cost at no charge. Combined with the team's existing personal hardware, the project incurs zero additional capital expenditure and is fully economically viable.
+The entire tool chain is free and open-source with Google Colab offering the graphic processing units at no cost. The project makes no additional capital investments with the teams’ personal systems.
 
 \subsection{Workforce and Time Feasibility}
-The project is carried out by Tan Erciyas and Kerem Baydar. Between them, the team covers all technical domains required for delivery. The Gantt chart below maps the project timeline from February 2026 through June 2026.
+The project team of Tan Erciyas and Kerem Baydar has the required skills to execute the entire project.
 
 \begin{figure}[htbp]
 	\centering

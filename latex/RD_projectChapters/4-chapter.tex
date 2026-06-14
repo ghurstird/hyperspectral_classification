@@ -1,5 +1,5 @@
 \chapter{SYSTEM DESIGN}
-System design translates the requirements identified in the analysis phase into a concrete architectural framework. This chapter covers the datasets used, the preprocessing pipeline that conditions raw spectral data for learning, the three deep learning architectures at the core of the system, and the supervised, semi-supervised, and federated training paradigms evaluated against one another.
+Translating requirements into an architectural framework occurs in system design. This chapter describes the datasets, preprocessing pipelines for spectral data, the three system core deep learning architectures, and the supervised, semi-supervised, and federated training methods examined.
 
 \begin{figure}[H]
     \centering
@@ -9,12 +9,12 @@ System design translates the requirements identified in the analysis phase into 
 \end{figure}
 
 \section{Material and Dataset}
-Model performance in HSI classification is tightly coupled to dataset characteristics---spatial resolution, class imbalance, and total labeled sample count all shape what a given architecture can learn. Three benchmark datasets from the remote sensing literature are used here, each posing a distinct set of challenges.
+The performance of different models on a classification task in hyperspectral imaging (HSI) is highly dependent on the different features of the used dataset. These features include the model's spatial resolution, the level of class imbalance, and the number of samples in the dataset with labels. In this work, we use three benchmark datasets from the remote sensing literature, and each of these datasets has its own set of challenges.
 
 \subsection{Dataset Specifications}
 
 \subsubsection{Indian Pines}
-Captured by the AVIRIS sensor over north-western Indiana, this dataset spans a $145 \times 145$ pixel grid across 224 spectral reflectance bands and covers 16 vegetation and land-cover classes. Water absorption bands reduce the usable band count to 200 in standard practice \cite{baumgardner2015220}.
+This dataset is collected by the AVIRIS sensor and has a 145x145 grid with 224 spectral bands on 16 vegetation and land-cover classes. In most cases, the water absorption bands reduce the number of usable bands to 200.
 
 \begin{figure}[H]
     \centering
@@ -62,7 +62,7 @@ Captured by the AVIRIS sensor over north-western Indiana, this dataset spans a $
 \end{table}
 
 \subsubsection{Pavia University}
-Acquired by the ROSIS sensor over an urban area in Pavia, Italy, this scene covers $610 \times 340$ pixels across 103 spectral bands. Nine urban land-cover classes---including asphalt, meadows, and self-blocking bricks---make it a demanding multi-class urban benchmark \cite{dell2005pavia}.
+This dataset is collected by the ROSIS sensor and covers 610x340 pixels with 103 spectral bands. This dataset has 9 urban land-cover classes which makes this dataset a very challenging multi-class urban benchmark.
 
 \begin{figure}[H]
     \centering
@@ -103,7 +103,7 @@ Acquired by the ROSIS sensor over an urban area in Pavia, Italy, this scene cove
 \end{table}
 
 \subsubsection{Salinas Scene}
-Also collected by AVIRIS, this time over Salinas Valley, California, the scene offers the highest spatial resolution of the three datasets: $512 \times 217$ pixels across 224 spectral bands, reduced to 204 after removing water absorption channels \cite{salinas_dataset}.
+This dataset is also collected by the AVIRIS sensor but this time over the Salinas Valley of California. This dataset has a spatial resolution of 512x217 pixels which is also the highest resolution of the other two datasets. This dataset also contains 224 spectral bands which are reduced to 204 after removal of the water absorption bands.
 
 \begin{figure}[H]
     \centering
@@ -151,7 +151,7 @@ Also collected by AVIRIS, this time over Salinas Valley, California, the scene o
 \end{table}
 
 \subsection{Data Structure and Storage}
-All three datasets are represented as 3D hypercubes of shape $H \times W \times B$, where $H$ and $W$ are the spatial dimensions and $B$ is the number of spectral bands. Datasets are stored as NumPy arrays (`.npy`) and loaded in spatial patches during training, which preserves local spatial context while keeping memory consumption tractable.
+All of these datasets have the same 3D structure and can be visualized as a hypercube, where the dimensions of the hypercube are the spatial dimensions (H and W) and the number of spectral bands (B). All datasets are stored as NumPy arrays (.npy) and are loaded in spatial patches to facilitate the training process. This supports the local spatial context and allows us to use the limited memory efficiently.
 
 \begin{figure}[H]
     \centering
@@ -161,28 +161,27 @@ All three datasets are represented as 3D hypercubes of shape $H \times W \times 
 \end{figure}
 
 \section{Methodology}
-The processing pipeline is structured into three sequential stages: preprocessing, patch-based feature extraction, and the learning phase. Each stage feeds directly into the next, and the design choices at each step are motivated by specific properties of hyperspectral data.
+The processing pipeline consists of three sequential phases: preprocessing, patch-based feature extraction, and learning. Each phase is connected to the next, and the characteristics of hyperspectral data are reflected in the design of each phase.
 
 \subsection{Preprocessing and Dimensionality Reduction}
-Raw hyperspectral cubes carry hundreds of correlated bands and sensor-induced noise---conditions that inflate training cost and can mislead learned features. Three sequential operations are applied uniformly across all datasets before any model sees the data.
+Hyperspectral cubes are made of hundreds of noises and correlated bands and can mislead learned features. Consequently, the cost of training can increase greatly. In order to mitigate this, three operations are done.
 
 \begin{enumerate}
-    \item \textbf{Global Min-Max Normalization:} The raw hypercube is reshaped to a 2D matrix and a single global minimum and maximum is computed across all pixels and all bands. Each value is then rescaled to $[0,1]$ as follows:
+    \item \textbf{Global Min-Max Normalization:} In this step, the hyperspectral data is reshaped from a 3D hypercube to a 2D matrix. From here, the global minimum and maximum across all pixels and bands of the reshaped data are calculated. Each value is then rescaled per the new global minimum and maximum. Normalization of the bands was avoided to prevent variance loss.
     \begin{equation}
         \hat{x} = \frac{x - x_{\min}}{x_{\max} - x_{\min}}
         \label{eq:normalization}
     \end{equation}
-    Band-wise normalization was deliberately avoided to preserve the natural variance ratio between bands.
 
-    \item \textbf{Spatial Gaussian Filtering:} A Gaussian filter is applied with $\sigma = 0.5$ along only the spatial axes ($H \times W$) of the normalized hypercube using \texttt{scipy.ndimage.gaussian\_filter} with \texttt{sigma=(0.5, 0.5, 0)} and \texttt{mode='reflect'}. Setting the spectral axis sigma to zero ensures that inter-band relationships remain intact while sensor-induced spatial noise is attenuated.
+    \item \textbf{Spatial Gaussian Filtering:} In this step the data is filtered using a Gaussian Filter. The value of $\sigma$ was set to 0.5 and was only applied to the spatial axes of the 3D hypercube. A value of zero was set for the spectral $\sigma$ ensuring that the relationships between the bands of the data were preserved.
 
-    \item \textbf{Fixed-Component PCA:} PCA with a fixed $n\_components = 30$ is applied to the filtered data after reshaping it to $(H \times W, B)$. The variance-based threshold (99.5\%) was evaluated first but yielded only 4--5 components for Pavia University and Salinas, which is insufficient for the CNN and ViT input depths. The resulting reduced cube is reshaped back to $(H, W, 30)$ \cite{pedregosa2011scikit}.
+    \item \textbf{Fixed-Component PCA:} In this step, PCA is applied with a value for $n\_components$ set to 30. Prior to this, a variance threshold of (99.5\%) was applied. However, for both the Salinas and Pavia University datasets, this resulted in 4-5 PCA components. This was insufficient for the input depths of the Convolutional Neural Networks and Vision Transformers. The processed hyperspectral data was then reshaped to $(H, W, 30)$ \cite{pedregosa2011scikit}.
 \end{enumerate}
 
 \subsection{Patch Extraction and Dataset Splitting}
-For each labeled pixel $(r, c)$ where \texttt{gt[r,c] > 0}, a $15 \times 15$ spatial patch is extracted from the PCA-reduced cube, producing a sample of shape $15 \times 15 \times 30$. Background pixels (label $= 0$) are excluded entirely. To allow boundary pixels to serve as valid patch centers, the cube is first padded by $\lfloor 15/2 \rfloor = 7$ pixels on each spatial side using reflect padding.
+From each pixel $(r, c)$ where \texttt{gt[r,c] > 0}, a $15 \times 15$  patch is sampled from the PCA cube, resulting in a sample of size $15 \times 15 \times 30$. All background pixels (label $= 0$) are omitted. A cube is padded $\lfloor 15/2 \rfloor = 7$ pixels on each side with reflective padding, allowing boundary pixels to be valid patch centers.
 
-The resulting patches are split into training and test sets with \texttt{test\_size=0.1}, \texttt{stratify=y}, and \texttt{random\_state=42}, ensuring minority classes are proportionally represented in both splits. The resulting sample counts are given in Table~\ref{tab:split_sizes}.
+Patches are randomly split into training and test sets with \texttt{test\_size=0.1}, \texttt{stratify=y}, and \texttt{random\_state=42}. The resulting sample counts are given in Table~\ref{tab:split_sizes}.
 
 \begin{table}[H]
     \centering
@@ -199,76 +198,76 @@ The resulting patches are split into training and test sets with \texttt{test\_s
 \end{table}
 
 \subsection{Model Architectures}
-Two architectures represent complementary inductive biases for spectral-spatial feature learning:
+Two model architectures represent different yet complementary approaches to learning spectral and spatial features:
 \begin{itemize}
-    \item \textbf{3D-CNN:} Three-dimensional convolutional kernels extract spectral and spatial features simultaneously from volumetric patches. Batch normalization and ReLU activations are inserted after each convolutional block to stabilize gradients and prevent vanishing activations \cite{chen2016deep}.
-    \item \textbf{Vision Transformer (ViT):} HSI patches are flattened into sequences of linear embeddings, and multi-head self-attention weighs each spectral-spatial token against every other---capturing long-range dependencies that local convolution windows cannot reach \cite{dosovitskiy2020image}.
+    \item \textbf{3D-CNN:} With 3D convolution, spectral and spatial features are extracted simultaneously. The model is designed with convolutional blocks with batch normalization and ReLU activations. \cite{chen2016deep}.
+    \item \textbf{Vision Transformer (ViT):} With a ViT, HSI patches are first linearized, then multi-head self-attention is applied to each spectral-spatial token. \cite{dosovitskiy2020image}.
 \end{itemize}
 
 \subsection{Supervised Learning Models}
-The supervised paradigm trains exclusively on the labeled portion of the training set. It establishes the performance baseline against which semi-supervised and federated variants are measured.
+All models in this paradigm learn only from the labeled portion of the training dataset. It is also the baseline model for measuring the performance of semi-supervised and federated models. 
 
 \subsubsection{2D-CNN Supervised Model}
-The 2D-CNN operates on $15 \times 15 \times 30$ patches, treating the 30 PCA components as input channels and applying 2D convolution kernels over the spatial dimensions. This formulation avoids the parameter cost of full volumetric convolution while retaining meaningful spatial-spectral structure.
+The 2D-CNN model uses $15 \times 15 \times 30$ patches and treats the 30 PCA components as channels. Convolutions in this model are applied over the spatial dimensions. 
 
 \subsubsection{3D-CNN Supervised Model}
-The 3D-CNN applies volumetric kernels that span both spatial and spectral axes simultaneously, enabling it to model inter-band correlations directly rather than treating spectral bands as independent channels. Batch normalization and dropout mitigate overfitting, which is particularly pronounced when labeled samples are scarce.
+The 3D-CNN model uses volumetric convolutions that simultaneously span both the spatial and spectral dimensions.
 
 \subsubsection{Vision Transformer (ViT) Supervised Model}
-The ViT tokenizes each patch into a sequence of linear projections and augments them with positional encodings to retain spatial ordering. Multi-head self-attention then relates every token to every other, giving the model a global receptive field from the first layer. This property has proven competitive on standard HSI benchmarks \cite{dosovitskiy2020image}.
+In the ViT, HSI patches are first linearized and then augmented with learnable positional encodings to retain their order \cite{dosovitskiy2020image}.
 
 \subsection{Semi-Supervised Learning Models}
-Collecting expert-labeled pixel annotations is expensive and slow. Semi-supervised learning sidesteps this bottleneck by treating the large pool of unlabeled pixels as additional training signal. The strategy here pairs self-training with curriculum learning to expand the labeled set iteratively while managing pseudo-label noise.
+The collection of expert labeled pixel annotations is a long and costly process. Semi-supervised learning employs the extensive, yet unlabeled, pixel set as a training signal. The strategy combines self-training and curriculum learning to add to the labeled set progressively while containing the noise of pseudo-labels.
 
 \subsubsection{Self-Training Strategy}
-The self-training mechanism operates through iterative pseudo-labeling:
+Pseudo-labeling self-training occurs in the following iterative manner:
 \begin{enumerate}
-    \item Initialize the model using a subset of labeled training samples.
-    \item Generate predictions on the unlabeled pool with associated confidence scores.
-    \item Incorporate samples exceeding a confidence threshold into the training set with their predicted labels.
-    \item Retrain the model on the augmented labeled set.
-    \item Repeat until convergence or a maximum iteration limit is reached \cite{triguero2015self}.
+    \item A small, labeled training sample set is used to initialize the model.
+    \item Subsequently, predictions with confidence score are generated for the unlabeled sample set.
+    \item The sample set is then augmented by the inclusion of highly confident predictions.
+    \item The model is retrained on the augmented sample set.
+    \item The process is repeated until a convergence criterion is met \cite{triguero2015self}.
 \end{enumerate}
 
 \subsubsection{Curriculum Learning Integration}
-Curriculum Learning (CL) guides the training process by presenting samples in order of increasing difficulty:
+Curriculum Learning (CL) helps structure the training procedure by organizing data from the easiest to the hardest samples:
 \begin{enumerate}
-    \item \textbf{Easy Samples:} Pixels with high spectral purity and clear spatial context are introduced first, allowing the model to learn robust decision boundaries.
-    \item \textbf{Medium Samples:} Pixels with moderate spectral-spatial characteristics are gradually introduced as the model gains confidence.
-    \item \textbf{Difficult Samples:} Boundary pixels and spectrally ambiguous samples are presented in later epochs to refine the decision boundaries \cite{bengio2009curriculum}.
+    \item \textbf{Easy Samples:} Training begins with samples that have good spectral data and clear pixels, allowing boundaries to be drawn that the model will not likely misclassify.
+    \item \textbf{Medium Samples:} Pixels that have moderate spectral and spatial data will be introduced next.
+    \item \textbf{Difficult Samples:} Samples that have unclear spectral data and difficult boundary pixels will be included in the training to further refine the model’s boundaries \cite{bengio2009curriculum}.
 \end{enumerate}
 
 \subsubsection{2D-CNN Semi-Supervised Model}
-The architecture is identical to its supervised counterpart. What changes is the training set: self-training iteratively adds high-confidence pseudo-labeled patches, and curriculum learning controls the order in which those additions are presented, dampening the effect of early-stage label noise.
+The structure of the model is the same as the supervised model, but the self-training process will continuously add confident pseudo-labeled patches, and curriculum learning will manage the order of these additions, reducing the impact of early introduced label noise.
 
 \subsubsection{3D-CNN Semi-Supervised Model}
-Unlabeled samples admitted through self-training expose the 3D-CNN to a wider range of spectral-spatial patterns than the labeled set alone provides. Curriculum scheduling prevents the volumetric kernels from overfitting to the noisiest pseudo-labels encountered in early iterations.
+Pseudo-labels that are added will allow the 3D-CNN to learn a variety of spectral and spatial data beyond what is offered in the labeled data, and the order of curriculum training will prevent the model from becoming too focused on the loudest pseudo-labels.
 
 \subsubsection{Vision Transformer (ViT) Semi-Supervised Model}
-The global receptive field of the self-attention mechanism makes the ViT naturally suited to semi-supervised settings: it can relate high-confidence pseudo-labeled tokens to labeled ones across the full spatial extent of a patch, rather than relying solely on local neighborhood agreement.
+The large global receptive field and self-attention of the ViT model are advantageous in semi-supervision, as it allows the model to draw a connection between confident pseudo-labels and labeled data beyond a local context.
 
 \subsection{Federated Learning Models}
-Federated learning trains a shared global model without ever moving raw data to a central server---each client trains locally and contributes only weight updates. In this project, federated learning is simulated through a server-client architecture in which three geographically distinct datasets stand in for independent client institutions \cite{mcmahan2017communication}.
+In a federated learning model, a global model is trained without raw data moving towards a central server, as clients only send model updates after training on their own data. Here, a server-client model is used to represent federated learning, with three disparate datasets representing the independent client institutes \cite{mcmahan2017communication}.
 
 \subsubsection{Federated Learning Framework}
-The federated learning process follows the Federated Averaging (FedAvg) algorithm:
+The Federated Learning phenomenon utilizes the Federated Averaging (FedAvg) algorithm and works in the following manner:
 \begin{enumerate}
-    \item Initialize a global model at the central server.
-    \item Each client downloads the global model weights and trains locally on its own hyperspectral dataset for a fixed number of epochs.
-    \item Clients upload their updated model weights to the server (not raw data, preserving privacy).
-    \item The server aggregates weights from all participating clients through averaging.
-    \item The updated global model is redistributed to clients for the next round.
-    \item Repeat for multiple communication rounds until convergence.
+    \item The central server starts off with a global model.
+    \item Each client receives the global model and trains it locally on their own hyperspectral dataset for a predetermined number of epochs.
+    \item Clients send the updated model back to the server (data is neither sent nor received, ensuring privacy).
+    \item The server consolidates the updated model using the averaged weights from all clients.
+    \item The revised global model is sent back to the clients.
+    \item The process is repeated for as many rounds of communication as necessary until convergence is reached.
 \end{enumerate}
 
 \subsubsection{2D-CNN Federated Model}
-Each client (Indian Pines, Pavia University, and Salinas in this simulation) trains an identical 2D-CNN locally under shared hyperparameters. Weight averaging at the server fuses the dataset-specific spatial patterns learned at each site into a single global model without exposing any client's raw pixels.
+Each of the clients (Indian Pines, Pavia University, and Salinas) builds an identical 2D-CNN model locally, using a set of hyperparameters which they all share. Weight averaging at the server integrates the spatial patterns of each dataset into a single global model. This is done while maintaining the privacy of the clients.
 
 \subsubsection{3D-CNN Federated Model}
-The 3D-CNN's volumetric kernels encode dataset-specific spectral correlations during local training. After aggregation, the global model inherits a richer spectral vocabulary than any single-dataset model could develop---particularly valuable in remote sensing, where data is routinely distributed across multiple acquisition campaigns and sensor configurations.
+The 3D-CNN model’s training kernels cover the dataset-specific spectral training patterns. The global model after aggregation possesses a stronger spectral training patterns than any single dataset model, which is especially needed in remote sensing.
 
 \subsubsection{Vision Transformer (ViT) Federated Model}
-Transformer attention weights encode the local data distribution of each client site. Their aggregation at the server produces a global self-attention mechanism capable of handling the heterogeneous spectral-spatial statistics that arise when different sensors observe different geographic regions.
+The training patterns at each client site are captured by the Transformer attention weights. After aggregation at the server, the global attention makes it feasible to work with the diverse spectral-spatial statistics arising from various clients.
 
 \subsubsection{Privacy and Communication Efficiency}
 Keeping raw hyperspectral data at client locations is the primary privacy guarantee of federated learning, but communication overhead between clients and the server is a practical constraint. Three measures address this:
