@@ -33,26 +33,26 @@ Federated learning provides near-supervised accuracy, but introduces a communica
 
     \item \textbf{3D-CNN:} Placed second with consistency (supervised: 99.91\%, semi-supervised: 86.92\%, federated: 97.36\%). Modeling inter-band correlation with volumetric kernels results in better handling of noisy pseudo-labels and federated weight averaging.
 
-    \item \textbf{Vision Transformer:} Competitive at full supervision (99.72\%) but the most sensitive to distribution shift: semi-supervised average drops to 77.41\% and federated to 94.11\%. Global self-attention, while powerful under clean full-label conditions, is more easily destabilized by pseudo-label noise and client-side data heterogeneity.
+    \item \textbf{Vision Transformer:} Competitive at full supervision (99.72\%) but most sensitive to distribution shift: average semi-supervised drops at 77.41\% and at 94.11\% federated. Global self-attention, although strong at full supervision with clean data, becomes easily destabilized with pseudo-labels noise and data distribution heterogeneity on clients.
 
-    \item \textbf{Cross-paradigm pattern:} Every architecture deteriorates substantially under semi-supervised conditions relative to both supervised and federated baselines, which points to pseudo-label quality---not model capacity---as the binding constraint in the semi-supervised pipeline.
+    \item \textbf{Cross-paradigm pattern:} All architectures show significant deterioration to semi-supervised relative to both supervised and federated baselines. This suggests that in semi-supervised learning, the quality of pseudo-labels constitute the main bottleneck, as opposed to the architectures’ capacity.
 \end{itemize}
 
 \section{Project Objectives and Achievement Level}
 
 \subsection{Original Objectives}
-The project initially set the following objectives:
+The project aimed to address the following goals.
 \begin{enumerate}
-    \item Develop preprocessing pipelines handling high-dimensional hyperspectral data with robust normalization and dimensionality reduction.
-    \item Implement supervised learning baselines using multiple deep learning architectures (CNN, ViT).
-    \item Extend to semi-supervised learning via self-training and curriculum learning to address limited labeling.
-    \item Implement federated learning for privacy-preserving collaborative training across distributed data sources.
-    \item Develop a reactive GUI with multithreaded inference for practical accessibility.
-    \item Achieve $>$ 95\% overall accuracy on benchmark datasets.
+    \item Create normalization and dimensionality reduction pipelines for high-dimensional hyperspectral data.
+    \item Establish baseline supervised learning systems based upon different deep learning architectures (CNN, ViT).
+    \item Integrate semi-supervised learning systems based on self-training and curriculum learning to overcome the problem of scarce labeling.
+    \item Introduce federated learning to enable privacy concerns to be addressed during collaborative learning across distributed data.
+    \item Create a reactive GUI with multithreaded inference.
+    \item Provide benchmark datasets with an overall accuracy exceeding 95%.
 \end{enumerate}
 
 \subsection{Achievement Level}
-All primary objectives were met or exceeded:
+All of the aforementioned goals were achieved (or more than were).
 
 \begin{table}[H]
     \centering
@@ -76,108 +76,104 @@ All primary objectives were met or exceeded:
 
 \subsection{Methodological Strengths}
 \begin{itemize}
-    \item \textbf{Unified comparative framework:} Evaluating three paradigms under identical preprocessing, split, and metric conditions is rare in the HSI literature; the results are directly comparable rather than confounded by differing experimental setups.
+    \item \textbf{Unified comparative framework:} The ability to evaluate three paradigms under the same preprocessing, splitting, and metrics is uncommon in the literature related to HSI; results are truly comparable.
 
-    \item \textbf{Curriculum Learning integration:} Coupling self-training with difficulty-ordered sample presentation measurably reduces pseudo-label overfitting and prevents early convergence to poor local minima.
+    \item \textbf{Curriculum Learning:} Combining self-training and the presentation of samples in a scaffolded format significantly alleviates pseudo-label overfitting and the task suddenly ceases to converge to deteriorated local minima.
 
-    \item \textbf{Privacy-preserving federated architecture:} The federated system demonstrates that competitive classification accuracy is achievable without pooling sensitive spectral data, a result directly relevant to multi-institutional remote sensing collaborations.
+    \item \textbf{Privacy-preservation federated framework:} The federated framework demonstrates that pooling sensitive spectral data is not a prerequisite for competitive classification results. This is directly related to remote sensing projects involving multiple institutions.
 
-    \item \textbf{Generalizable preprocessing:} The three-step pipeline (normalization, Gaussian filtering, fixed-component PCA) is data-driven and has been validated across three datasets with substantially different spatial resolutions, class counts, and band counts.
+    \item \textbf{Generalizable preprocessing:} The three-step pipeline (normalization, Gaussian filtering, fixed-component PCA) has been validated with three datasets with different class counts, spatial resolution, and bands. The three steps of this data-driven pipeline are generalizable.
 \end{itemize}
 
 \subsection{Implementation Strengths}
 \begin{itemize}
-    \item \textbf{Three-architecture support:} Users can select 2D-CNN, 3D-CNN, or ViT based on their accuracy-versus-efficiency requirements without modifying the surrounding pipeline.
+    \item \textbf{Three-architecture support:} The flexibility of the surrounding pipeline means users may choose between a 2D-CNN, 3D-CNN, and ViT based on preferences for accuracy and efficiency.
 
-    \item \textbf{GPU-accelerated training:} Google Colab GPU resources support efficient training on datasets exceeding 50,000 samples within realistic time budgets.
+    \item \textbf{GPU-accelerated training:} Large datasets (N > 50,000) can be trained using (+) Based on the benchmarking data presented in the paper, the framework achieves very high training efficiency with the use of Google Colab GPU.
 
-    \item \textbf{Responsive multithreaded GUI:} PyQt6 worker threads decouple inference from the UI event loop, keeping the interface interactive during long-running classification tasks.
+    \item \textbf{Responsive multithreaded GUI:} PyQt6 decouples inference from the UI event loop and allows the GUI to remain active during long lasting classification.
 
-    \item \textbf{Reproducibility:} Fixed random seeds and stratified splitting ensure that results are replicable across experimental runs without additional configuration.
+    \item \textbf{Reproducibility:} Fixed randomization and a stratified split guarantee reproducible results from an experimental run and do not require further (manual) tuning.
 \end{itemize}
 
 \section{Limitations and Weaknesses}
 
 \subsection{Methodological Limitations}
 \begin{itemize}
-    \item \textbf{Simulated federated scenario:} Three local datasets on a single machine are a proxy for true distributed clients. Real deployments introduce network latency, stragglers, and far greater data heterogeneity---all of which would likely widen the accuracy gap.
+    \item \textbf{Simulated federated scenario:} Having three local datasets on one machine simulates three clients. True deployments have unbalanced datasets, considerable latency, and stragglers, therefore, the accuracy gap would be expected to be larger.
 
-    \item \textbf{Fixed PCA components:} Fixing $n\_\text{components} = 30$ is empirically motivated rather than theoretically grounded. Adaptive selection based on per-dataset variance retention or information-theoretic criteria could better match the complexity of each scene.
+    \item \textbf{Fixed PCA components:} The empirical decision to fix 30 PCA components could be evolved to a more sophisticated choice of variance or information retention for the given scene.
 
-    \item \textbf{Confidence threshold rigidity:} The self-training confidence threshold of 0.95 is held constant across all datasets. Sensitivity analysis would reveal how robust the semi-supervised pipeline is to this choice, particularly on class-imbalanced sets.
+    \item \textbf{Confidence threshold rigidity:} All datasets used the same threshold for self-training (confidence > 0.95). Sensitivity tests on class-imbalanced datasets could demonstrate the same degree of flexibility in the semi-supervised pipeline.
 
-    \item \textbf{Single curriculum schedule:} Only difficulty-based ordering is evaluated; reverse curriculum, paced learning, and uncertainty-driven schedules remain untested and may perform differently across dataset sizes.
+    \item \textbf{Single curriculum schedule:} Difficulty-only curriculum ordering has been used exclusively. Reverse order, flexible pace, and other (class size driven) uncertainty curricula are untested and may have significant effects based on class size.
 \end{itemize}
 
 \subsection{Experimental Limitations}
 \begin{itemize}
-    \item \textbf{Benchmark datasets only:} Generalization to operational hyperspectral surveys, with real acquisition noise and non-standard class taxonomies, has not been tested.
+    \item \textbf{Benchmark datasets only:} Generalizing to actual operational hyperspectral surveys with real acquisition noise and non-standard class taxonomies is impossible.
 
-    \item \textbf{No concept drift analysis:} The federated framework assumes stationary data distributions. Remote sensing data exhibits temporal drift that would require continual learning mechanisms in a production deployment.
+    \item \textbf{No concept drift analysis:} The distributed system assumes the data remains stationary. Remote sensing data has a temporal drift and would require concept drift in a production setting.
 
-    \item \textbf{Communication cost not quantified:} Federated accuracy results are reported, but bandwidth consumption and round-trip latency---critical for assessing real-world feasibility---are not measured.
+    \item \textbf{Communication cost not quantified:} While federated accuracy is presented, no measurements of bandwidth usage or one-way latency is presented, which are both crucial for assessing the practicality of the system.
 
-    \item \textbf{Adversarial robustness not assessed:} No evaluation of model behavior under adversarial perturbations or sensor-induced distribution shift is conducted, both of which are relevant for operational deployment.
+    \item \textbf{Adversarial robustness not assessed:} Operational deployment requires the analysis of the perturbed distributions of sensors and a sample data set; both are lacked.
 \end{itemize}
 
 \subsection{Implementation Limitations}
 \begin{itemize}
-    \item \textbf{No model compression:} Weight pruning or quantization would reduce federated communication overhead but is not implemented in the current system.
+    \item \textbf{No model compression:} Weight pruning and quantization are absent.
 
-    \item \textbf{Single-GPU training:} Multi-GPU data parallelism is not supported, which limits scalability for datasets substantially larger than Salinas.
+    \item \textbf{Single-GPU training:} Data parallelism is absent; training is limited to a single GPU.
 
-    \item \textbf{Narrow hyperparameter search:} Grid search covers a fixed candidate space; Bayesian optimization or AutoML approaches would likely identify better-tuned configurations, particularly for the semi-supervised confidence threshold.
+    \item \textbf{Restricted hyperparameter tuning:} The approach is a coarse grid search, which provides little estimate improvement. Confidence thresholds in semi-supervised learning may benefit significantly from hyperparameter tuning.
 \end{itemize}
 
 \section{Future Work}
 
 \subsection{Methodological Extensions}
 \begin{enumerate}
-    \item \textbf{Continual federated learning:} Equip the federated system with mechanisms to adapt to temporal distribution shifts in hyperspectral data streams, enabling long-term deployment without full retraining.
+    \item \textbf{Federated continual learning:} Imparts the distributed system the capability to adapt to the temporal distribution shifts of hyperspectral data without requiring a complete system refresh.
 
-    \item \textbf{Heterogeneous federated aggregation:} Replace vanilla FedAvg with weighted aggregation schemes that account for statistical heterogeneity across clients (e.g., FedProx, SCAFFOLD).
+    \item \textbf{Heterogeneous federated aggregation:} Introduces hierarchical aggregations (weighted aggregation) to accommodate differing data distributions of the clients.
 
-    \item \textbf{Adaptive curriculum generation:} Replace predefined difficulty orderings with automatic scheduling driven by model uncertainty or gradient-based difficulty estimation.
+    \item \textbf{Adaptive difficulty:} Rather than the fixed ordering of training sample difficulties, allow the model to determine the sample order based on its current state.
 
-    \item \textbf{Meta-learning for few-shot HSI:} Incorporate meta-learning to enable rapid adaptation to new sensors or geographic regions with only a handful of labeled samples.
+    \item \textbf{Few-shot HSI:} Develop the ability to rapidly transfer learning in the context of few-shot HSI across different sensors and regions.
 \end{enumerate}
 
 \subsection{Architectural Enhancements}
 \begin{enumerate}
-    \item \textbf{Hybrid 2D-3D models:} Combine 2D and 3D convolutional stages to balance spectral-spatial expressiveness against parameter count---the strong 2D-CNN results suggest this may be the most efficient frontier.
+    \item \textbf{Hybrid 2D-3D models:} Integrate 2D and 3D convolutions to find optimal trade-off between spectral-spatial expressiveness and number of model parameters; the promising outcomes of 2D-CNNs indicate that this may define the efficient frontier.
 
-    \item \textbf{Graph Neural Networks:} Model spectral-spatial relationships as graph structures, which may capture irregular spatial dependencies that regular convolutional grids miss.
+    \item \textbf{Graph Neural Networks:} Model spectral-spatial relationships as graphs to capture irregular spatial relationships which may be lost with traditional convolutional approaches.
 
-    \item \textbf{Self-supervised pretraining:} Apply contrastive or masked-reconstruction pretraining on unlabeled hyperspectral data to initialize richer representations before semi-supervised fine-tuning.
+    \item \textbf{Self-supervised pretraining:} Leverage contrastive or masked-reconstruction self-supervised pretraining on unlabeled hyperspectral data to build foundational representations which can then be improved through semi-supervised learning.
 
-    \item \textbf{Multi-modal fusion:} Extend the pipeline to fuse hyperspectral data with panchromatic imagery and LiDAR point clouds for scenes where a single modality is ambiguous.
+    \item \textbf{Multi-modal fusion:} Extend the workflow to integrate hyperspectral data with panchromatic images and laser data within those contexts where one modality falls short.
 \end{enumerate}
 
 \subsection{Experimental Directions}
 \begin{enumerate}
-    \item \textbf{Real-world federated deployment:} Validate the federated system on actual data distributed across multiple institutions or space agencies (e.g., ESA, NASA) to confirm that simulated results transfer to production conditions.
+    \item \textbf{Real-world federated deployment:} Test the federated learning framework with actual datasets from known multiple data sources/workplaces to validate that the simulated results will hold in real-world use cases (e.g., ESA, NASA).
 
-    \item \textbf{Cross-sensor generalization:} Benchmark federated learning across heterogeneous sensors (AVIRIS, Sentinel-2, DESIS) to characterize domain adaptation capability.
+    \item \textbf{Cross-sensor generalization:} Evaluate the federated learning framework with multiple disparate sensors (AVIRIS, Sentinel-2, DESIS) for an understanding of the extent of domain generalization and adaptation.
 
-    \item \textbf{Adversarial robustness:} Conduct systematic adversarial evaluation and develop sensor-noise-aware defense mechanisms for operationally deployed classifiers.
+    \item \textbf{Adversarial robustness:} Perform comprehensive adversarial evaluations and create sensor noise defense frameworks for fully deployed classifiers.
 
-    \item \textbf{Uncertainty quantification:} Integrate Bayesian deep learning to output per-prediction confidence estimates---essential for downstream decision-making in high-stakes remote sensing applications.
+    \item \textbf{Uncertainty quantification:} Implement Bayesian deep learning for hypothetical low integration risk and high-value remote sensing applications.
 \end{enumerate}
 
 \subsection{Practical Applications}
 \begin{enumerate}
-    \item \textbf{Edge deployment:} Compress models via pruning and quantization to enable real-time onboard classification on drones and nanosatellites.
+    \item \textbf{Edge deployment:} Use the combination of model pruning and quantization to achieve the goal of real-time data classification from nanosatellites.
 
-    \item \textbf{Active learning interface:} Add an active learning module to the GUI that identifies the most informative unlabeled pixels and routes them for human annotation, reducing labeling effort systematically.
+    \item \textbf{Active learning interface:} Implement an active learning module in the interface to autonomously flag the most informative unlabeled pixels.
 
-    \item \textbf{Interpretability tooling:} Embed explainable AI methods (attention maps, LIME, SHAP) so domain experts can interrogate model predictions before acting on them.
+    \item \textbf{Interpretability tooling:} Integrate explainable AI (attenuation mapping, LIME, SHAP) to facilitate avenues for domain experts to perform thorough evaluations of model outputs prior to engagement.
 
-    \item \textbf{GUI enhancements:} Extend the current interface with annotation support, quality assurance workflows, and real-time performance dashboards suited to operational remote sensing teams.
+    \item \textbf{GUI enhancements:} Annotation tools, quality assurance workflows, and real-time performance dashboards will be added to the interface based on the needs of the operational remote sensing teams.
 \end{enumerate}
 
 \section{Conclusion}
-The experimental record is clear on two points. First, federated learning is a practical alternative to centralized training: a $-3.1$\% average accuracy cost buys meaningful data privacy, and the gap narrows further on larger datasets. Second, semi-supervised learning via self-training and curriculum learning works well at scale---competitive on Pavia University and Salinas---but degrades substantially on the small, imbalanced Indian Pines set, where pseudo-label noise accumulates faster than the curriculum can contain it.
-
-Among the three architectures, 2D-CNN is the most consistent performer across all paradigms, which is a practically important finding: after PCA reduces the spectral dimension, spatial convolution alone captures the discriminative structure needed for near-perfect classification. The Vision Transformer, despite matching CNN accuracy under full supervision, is the least robust to the distribution shifts introduced by pseudo-labeling and federated weight averaging.
-
-The framework delivered here---a unified pipeline spanning three paradigms, three architectures, and three datasets, wrapped in a user-facing multithreaded GUI---provides both a reproducible comparative benchmark and a deployable application. Future work should prioritize real-world federated deployments and adaptive curriculum strategies that respond to the specific class-imbalance profile of each dataset, since those are the two factors that most constrain the system's current performance envelope.
+There is no ambiguity in the data. First, in federated learning, a small average reduction in accuracy (-3.1\%) offers a cost-benefit tradeoff for significant data privacy, especially in cases with large data. Second, in the case of semi-supervised learning, self-training, and curriculum learning, rapid scaling is achievable with competition on the Pavia University and Salinas datasets, but on the small, imbalanced Indian Pines set, dominated by noisy pseudo-labels, the system can’t keep pace – a loss of efficacy is expected. 2D-CNNs are the clear winners of all paradigms. One interesting thing to note is that, after PCA on the spectral data, the spatial data alone is sufficient for near-perfect classification. The Vision Transformer, though achieving the same level of accuracy as CNNs in full supervision, is the least resilient to the distribution shifts resulting from pseudo-labeling and federated weight averaging. What has been developed is a comprehensive system that integrates three paradigms, three architectures, and three datasets, all within a user-friendly multi-threaded GUI. Many examples of research can be found online, but what this research incorporates is an application that can be readily implemented. The focus of subsequent research needs to be on actual federated implementations and on curriculum techniques that are dynamically responsive. These techniques should be tailored to address the class imbalance in the datasets, as these are the most influential factors to the system’s performance.

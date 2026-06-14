@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.10)  14 JUN 2026 18:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.1)  14 JUN 2026 19:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/kerem/Documents/Kerem/Codes/Github Projects/bitirme/hyperspectral_classification/latex/main.tex"
-(/Users/kerem/Documents/Kerem/Codes/Github Projects/bitirme/hyperspectral_classification/latex/main.tex
+**/Users/tanerciyas/workspace/github.com/ghurstird/hyperspectral_classification/latex/main.tex
+(/Users/tanerciyas/workspace/github.com/ghurstird/hyperspectral_classification/latex/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/local/texlive/2026/texmf-dist/tex/latex/base/book.cls
@@ -1034,8 +1034,7 @@ Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 )
 \@quotelevel=\count521
 \@quotereset=\count522
-
-No file main.aux.
+ (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
@@ -1054,7 +1053,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
 LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 36.
 LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 36.
-(/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdacmr.fd
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/mathdesign/mdacmr.fd
 File: mdacmr.fd 
 )
 LaTeX Font Info:    ... okay on input line 36.
@@ -1232,19 +1231,67 @@ LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
 (Font)              scaled to size 23.88496pt on input line 90.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 (Font)              scaled to size 23.88496pt on input line 90.
+ (./main.toc
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 1.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 1.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 7.68005pt on input line 1.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 5.76004pt on input line 1.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 1.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 1.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 1.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 1.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 1.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 1.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 1.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 1.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 1.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 1.
+ [3
 
-No file main.toc.
+] [4])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
-[3
-
-]
+ [5]
 \mylen=\skip136
 \tempp=\skip137
- [4
+ [6
 
-] [5
+] (./main.lof)
+\tf@lof=\write7
+\openout7 = `main.lof'.
+
+ [7
+
+] (./main.lot
+Underfull \hbox (badness 2772) in paragraph at lines 1--1
+ [][] []\T1/mdbch/m/n/12 Groundtruth classes for the Indian Pines scene and their 
+ []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 5--5
+ [][] []\T1/mdbch/m/n/12 Comparison of Supervised, Semi-Supervised, and Federated 
+ []
+
+)
+\tf@lot=\write8
+\openout8 = `main.lot'.
+
+ [8
 
 ]
 Underfull \hbox (badness 1590) in paragraph at lines 190--191
@@ -1256,34 +1303,26 @@ Underfull \hbox (badness 1308) in paragraph at lines 190--191
 \T1/mdbch/m/n/12 Transformer, Semi-Supervised Learning, Federated Learning, Machine Learning,
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
-[]\T1/mdbch/m/n/12 Bu proje, hiperspektral görüntülerin (HSI) s^^Yn^^Yfland^^Yr^^Ylmas^^Y için denetimli,
+[9
+
+]
+Underfull \hbox (badness 7814) in paragraph at lines 208--209
+[]\T1/mdbch/m/n/12 Bu çal^^Y³ma, hyperspektral görüntü s^^Yn^^Yfland^^Yrmas^^Y için yap^^Yland^^Yr^^Ylm^^Y³, yar^^Y
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 208--209
-\T1/mdbch/m/n/12 olu³turmaktad^^Yr: 2D-CNN, 3D-CNN ve Vision Transformer (ViT). 200'ü a³k^^Yn
+Underfull \hbox (badness 7238) in paragraph at lines 208--209
+\T1/mdbch/m/n/12 yap^^Yland^^Yr^^Ylm^^Y³ ve federasyonel ö§renmeyi entegre eden birle³ik bir sistem
  []
 
 
-Underfull \hbox (badness 1983) in paragraph at lines 208--209
-\T1/mdbch/m/n/12 stratejisi benimsenmi³tir; bu yakla³^^Ym, etiketsiz örnekleri güven skoruna göre
+Underfull \hbox (badness 2065) in paragraph at lines 208--209
+\T1/mdbch/m/n/12 geli³tirmektedir. Öncelikle, uzaktan alg^^Ylama alan^^Ynda s^^Ykl^^Ykla kar³^^Yla³^^Ylan iki
  []
 
+[10
 
-Underfull \hbox (badness 1286) in paragraph at lines 208--209
-\T1/mdbch/m/n/12 ise üç standart k^^Yyaslama veri seti (Indian Pines, Pavia University ve Salinas)
- []
-
-
-Underfull \hbox (badness 1546) in paragraph at lines 208--209
-\T1/mdbch/m/n/12 üzerinde çal^^Y³an simüle edilmi³ bir sunucu-istemci mimarisi arac^^Yl^^Y§^^Yyla hayata
- []
-
-[7
-
-] [8]) (./RD_projectChapters/1-chapter.tex
+]) (./RD_projectChapters/1-chapter.tex
  1.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 (Font)              scaled to size 28.8002pt on input line 1.
@@ -1314,16 +1353,6 @@ Underfull \hbox (badness 1688) in paragraph at lines 19--20
 
 [4]) (./RD_projectChapters/3-chapter.tex [5]
  3.
-./RD_projectChapters/3-chapter.tex:5: Misplaced alignment tab character &.
-l.5 As this is an R&
-                    D project, requirements were not provided because there ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
 [6
 
 ]
@@ -1377,7 +1406,7 @@ Overfull \hbox (2.38869pt too wide) in paragraph at lines 62--63
 
 ) (./RD_projectChapters/4-chapter.tex [7] [8]
  4.
-<images/workflow.png, id=66, 2822.545pt x 1452.42625pt>
+<images/workflow.png, id=73, 2822.545pt x 1452.42625pt>
 File: images/workflow.png Graphic file (type png)
 <use images/workflow.png>
 Package pdftex.def Info: images/workflow.png  used on input line 6.
@@ -1385,68 +1414,40 @@ Package pdftex.def Info: images/workflow.png  used on input line 6.
 [9
 
  <./images/workflow.png>]
-<images/indian_pines_band.png, id=71, 353.4003pt x 278.9622pt>
+<images/indian_pines_band.png, id=78, 353.4003pt x 278.9622pt>
 File: images/indian_pines_band.png Graphic file (type png)
 <use images/indian_pines_band.png>
 Package pdftex.def Info: images/indian_pines_band.png  used on input line 23.
 (pdftex.def)             Requested size: 204.85802pt x 161.7088pt.
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 26.
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 26.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 26.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 5.76004pt on input line 26.
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 26.
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 26.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 26.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 26.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 26.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 26.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 26.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 26.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 26.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 26.
-<images/Indian_pines_gt.png, id=72, 353.4003pt x 280.4076pt>
+<images/Indian_pines_gt.png, id=79, 353.4003pt x 280.4076pt>
 File: images/Indian_pines_gt.png Graphic file (type png)
 <use images/Indian_pines_gt.png>
 Package pdftex.def Info: images/Indian_pines_gt.png  used on input line 30.
 (pdftex.def)             Requested size: 204.85802pt x 162.54666pt.
  [10 <./images/indian_pines_band.png> <./images/Indian_pines_gt.png>]
-<images/pavia_band.png, id=77, 353.4003pt x 280.4076pt>
+<images/pavia_band.png, id=83, 353.4003pt x 280.4076pt>
 File: images/pavia_band.png Graphic file (type png)
 <use images/pavia_band.png>
 Package pdftex.def Info: images/pavia_band.png  used on input line 71.
 (pdftex.def)             Requested size: 204.85802pt x 162.54666pt.
-<images/paviau_gt.png, id=78, 353.4003pt x 278.9622pt>
+<images/paviau_gt.png, id=84, 353.4003pt x 278.9622pt>
 File: images/paviau_gt.png Graphic file (type png)
 <use images/paviau_gt.png>
 Package pdftex.def Info: images/paviau_gt.png  used on input line 78.
 (pdftex.def)             Requested size: 204.85802pt x 161.7088pt.
  [11]
-<images/salinas_band.png, id=82, 449.5194pt x 338.2236pt>
+<images/salinas_band.png, id=88, 449.5194pt x 338.2236pt>
 File: images/salinas_band.png Graphic file (type png)
 <use images/salinas_band.png>
 Package pdftex.def Info: images/salinas_band.png  used on input line 112.
 (pdftex.def)             Requested size: 204.85802pt x 154.13454pt.
-<images/salinas_gt.png, id=83, 449.5194pt x 338.2236pt>
+<images/salinas_gt.png, id=89, 449.5194pt x 338.2236pt>
 File: images/salinas_gt.png Graphic file (type png)
 <use images/salinas_gt.png>
 Package pdftex.def Info: images/salinas_gt.png  used on input line 119.
 (pdftex.def)             Requested size: 204.85802pt x 154.13454pt.
  [12 <./images/pavia_band.png> <./images/paviau_gt.png>] [13 <./images/salinas_band.png> <./images/salinas_gt.png>]
-<images/block_diagram.png, id=90, 2826.56pt x 1475.5125pt>
+<images/block_diagram.png, id=96, 2826.56pt x 1475.5125pt>
 File: images/block_diagram.png Graphic file (type png)
 <use images/block_diagram.png>
 Package pdftex.def Info: images/block_diagram.png  used on input line 158.
@@ -1469,9 +1470,6 @@ Underfull \hbox (badness 2744) in paragraph at lines 178--179
 LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
 (Font)              scaled to size 12.86407pt on input line 182.
 
-LaTeX Warning: Reference `tab:split_sizes' on page 15 undefined on input line 184.
-
-
 Underfull \hbox (badness 2197) in paragraph at lines 184--185
 []\T1/mdbch/m/n/12 Patches are randomly split into training and test sets with \T1/cmtt/m/n/12 test_size=0.1\T1/mdbch/m/n/12 ,
  []
@@ -1491,12 +1489,8 @@ Underfull \hbox (badness 1158) in paragraph at lines 256--257
 []\T1/mdbch/m/n/12 Each client receives the global model and trains it locally on their own
  []
 
-[18]
-
-LaTeX Warning: Reference `tab:learning_paradigms' on page 19 undefined on input line 283.
-
-[19]
-<images/SSL_flowchart.png, id=115, 2826.56pt x 1451.4225pt>
+[18] [19]
+<images/SSL_flowchart.png, id=121, 2826.56pt x 1451.4225pt>
 File: images/SSL_flowchart.png Graphic file (type png)
 <use images/SSL_flowchart.png>
 Package pdftex.def Info: images/SSL_flowchart.png  used on input line 303.
@@ -1529,9 +1523,6 @@ Underfull \hbox (badness 1681) in paragraph at lines 246--247
 Underfull \hbox (badness 7116) in paragraph at lines 257--258
 []\T1/mdbch/b/n/12 Salinas: \T1/mdbch/m/n/12 The largest dataset (54,129 samples) achieves the highest
  []
-
-
-LaTeX Warning: Reference `tab:paradigm_tradeoffs' on page 28 undefined on input line 261.
 
 
 Underfull \hbox (badness 1997) in paragraph at lines 261--262
@@ -1572,39 +1563,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 []\T1/mdbch/b/n/12 3D-CNN: \T1/mdbch/m/n/12 Placed second with consistency (supervised: 99.91%,
  []
 
+
+Underfull \hbox (badness 1314) in paragraph at lines 36--37
+[]\T1/mdbch/b/n/12 Vision Trans-former: \T1/mdbch/m/n/12 Competitive at full supervision (99.72%) but most
+ []
+
 [30]
-Underfull \hbox (badness 6608) in paragraph at lines 47--48
-[]\T1/mdbch/m/n/12 Implement supervised learning baselines using multiple deep learning
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+[]\T1/mdbch/m/n/12 Create normalization and dimensionality reduction pipelines for
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 49--50
-[]\T1/mdbch/m/n/12 Implement federated learning for privacy-preserving collaborative training
+Underfull \hbox (badness 1337) in paragraph at lines 47--48
+[]\T1/mdbch/m/n/12 Establish baseline supervised learning systems based upon different deep
+ []
+
+
+Underfull \hbox (badness 7777) in paragraph at lines 48--49
+[]\T1/mdbch/m/n/12 Integrate semi-supervised learning systems based on self-training and
  []
 
 [31]
-Underfull \hbox (badness 1590) in paragraph at lines 79--80
-\T1/mdbch/m/n/12 preprocessing, split, and metric conditions is rare in the HSI literature;
- []
-
-
-Underfull \hbox (badness 2012) in paragraph at lines 79--80
-\T1/mdbch/m/n/12 the results are directly comparable rather than confounded by differing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-[]\T1/mdbch/b/n/12 Curriculum Learn-ing in-te-gra-tion: \T1/mdbch/m/n/12 Coupling self-training with
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-\T1/mdbch/m/n/12 difficulty-ordered sample presentation measurably reduces pseudo-label
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
-[]\T1/mdbch/b/n/12 Privacy-preserving fed-er-ated ar-chi-tec-ture: \T1/mdbch/m/n/12 The federated system
+Underfull \hbox (badness 4699) in paragraph at lines 83--84
+[]\T1/mdbch/b/n/12 Privacy-preservation fed-er-ated frame-work: \T1/mdbch/m/n/12 The federated framework
  []
 
 
@@ -1612,57 +1593,62 @@ Underfull \hbox (badness 7081) in paragraph at lines 85--86
 []\T1/mdbch/b/n/12 Generalizable pre-pro-cess-ing: \T1/mdbch/m/n/12 The three-step pipeline (normalization,
  []
 
-
-Underfull \hbox (badness 1371) in paragraph at lines 90--91
-[]\T1/mdbch/b/n/12 Three-architecture sup-port: \T1/mdbch/m/n/12 Users can select 2D-CNN, 3D-CNN, or ViT
+[32]
+Underfull \hbox (badness 4673) in paragraph at lines 96--97
+[]\T1/mdbch/b/n/12 Reproducibility: \T1/mdbch/m/n/12 Fixed randomization and a stratified split guarantee
  []
 
-[32]
-Underfull \hbox (badness 1383) in paragraph at lines 118--119
-\T1/mdbch/m/n/12 but bandwidth consumption and round-trip latency---critical for assessing
+
+Underfull \hbox (badness 4752) in paragraph at lines 103--104
+\T1/mdbch/m/n/12 simulates three clients. True deployments have unbalanced datasets,
+ []
+
+
+Underfull \hbox (badness 1281) in paragraph at lines 114--115
+\T1/mdbch/m/n/12 surveys with real acquisition noise and non-standard class taxonomies is
  []
 
 [33]
-Underfull \hbox (badness 1577) in paragraph at lines 125--126
-[]\T1/mdbch/b/n/12 No model com-pres-sion: \T1/mdbch/m/n/12 Weight pruning or quantization would reduce
+Underfull \hbox (badness 3449) in paragraph at lines 129--130
+\T1/mdbch/m/n/12 which provides little estimate improvement. Confidence thresholds in
  []
 
 
-Underfull \hbox (badness 2635) in paragraph at lines 149--150
-[]\T1/mdbch/b/n/12 Graph Neu-ral Net-works: \T1/mdbch/m/n/12 Model spectral-spatial relationships as graph
+Underfull \hbox (badness 1997) in paragraph at lines 140--141
+[]\T1/mdbch/b/n/12 Adaptive dif-fi-culty: \T1/mdbch/m/n/12 Rather than the fixed ordering of training sample
+ []
+
+
+Underfull \hbox (badness 4765) in paragraph at lines 147--148
+\T1/mdbch/m/n/12 trade-off between spectral-spatial expressiveness and number of model
+ []
+
+
+Underfull \hbox (badness 1199) in paragraph at lines 149--150
+\T1/mdbch/m/n/12 capture irregular spatial relationships which may be lost with traditional
  []
 
 [34]
-Underfull \hbox (badness 1960) in paragraph at lines 151--152
-[]\T1/mdbch/b/n/12 Self-supervised pre-train-ing: \T1/mdbch/m/n/12 Apply contrastive or masked-reconstruction
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+\T1/mdbch/m/n/12 self-supervised pretraining on unlabeled hyperspectral data to build
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
-[]\T1/mdbch/b/n/12 Cross-sensor gen-er-al-iza-tion: \T1/mdbch/m/n/12 Benchmark federated learning across
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+\T1/mdbch/m/n/12 foundational representations which can then be improved through
  []
 
 
-Underfull \hbox (badness 2573) in paragraph at lines 162--163
-[]\T1/mdbch/b/n/12 Adversarial ro-bust-ness: \T1/mdbch/m/n/12 Conduct systematic adversarial evaluation and
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
+[]\T1/mdbch/b/n/12 Uncertainty quan-tifi-ca-tion: \T1/mdbch/m/n/12 Implement Bayesian deep learning for
  []
 
 
-Underfull \hbox (badness 1769) in paragraph at lines 164--165
-[]\T1/mdbch/b/n/12 Uncertainty quan-tifi-ca-tion: \T1/mdbch/m/n/12 Integrate Bayesian deep learning to output
+Underfull \hbox (badness 1147) in paragraph at lines 175--176
+[]\T1/mdbch/b/n/12 GUI en-hance-ments: \T1/mdbch/m/n/12 Annotation tools, quality assurance workflows, and
  []
 
-[35])
-Underfull \hbox (badness 2626) in paragraph at lines 183--57
-[]\T1/mdbch/m/n/12 The framework delivered here---a unified pipeline spanning three paradigms,
- []
-
-
-Underfull \hbox (badness 2512) in paragraph at lines 183--57
-\T1/mdbch/m/n/12 GUI---provides both a reproducible comparative benchmark and a deployable
- []
-
-[36]
+) [35] [36]
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
 (Font)              scaled to size 11.52008pt on input line 85.
 
@@ -1689,40 +1675,31 @@ Underfull \hbox (badness 2189) in paragraph at lines 85--85
 
 [38] (./cv.tex) [39
 
-] (./main.aux)
+]
+runsystem(latexminted cleantemp  --timestamp 20260614191457 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+
+ (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33102 strings out of 467525
- 696561 string characters out of 5418982
- 1612950 words of memory out of 5000000
- 61464 multiletter control sequences out of 15000+600000
+ 33122 strings out of 467525
+ 696761 string characters out of 5418983
+ 1615789 words of memory out of 5000000
+ 61474 multiletter control sequences out of 15000+600000
  689634 words of font info for 134 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 100i,16n,147p,2159b,1298s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 100i,16n,147p,2062b,1296s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7v.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chrma.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (48 pages, 13663079 bytes).
+Output written on main.pdf (50 pages, 13666006 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 144 compressed objects within 2 object streams
+ 237 PDF objects out of 1000 (max. 8388607)
+ 149 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  63 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,6 +1,8 @@
-\contentsline {chapter}{LIST OF ABBREVIATIONS}{iv}{}%
-\contentsline {chapter}{ABSTRACT}{v}{}%
-\contentsline {chapter}{ÖZET}{vii}{}%
+\contentsline {chapter}{LIST OF ABBREVIATIONS}{vi}{}%
+\contentsline {chapter}{LIST OF FIGURES}{vii}{}%
+\contentsline {chapter}{LIST OF TABLES}{viii}{}%
+\contentsline {chapter}{ABSTRACT}{ix}{}%
+\contentsline {chapter}{ÖZET}{x}{}%
 \contentsline {chapter}{\numberline {1}INTRODUCTION}{1}{}%
 \contentsline {section}{\numberline {1.1}Purpose}{1}{}%
 \contentsline {section}{\numberline {1.2}Preliminary Investigation}{2}{}%
