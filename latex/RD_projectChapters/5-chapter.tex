@@ -1,10 +1,10 @@
 \chapter{EXPERIMENTAL RESULTS}
 
 \section{Performance Analysis}
-All three architectures---2D-CNN, 3D-CNN, and Vision Transformer---are evaluated on Indian Pines, Pavia University, and Salinas under each of the three learning paradigms. The tables below report quantitative results; the comparative analysis that follows dissects the patterns across datasets and architectures.
+The three models—2D-CNN, 3D-CNN, and Vision Transformer— are analyzed within the three frameworks using the Indian Pines, Pavia University, and Salinas hyperspectral datasets. Quantitative analysis is presented in the tables. The following analysis focuses on the Indian Pines, Pavia University, and Salinas case studies and focuses on architecture and dataset design.
 
 \subsection{Supervised Learning Results}
-Supervised models are trained exclusively on labeled samples, with hyperparameters selected through grid search and cross-validation. These results serve as the performance ceiling against which semi-supervised and federated variants are judged.
+In the supervised framework, models are trained on labeled examples. The hyperparameters are tuned using grid search and cross-validation. These results set the upper bound on the performance of semi-supervised and federated approaches.
 
 \subsubsection{Indian Pines Dataset Performance}
 \begin{table}[H]
@@ -52,7 +52,7 @@ Supervised models are trained exclusively on labeled samples, with hyperparamete
 \end{table}
 
 \subsection{Semi-Supervised Learning Results}
-The semi-supervised variants augment the labeled training set through iterative self-training with curriculum learning, leveraging the unlabeled pixel pool to improve generalization. The results are notably dataset-dependent: performance on the two larger datasets remains competitive, while the small, class-imbalanced Indian Pines set presents a harder challenge.
+The semi-supervised models perform self-training with curriculum learning and generalization to the unlabeled examples of the dataset. The results showed that the performance was heavily dependent on the dataset. The larger datasets were performing better, but the Indian Pines dataset, which is smaller and class imbalanced, is more challenging.
 
 \subsubsection{Semi-Supervised Indian Pines Performance}
 \begin{table}[H]
@@ -100,7 +100,7 @@ The semi-supervised variants augment the labeled training set through iterative 
 \end{table}
 
 \subsection{Federated Learning Results}
-In the federated setting, each dataset acts as an independent client. Local models are trained and their weights aggregated via FedAvg over 50 communication rounds---raw data never leaves the client. The results show that federated learning sustains near-supervised accuracy on the two larger datasets while incurring a more meaningful gap on the small Indian Pines set.
+In the federated scenario, each dataset is viewed as a separate client. Local models are trained and weights are shared in a federated setting over 50 communication rounds. The Indian Pines dataset was challenging in the federated learning framework, but the other two larger datasets showed that federated learning was able to achieve results that were comparable to a supervised setting.
 
 \subsubsection{Federated Learning on Indian Pines}
 \begin{table}[H]
@@ -148,7 +148,7 @@ In the federated setting, each dataset acts as an independent client. Local mode
 \end{table}
 
 \section{Comparative Analysis}
-With all results in hand, three dimensions of comparison are examined: the accuracy change each paradigm produces relative to the supervised baseline, performance differences across architectures, and dataset-specific trends.
+With the results, three comparison aspects are examined: the extent of the accuracy deterioration in each paradigm in relation to the supervised framework, the architecture performance, and the trends in relation to the dataset.
 
 \subsection{Overall Accuracy Comparison}
 \begin{table}[H]
@@ -185,7 +185,7 @@ With all results in hand, three dimensions of comparison are examined: the accur
 \end{table}
 
 \subsection{Performance Change Analysis}
-Accuracy change relative to the supervised baseline is quantified as:
+Accuracy change relative to the supervised baseline is represented by the following:
 
 \begin{equation}
     \text{Change\%} = \frac{\text{OA}_{\text{alt}} - \text{OA}_{\text{Supervised}}}{\text{OA}_{\text{Supervised}}} \times 100
@@ -193,19 +193,19 @@ Accuracy change relative to the supervised baseline is quantified as:
 \end{equation}
 
 \subsubsection{Semi-Supervised vs. Supervised}
-Semi-supervised learning degrades substantially relative to the supervised baseline, with the scale of that degradation determined almost entirely by dataset size:
+Given the scale of the datasets, semi-supervised learning degrades significantly in comparison to supervised learning.
 \begin{itemize}
-    \item \textbf{Indian Pines:} Average drop of $-34.96$ percentage points across architectures (from 99.81\% to 64.85\%), indicating that the self-training strategy is highly sensitive to limited dataset size and class imbalance.
-    \item \textbf{Pavia University:} Average drop of $-4.63$ percentage points (from 99.91\% to 95.28\%), demonstrating that curriculum learning partially mitigates degradation when larger unlabeled pools are available.
-    \item \textbf{Salinas:} Average drop of $-6.46$ percentage points (from 99.88\% to 93.42\%), suggesting that even the largest dataset is insufficient to recover fully supervised-level accuracy through pseudo-labeling alone.
+    \item \textbf{Indian Pines:} Average drop of $-34.96$ percentages across architectures (from 99.81\% to 64.85\%). This drop shows that self training is considerably limited by dataset size and class balance.
+    \item \textbf{Pavia University:} Average drop of only $-4.63$ percentages (from 99.91\% to 95.28\%). This drop shows that in the presence of large uncontrolled dataset curriculum learning helps to limit the degradation.
+    \item \textbf{Salinas:} Average drop of $-6.46$ percentages (from 99.88\% to 93.42\%). From this drop, we see that the largest dataset in the study is still insufficient to reach fully-accurate, supervised-level in the presence of pseudo-labels.
 \end{itemize}
 
 \subsubsection{Federated vs. Supervised}
-Federated learning holds much closer to the supervised ceiling, particularly on the larger datasets:
+When compared to the other approaches, supervised learning aggregates at the ceiling level more than the others, especially in the large datasets:
 \begin{itemize}
-    \item \textbf{Indian Pines:} Average difference of $-8.26$ percentage points (from 99.81\% to 91.55\%), reflecting the challenge of federated aggregation on a small dataset with limited local samples per client.
-    \item \textbf{Pavia University:} Average difference of $-0.40$ percentage points (from 99.91\% to 99.51\%), demonstrating strong robustness across heterogeneous urban land-cover classes.
-    \item \textbf{Salinas:} Average difference of $-0.75$ percentage points (from 99.88\% to 99.13\%), showing near-parity performance at scale.
+    \item \textbf{Indian Pines:} Average difference of $-8.26$ percentages (from 99.81\% to 91.55\%), showing the difficulty federated aggregation has on small datasets with limited local samples for each client.
+    \item \textbf{Pavia University:} Average difference of just $-0.40$ percentages (from 99.91\% to 99.51\%), which shows strong robustness.
+    \item \textbf{Salinas:} Average difference of just $-0.75$ percentage points (from 99.88\% to 99.13\%), showing near-parity at large scale.
 \end{itemize}
 
 \subsection{Architecture Comparison}
@@ -239,26 +239,26 @@ Federated learning holds much closer to the supervised ceiling, particularly on 
     \end{tabular}}
 \end{table}
 
-Three patterns stand out from the architecture-level averages:
+Three trends emerge based on averages across different architectures.
 \begin{enumerate}
-    \item \textbf{2D-CNN dominates all paradigms:} Despite being the simplest architecture, 2D-CNN leads in supervised (99.96\%), semi-supervised (89.22\%), and federated (98.72\%) average accuracy. After PCA reduces the spectral dimension to 30 components, 2D spatial convolutions appear fully sufficient to discriminate between classes---volumetric operations add complexity without a commensurate accuracy gain.
+    \item \textbf{2D-CNN shows dominance across the board:}  As the most basic architecture, 2D-CNN achieves the highest score in all paradigms—supervised (99.96\%), semi-supervised (89.22\%), and federated (98.72\%)—where PCA reduces the spectral dimension to 30 components. Class separation seems to require only 2D spatial operations. 3D convolutions add complexity to the architecture without providing a significant increase in accuracy.
 
-    \item \textbf{3D-CNN offers consistent robustness:} The 3D-CNN ranks second across all three paradigms (supervised: 99.91\%, semi-supervised: 86.92\%, federated: 97.36\%). Its explicit modeling of inter-band correlations through volumetric kernels contributes to stable performance even when training conditions are imperfect.
+    \item \textbf{3D-CNN shows reliability:} The 3D-CNN is in second place across the three paradigms (supervised: 99.91\%, semi-supervised: 86.92\%, federated: 97.36\%). The stable performance is attributed to the 3D-CNN’s design of volumetric kernels, which model inter-band relations.
 
-    \item \textbf{ViT is most sensitive to distribution shift:} The Vision Transformer reaches competitive supervised accuracy (99.72\%) but suffers the steepest degradation under semi-supervised (77.41\%) and federated (94.11\%) settings. Self-attention mechanisms appear more susceptible to noisy pseudo-labels and to weight averaging across heterogeneous client data distributions.
+    \item \textbf{Distribution shift most affects ViT:} The Vision Transformer shows strong performance in the supervised paradigm (99.72\%) but experiences the largest drop in semi-supervised (77.41\%) and federated (94.11\%) paradigms. Of the architectures, ViTs are the most affected by inadequate quality of pseudo-labels and the averaging of model weights across heterogeneous client data.
 \end{enumerate}
 
 \subsection{Dataset-Specific Analysis}
 \begin{itemize}
-    \item \textbf{Indian Pines:} With only 10,249 samples spread across 16 imbalanced classes, this is the hardest setting for both semi-supervised and federated training. Semi-supervised accuracy collapses by an average of 34.96 percentage points (99.81\% $\to$ 64.85\%), driven by error propagation through pseudo-label iterations on severely underrepresented minority classes.
+    \item \textbf{Indian Pines:} The class distribution (16 classes) and sample size (10,249 samples) make this the most difficult case for semi-supervised and federated learning. Semi-supervised accuracy dropped on average 34.96 (99.81\% $\to$ 64.85\%) due to the propagation of labeling errors on the pseudo-labels of severely underrepresented classes.
 
-    \item \textbf{Pavia University:} At 42,776 samples across 9 urban classes, this dataset is robust to paradigm shifts. Federated learning degrades by only 0.40 percentage points on average, pointing to its suitability for multi-institutional collaboration scenarios where urban remote sensing data is distributed across agencies.
+    \item \textbf{Pavia University:} With 42,776 samples covering 9 classes, this is a dataset that shows stability against paradigm changes. Federated learning accuracy decreased by only 0.40 percentage points, indicating that this architecture is applicable to scenarios where urban remote sensing data is distributed across organizations.
 
-    \item \textbf{Salinas:} The largest dataset (54,129 samples) achieves the highest absolute semi-supervised accuracy of any configuration (3D-CNN + SSL: 97.30\%) and the narrowest federated-supervised gap ($-0.75$ percentage points), confirming that both alternative paradigms scale favorably as labeled and unlabeled sample counts grow.
+    \item \textbf{Salinas:} The largest dataset (54,129 samples) achieves the highest semi-supervised accuracy of any configuration (3D-CNN + SSL: 97.30\%) and the smallest federated-supervised gap ($-0.75$ percentage points). It shows that both different frameworks work well when the labeled and/or the unlabeled sample sizes increase.
 \end{itemize}
 
 \subsection{Privacy and Efficiency Trade-offs}
-Beyond raw accuracy, the three paradigms differ substantially in their operational characteristics. Table~\ref{tab:paradigm_tradeoffs} summarizes these trade-offs qualitatively.
+These three systems show very different characteristics even beyond just the differences in their accuracy. The qualitative trade-offs are summarized in Table~\ref{tab:paradigm_tradeoffs}.
 
 \begin{table}[H]
     \centering

@@ -270,15 +270,17 @@ The 3D-CNN model’s training kernels cover the dataset-specific spectral traini
 The training patterns at each client site are captured by the Transformer attention weights. After aggregation at the server, the global attention makes it feasible to work with the diverse spectral-spatial statistics arising from various clients.
 
 \subsubsection{Privacy and Communication Efficiency}
-Keeping raw hyperspectral data at client locations is the primary privacy guarantee of federated learning, but communication overhead between clients and the server is a practical constraint. Three measures address this:
+The main privacy benefit of federated learning is that raw hyperspectral data does not leave client locations. However, the communication overhead between clients and the server is a real limitation.
+
+Three methods help address this issue:
 \begin{itemize}
-    \item \textbf{Gradient Compression:} Model weights are compressed before transmission to reduce bandwidth requirements.
-    \item \textbf{Local Training Epochs:} Each client performs multiple local training epochs (typically 5--10) before communicating with the server, reducing the total number of communication rounds.
-    \item \textbf{Asynchronous Aggregation:} The server aggregates updates from whichever clients respond first rather than waiting for all participants, reducing wall-clock training time.
+    \item \textbf{Gradient Compression:} Model weights are compressed before sending them, thus saving bandwidth.
+    \item \textbf{Local Training Epochs:} Clients perform a number of local training epochs (5-10 is typical) before sending model weights. This means fewer communication rounds overall.
+    \item \textbf{Asynchronous Aggregation:} The server aggregates model updates from clients that responded first. This helps save time when contrasted with other methods, which wait for all participating clients to respond.
 \end{itemize}
 
 \subsection{Comparative Learning Paradigm Summary}
-The three paradigms each address labeled data scarcity from a different angle. Table~\ref{tab:learning_paradigms} summarizes their key characteristics.
+These methods individually address the problem of data scarcity in different ways. The Table~\ref{tab:learning_paradigms} summarizes their distinct aspects.
 
 \begin{table}[H]
     \centering
@@ -304,35 +306,35 @@ The three paradigms each address labeled data scarcity from a different angle. T
 \end{figure}
 
 \subsection{Evaluation Metrics}
-Five standard metrics quantify classification performance. Let $TP_c$, $FP_c$, and $FN_c$ denote the true positives, false positives, and false negatives for class $c$, and let $N$ be the total number of test samples.
+To measure classification performance, five common parameters are used. Let T Pc , F Pc , and F Nc denote the true positives, false positives, and false negatives for class c, and let N denote the total number of test samples.
 
 \begin{itemize}
-    \item \textbf{Overall Accuracy (OA):} The ratio of correctly classified pixels to the total number of test pixels:
+    \item \textbf{Overall Accuracy (OA):} Ratio of the number of correctly classified test pixels to the number of test pixels:
     \begin{equation}
         \text{OA} = \frac{\sum_{c} TP_c}{N}
     \end{equation}
 
-    \item \textbf{Precision:} The fraction of pixels predicted as class $c$ that truly belong to class $c$, averaged across all classes (macro):
+    \item \textbf{Precision:} The fraction of test pixels that belong to class $c$ when predicted to be in class $c$, This is macro averaged:
     \begin{equation}
         \text{Precision} = \frac{1}{C} \sum_{c=1}^{C} \frac{TP_c}{TP_c + FP_c}
     \end{equation}
 
-    \item \textbf{Recall:} The fraction of true class-$c$ pixels that are correctly identified:
+    \item \textbf{Recall:}  The fraction of class $c$ test pixels that were predicted to be in class $c$:
     \begin{equation}
         \text{Recall} = \frac{1}{C} \sum_{c=1}^{C} \frac{TP_c}{TP_c + FN_c}
     \end{equation}
 
-    \item \textbf{F1-Score:} The harmonic mean of Precision and Recall:
+    \item \textbf{F1-Score:} The harmonic mean of Precision and Recall.
     \begin{equation}
         \text{F1} = \frac{2 \cdot \text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}
     \end{equation}
 
-    \item \textbf{Cohen's Kappa ($\kappa$):} A metric that corrects Overall Accuracy for agreement expected by chance. Given the observed accuracy $p_o$ and the chance agreement $p_e$:
+    \item \textbf{Cohen's Kappa ($\kappa$):} The metric helps Overall Accuracy when measuring classification performance. Given the observed accuracy $p_o$ and the chance agreement $p_e$:
     \begin{equation}
         \kappa = \frac{p_o - p_e}{1 - p_e}
     \end{equation}
-    A value of $\kappa = 1$ indicates perfect classification; $\kappa = 0$ is equivalent to random guessing.
+    A value of $\kappa = 1$ is perfect classification; $\kappa = 0$ is random classification.
 \end{itemize}
 
 \subsection{GUI and Multithreading Integration}
-The trained models are exposed through a standalone PyQt6 desktop application. Model inference runs in a dedicated worker thread, decoupled from the main UI event loop, so the interface remains fully responsive while the deep learning pipeline processes large hyperspectral hypercubes in the background.
+The models are available in a standalone desktop application built using PyQt6. Model inference is processed in a separate worker thread. This is separate from the main UI event loop. As a result, the UI remains responsive while the deep learning pipeline is processing a hyperspectral hypercube.

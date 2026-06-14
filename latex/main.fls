@@ -518,11 +518,11 @@ INPUT ./images/SSL_flowchart.png
 INPUT ./images/SSL_flowchart.png
 INPUT ./images/SSL_flowchart.png
 INPUT ./images/SSL_flowchart.png
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/vf/public/mathdesign/mdbch/mdbchr7v.vf
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/mathdesign/mdbch/md-chr7v.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/vf/public/mathdesign/mdbch/mdbchri7m.vf
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/mathdesign/mdbch/md-chri7m.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/mathdesign/mdbch/md-chri8y.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/vf/public/mathdesign/mdbch/mdbchr7v.vf
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/mathdesign/mdbch/md-chr7v.tfm
 INPUT ./RD_projectChapters/5-chapter.tex
 INPUT ./RD_projectChapters/5-chapter.tex
 INPUT RD_projectChapters/5-chapter.tex

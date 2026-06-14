@@ -1,35 +1,37 @@
 \chapter{CONCLUSIONS AND DISCUSSION}
 
 \section{Summary}
-This project built and evaluated a unified HSI classification framework that places supervised, semi-supervised, and federated learning in direct comparison on the same preprocessing pipeline, the same three benchmark datasets (Indian Pines, Pavia University, and Salinas), and the same three architectures (2D-CNN, 3D-CNN, and Vision Transformer).
+This project designed and assessed an HSI classification system that allows direct comparison of supervised, semi-supervised and federated learning.
 
-Raw spectral data exceeding 200 bands is conditioned through global min-max normalization, Gaussian spatial filtering, and PCA reduction to 30 components before being divided into $15 \times 15 \times 30$ patches. A stratified 90/10 train-test split preserves class proportions across both sets. The semi-supervised branch pairs self-training with curriculum learning, which schedules pseudo-labeled samples from high-confidence to ambiguous to dampen error propagation. The federated branch simulates a three-client environment where each dataset acts as a local data silo; local weights are aggregated at a central server via the FedAvg protocol without any raw data ever leaving the client.
+The comparison system used the same preprocessing pipeline, three benchmark datasets (Indian Pines, Pavia University, and Salinas) and three model architectures (2D-CNN, 3D-CNN, and Vision Transformer).
+
+Spectral data that exceeds 200 bands (and is raw) is submitted to a series of treatments that include global min-max normalization, Gaussian spatial filtering, PCA that reduces the filtration to 30 components, and segmentation into 15 × 15 × 30 patches. From these, class proportions are maintained in a stratified 90/10 train-test split. In the semi-supervised model, self-training is combined with a curriculum that reduces the self-training model’s error propagation by introducing pseudo-labels that are least confident and/or least certain, in a progressive manner. The federated model mimics a three-client system in which each of the datasets is a local data silo. In this model, the FedAvg protocol is used to aggregate local copies of models in a central system without any transfer of original data.
 
 \section{Key Findings}
 
 \subsection{Semi-Supervised Learning Effectiveness}
-Semi-supervised performance is strongly conditioned on dataset size:
+Semi-supervised learning is more successfully applied to larger datasets.
 \begin{enumerate}
-    \item On Pavia University and Salinas, where unlabeled pools are large, semi-supervised models achieve competitive accuracy (86--97\%), confirming that self-training is a viable strategy given sufficient data volume.
-    \item On the smaller, class-imbalanced Indian Pines set, accuracy collapses to 54--74\%---a clear signal that the confidence threshold and pseudo-label iteration count require dataset-specific tuning.
-    \item Across all datasets, 2D-CNN achieves the highest semi-supervised average at 89.22\%, suggesting that simpler convolutional architectures are more forgiving of pseudo-label noise than deeper or attention-based ones.
-    \item Curriculum learning contains but does not eliminate the overfitting caused by noisy pseudo-labels; its benefit is most pronounced when the initial labeled set is large enough to seed reliable pseudo-labels.
+    \item For Pavia University and Salinas, which contain large unlabeled data pools, semi-supervised models received competitive accuracy (86--97\%).
+    \item For the smaller, more class-imbalanced Indian Pines set, accuracies were around 54--74\%, indicating the confidence threshold and the count of pseudo-label iterations require more tuning to the specific dataset.
+    \item In all studies, 2D-CNN has the best semi-supervised average at 89.22\%, suggesting that simpler convolutional architectures are more forgiving of pseudo-label noise than deeper or attention-based ones.
+    \item Curriculum learning does not remove the overfitting from noisy pseudo-labels, but does help, especially when the first labeled set is sufficiently large to create good pseudo-labels.
 \end{enumerate}
 
 \subsection{Federated Learning Privacy-Performance Trade-off}
-Federated learning maintains near-supervised accuracy at the cost of communication overhead:
+Federated learning provides near-supervised accuracy, but introduces a communication burden.
 \begin{enumerate}
-    \item Federated 3D-CNN achieves a 97.36\% average overall accuracy, representing only a $-2.55$ percentage point degradation relative to its centralized supervised counterpart (99.91\%).
-    \item On Pavia University and Salinas, federated models reach 99--100\% accuracy, demonstrating that FedAvg is robust when local data distributions are moderately heterogeneous.
-    \item The Indian Pines gap is wider (85--96\% federated vs.\ 99--100\% supervised), reflecting the difficulty of aggregating meaningful weight updates from a small local dataset across 50 communication rounds.
-    \item For organizations that cannot centralize raw spectral data, federated learning represents a pragmatically viable alternative---the accuracy cost is modest and the privacy guarantee is meaningful.
+    \item Federated 3D-CNN has a 97.36\% average overall accuracy, which only represents a $-2.55$ percentage point loss against its centralized supervised model (99.91\%).
+    \item On Pavia University and Salinas, federated models achieve 99--100\% accuracy, which shows that FedAvg is applicable when local data is somewhat heterogeneous.
+    \item The Indian Pines gap is larger (85--96\% federated vs.\ 99--100\% supervised), and shows the difficulty of getting meaningful weight updates from a small local dataset after 50 communication rounds.
+    \item For organizations that cannot centralize raw spectral data, federated learning is a valuable option, since the accuracy cost is small and the privacy is protected.
 \end{enumerate}
 
 \subsection{Architecture-Specific Insights}
 \begin{itemize}
-    \item \textbf{2D-CNN:} Leads overall accuracy in every paradigm (supervised: 99.96\%, semi-supervised: 89.22\%, federated: 98.72\%). After PCA compresses the spectral axis to 30 components, 2D spatial convolutions capture sufficient discriminative information---volumetric operations add parameters without a proportional accuracy return.
+    \item \textbf{2D-CNN:} Leads overall accuracy in every paradigm (supervised: 99.96\%, semi-supervised: 89.22\%, federated: 98.72\%). After PCA reduces the spectral axis to 30 components, 2D spatial convolutions are enough. Volumetric operations only add parameters with no proportional return in accuracy.
 
-    \item \textbf{3D-CNN:} Consistent second across all paradigms (supervised: 99.91\%, semi-supervised: 86.92\%, federated: 97.36\%). Explicit modeling of inter-band correlations through volumetric kernels translates into more stable behavior under both noisy pseudo-labels and federated weight averaging.
+    \item \textbf{3D-CNN:} Placed second with consistency (supervised: 99.91\%, semi-supervised: 86.92\%, federated: 97.36\%). Modeling inter-band correlation with volumetric kernels results in better handling of noisy pseudo-labels and federated weight averaging.
 
     \item \textbf{Vision Transformer:} Competitive at full supervision (99.72\%) but the most sensitive to distribution shift: semi-supervised average drops to 77.41\% and federated to 94.11\%. Global self-attention, while powerful under clean full-label conditions, is more easily destabilized by pseudo-label noise and client-side data heterogeneity.
 
