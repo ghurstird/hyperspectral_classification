@@ -105,6 +105,17 @@ QPushButton#ghost_btn {
 QPushButton#ghost_btn:hover   { background: #f8fafc; border-color: #7c3aed; color: #7c3aed; }
 QPushButton#ghost_btn:disabled { background: #f8fafc; color: #94a3b8; }
 
+QPushButton#danger_btn {
+    background: white;
+    color: #dc2626;
+    border: 1px solid #fca5a5;
+    border-radius: 7px;
+    padding: 7px 12px;
+    font-size: 12px;
+}
+QPushButton#danger_btn:hover   { background: #fff5f5; border-color: #dc2626; }
+QPushButton#danger_btn:disabled { background: #f8fafc; color: #94a3b8; border-color: #e2e8f0; }
+
 /* ── ComboBox ───────────────────────────────────────────────────────────── */
 QComboBox {
     background: white;
@@ -606,6 +617,7 @@ class MapPanel(QFrame):
 
 class SidePanel(QFrame):
     classify_requested = pyqtSignal()
+    clear_requested    = pyqtSignal()
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -708,6 +720,13 @@ class SidePanel(QFrame):
         layout.addWidget(self.status_lbl)
 
         layout.addStretch()
+
+        layout.addWidget(_hline())
+
+        self.clear_btn = QPushButton("Geçmişi Temizle")
+        self.clear_btn.setObjectName("danger_btn")
+        self.clear_btn.clicked.connect(self.clear_requested.emit)
+        layout.addWidget(self.clear_btn)
 
         # footer version tag
         ver = QLabel("HSI Classifier v1.0")
@@ -906,11 +925,12 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("HSI Classification — Comparative Analysis")
         self.resize(1460, 820)
-        self._workers:       list = []
-        self._prep_worker          = None
-        self._completed:     int  = 0
-        self._total_to_run:  int  = _TOTAL_MODELS
-        self._all_metrics:   dict = {}
+        self._workers:            list = []
+        self._prep_worker               = None
+        self._completed:          int  = 0
+        self._total_to_run:       int  = _TOTAL_MODELS
+        self._all_metrics:        dict = {}
+        self._current_dataset_key: str | None = None
         self._init_ui()
 
     def _init_ui(self):
@@ -960,6 +980,7 @@ class MainWindow(QMainWindow):
 
         self.side = SidePanel()
         self.side.classify_requested.connect(self._start)
+        self.side.clear_requested.connect(self._clear_all)
         main_row.addWidget(self.side, 0, Qt.AlignmentFlag.AlignTop)
 
         grid = QVBoxLayout()
@@ -996,15 +1017,31 @@ class MainWindow(QMainWindow):
 
     # ── classification flow ─────────────────────────────────────────────────
 
+    def _clear_all(self):
+        for p in self.map_panels.values():
+            p.reset()
+        self._all_metrics.clear()
+        self.stats.clear()
+        self._current_dataset_key = None
+
     def _start(self):
         if not self.side.filepath or not self.side.dataset_key:
             return
-        for p in self.map_panels.values(): p.reset()
-        self._all_metrics.clear()
+
+        # Dataset değiştiyse tüm geçmişi sıfırla
+        if self.side.dataset_key != self._current_dataset_key:
+            self._clear_all()
+            self._current_dataset_key = self.side.dataset_key
+
+        # Yalnızca çalıştırılacak modelin panelini sıfırla
+        selected = self.side.selected_model
+        configs_to_run = [c for c in MODEL_CONFIGS if selected is None or c["key"] == selected]
+        for cfg in configs_to_run:
+            self.map_panels[cfg["key"]].reset()
+
         self._completed = 0
         self._total_to_run = self.side._run_total
         self._workers.clear()
-        self.stats.clear()
         self.side.set_running(True)
         self.side.set_status("Preprocessing çalışıyor…")
 
